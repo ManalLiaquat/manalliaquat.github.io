@@ -1,0 +1,42 @@
+.theme-switcher {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 9999;
+  display: flex;
+  gap: 2px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(15, 17, 23, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  font-family: "JetBrains Mono", monospace;
+}
+.theme-switcher button {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #b7bdcc;
+  font: inherit;
+  font-size: 12px;
+  padding: 7px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.theme-switcher button:hover {
+  color: #fff;
+}
+.theme-switcher button.is-active {
+  background: #f5f5f5;
+  color: #0b0d12;
+}
+@media (max-width: 480px) {
+  .theme-switcher {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+}
