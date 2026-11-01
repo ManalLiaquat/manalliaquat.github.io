@@ -1,7 +1,8 @@
 import {defineConfig} from "vite";
 import react from "@vitejs/plugin-react";
+import seoPlugin from "./seo/seoPlugin.js";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), seoPlugin()],
   base: "/"
 });

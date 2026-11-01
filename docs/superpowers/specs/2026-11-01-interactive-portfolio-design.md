@@ -12,7 +12,7 @@ Vite + React 18. Plain CSS per theme. No UI/animation libraries.
 - `src/data/portfolio.js` — single source of content: profile, socials, experience
   (4 roles), skills, certifications, Medium blogs.
 - `src/App.jsx` — theme selection: `?theme=terminal|motion|desktop` if present,
-  otherwise random. Themes are `React.lazy` loaded so only one ships per visit.
+  otherwise Terminal (the default). Themes are `React.lazy` loaded so only one ships per visit.
 - `src/components/ThemeSwitcher.jsx` — fixed pill (bottom-right) to switch themes;
   updates `?theme=` via `history.replaceState` so links are shareable.
 - `src/themes/terminal/` — typeable terminal hero (help, whoami, experience, skills,
@@ -37,3 +37,10 @@ Vite + React 18. Plain CSS per theme. No UI/animation libraries.
 ## Testing
 Production build succeeds; each theme checked at desktop and mobile widths in a
 browser; terminal commands, window dragging, theme switcher and `?theme=` verified.
+
+## SEO and AI agents
+`seo/seoPlugin.js` (Vite plugin) generates from `src/data/portfolio.js` at build time:
+prerendered semantic HTML inside `#root`, meta/OG/Twitter tags, canonical URL, `rel="me"`
+links, Schema.org JSON-LD (`WebSite`, `ProfilePage`, `Person`, `BlogPosting`), `robots.txt`
+(explicitly allowing AI crawlers), `sitemap.xml`, `llms.txt`, `llms-full.txt` and
+`resume.json` (JSON Resume schema). `public/og-image.png` is the 1200×630 share image.

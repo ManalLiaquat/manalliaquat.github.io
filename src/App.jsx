@@ -7,6 +7,8 @@ export const THEMES = [
   {id: "desktop", label: "Desktop"}
 ];
 
+const DEFAULT_THEME = "terminal";
+
 const loaders = {
   terminal: lazy(() => import("./themes/terminal/TerminalTheme.jsx")),
   motion: lazy(() => import("./themes/motion/MotionTheme.jsx")),
@@ -15,8 +17,7 @@ const loaders = {
 
 function pickInitialTheme() {
   const requested = new URLSearchParams(window.location.search).get("theme");
-  if (loaders[requested]) return requested;
-  return THEMES[Math.floor(Math.random() * THEMES.length)].id;
+  return loaders[requested] ? requested : DEFAULT_THEME;
 }
 
 export default function App() {

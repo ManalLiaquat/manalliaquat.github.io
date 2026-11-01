@@ -8,7 +8,14 @@ export const profile = {
   tagline: "I build the systems behind web and mobile products.",
   summary:
     "Full stack JavaScript engineer with 7+ years building web and mobile applications. These days I lead the backend team at Plai, designing APIs and services in Node.js. Before that I shipped React, Next.js and React Native apps for insurance, marketing and agency clients.",
-  email: "m.manalliaquat@gmail.com"
+  email: "m.manalliaquat@gmail.com",
+  siteUrl: "https://manalliaquat.github.io/",
+  avatar: "https://github.com/manalliaquat.png",
+  twitter: "@manalliaquat",
+  seoTitle:
+    "Manal Liaquat — Backend Engineer & Team Lead (Node.js, React, React Native)",
+  seoDescription:
+    "Manal Liaquat is a Backend Engineer and Backend Team Lead at Plai with 7+ years building web and mobile apps using Node.js, Express, MongoDB, React, Next.js and React Native."
 };
 
 export const socials = [
