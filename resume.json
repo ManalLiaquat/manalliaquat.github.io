@@ -1,0 +1,148 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Manal Liaquat",
+    "label": "Backend Team Lead @ Plai",
+    "email": "m.manalliaquat@gmail.com",
+    "url": "https://manalliaquat.github.io/",
+    "image": "https://github.com/manalliaquat.png",
+    "summary": "Full stack JavaScript engineer with 7+ years building web and mobile applications. These days I lead the backend team at Plai, designing APIs and services in Node.js. Before that I shipped React, Next.js and React Native apps for insurance, marketing and agency clients.",
+    "profiles": [
+      {
+        "network": "GitHub",
+        "url": "https://github.com/manalliaquat"
+      },
+      {
+        "network": "LinkedIn",
+        "url": "https://www.linkedin.com/in/manalliaquat/"
+      },
+      {
+        "network": "Medium",
+        "url": "https://medium.com/@m.manalliaquat"
+      },
+      {
+        "network": "Stack Overflow",
+        "url": "https://stackoverflow.com/users/12815456/manal-liaquat"
+      },
+      {
+        "network": "X / Twitter",
+        "url": "https://twitter.com/manalliaquat"
+      },
+      {
+        "network": "CodePen",
+        "url": "https://codepen.io/ManalLiaquat"
+      },
+      {
+        "network": "freeCodeCamp",
+        "url": "https://www.freecodecamp.org/manalliaquat"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Plai",
+      "position": "Backend Engineer",
+      "startDate": "2024-01",
+      "highlights": [
+        "Backend Team Lead",
+        "Backend application engineering"
+      ]
+    },
+    {
+      "name": "Insurance Market",
+      "position": "Software Engineer",
+      "startDate": "2021-09",
+      "endDate": "2023-12",
+      "highlights": [
+        "Web application development",
+        "Backend application development"
+      ]
+    },
+    {
+      "name": "Digital MarknAdsPlan",
+      "position": "Consultant Developer",
+      "startDate": "2020-06",
+      "endDate": "2021-08",
+      "highlights": [
+        "Web application development"
+      ]
+    },
+    {
+      "name": "Systems Avenue",
+      "position": "React Native Developer",
+      "startDate": "2019-03",
+      "endDate": "2020-06",
+      "highlights": [
+        "Senior mobile application developer",
+        "Web application development"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Backend",
+      "keywords": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "REST APIs",
+        "Firebase",
+        "Python"
+      ]
+    },
+    {
+      "name": "Frontend",
+      "keywords": [
+        "React",
+        "Next.js",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "PWA"
+      ]
+    },
+    {
+      "name": "Mobile",
+      "keywords": [
+        "React Native"
+      ]
+    },
+    {
+      "name": "Tooling",
+      "keywords": [
+        "npm",
+        "Git",
+        "Google Ads Scripts"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "React Nanodegree",
+      "issuer": "Udacity",
+      "url": "https://confirm.udacity.com/KHYFX7KF"
+    },
+    {
+      "name": "PWA Web App Developer",
+      "issuer": "SMIT"
+    },
+    {
+      "name": "Web & Mobile App Developer",
+      "issuer": "SMIT"
+    },
+    {
+      "name": "Legacy Front End",
+      "issuer": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/manalliaquat/legacy-front-end"
+    },
+    {
+      "name": "JavaScript Algorithms & Data Structures",
+      "issuer": "freeCodeCamp",
+      "url": "https://www.freecodecamp.org/certification/manalliaquat/javascript-algorithms-and-data-structures"
+    },
+    {
+      "name": "Financial Literacy Training Program",
+      "issuer": "NIBAF Pakistan"
+    }
+  ]
+}

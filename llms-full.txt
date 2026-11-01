@@ -1,0 +1,66 @@
+# Manal Liaquat — full profile
+
+> Manal Liaquat is a Backend Engineer and Backend Team Lead at Plai with 7+ years building web and mobile apps using Node.js, Express, MongoDB, React, Next.js and React Native.
+
+Full stack JavaScript engineer with 7+ years building web and mobile applications. These days I lead the backend team at Plai, designing APIs and services in Node.js. Before that I shipped React, Next.js and React Native apps for insurance, marketing and agency clients.
+
+## Experience
+
+### Backend Engineer — Plai
+
+Jan 2024 – Present
+
+- Backend Team Lead
+- Backend application engineering
+
+### Software Engineer — Insurance Market
+
+Sep 2021 – Dec 2023
+
+- Web application development
+- Backend application development
+
+### Consultant Developer — Digital MarknAdsPlan
+
+Jun 2020 – Aug 2021
+
+- Web application development
+
+### React Native Developer — Systems Avenue
+
+Mar 2019 – Jun 2020
+
+- Senior mobile application developer
+- Web application development
+
+## Skills
+
+- **Backend:** Node.js, Express, MongoDB, REST APIs, Firebase, Python
+- **Frontend:** React, Next.js, JavaScript, HTML5, CSS3, PWA
+- **Mobile:** React Native
+- **Tooling:** npm, Git, Google Ads Scripts
+
+## Certifications
+
+- [React Nanodegree](https://confirm.udacity.com/KHYFX7KF) — Udacity
+- PWA Web App Developer — SMIT
+- Web & Mobile App Developer — SMIT
+- [Legacy Front End](https://www.freecodecamp.org/certification/manalliaquat/legacy-front-end) — freeCodeCamp
+- [JavaScript Algorithms & Data Structures](https://www.freecodecamp.org/certification/manalliaquat/javascript-algorithms-and-data-structures) — freeCodeCamp
+- Financial Literacy Training Program — NIBAF Pakistan
+
+## Writing
+
+- [Why I choose React?](https://medium.com/@m.manalliaquat/why-i-choose-react-ab215dffdb79): React was developed by Facebook in 2013 and is now the most popular JavaScript library for building single-page applications.
+- [CRA to PWA](https://medium.com/swlh/cra-to-pwa-1e572207d7): How to convert a Create React App project into a Progressive Web App — one of the most searched questions for React developers.
+
+## Contact
+
+- Email: m.manalliaquat@gmail.com
+- GitHub: https://github.com/manalliaquat
+- LinkedIn: https://www.linkedin.com/in/manalliaquat/
+- Medium: https://medium.com/@m.manalliaquat
+- Stack Overflow: https://stackoverflow.com/users/12815456/manal-liaquat
+- X / Twitter: https://twitter.com/manalliaquat
+- CodePen: https://codepen.io/ManalLiaquat
+- freeCodeCamp: https://www.freecodecamp.org/manalliaquat

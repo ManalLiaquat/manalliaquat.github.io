@@ -1,0 +1,26 @@
+# Manal Liaquat
+
+> Manal Liaquat is a Backend Engineer and Backend Team Lead at Plai with 7+ years building web and mobile apps using Node.js, Express, MongoDB, React, Next.js and React Native.
+
+Full stack JavaScript engineer with 7+ years building web and mobile applications. These days I lead the backend team at Plai, designing APIs and services in Node.js. Before that I shipped React, Next.js and React Native apps for insurance, marketing and agency clients.
+
+## Current role
+
+- Backend Engineer at Plai (Jan 2024 – Present): Backend Team Lead, Backend application engineering
+
+## Key pages
+
+- [Portfolio](https://manalliaquat.github.io/): interactive portfolio (terminal, motion and desktop themes)
+- [Full profile for LLMs](https://manalliaquat.github.io/llms-full.txt): complete experience, skills, certifications and writing in Markdown
+- [Résumé JSON](https://manalliaquat.github.io/resume.json): machine-readable résumé (JSON Resume schema)
+
+## Contact
+
+- Email: m.manalliaquat@gmail.com
+- GitHub: https://github.com/manalliaquat
+- LinkedIn: https://www.linkedin.com/in/manalliaquat/
+- Medium: https://medium.com/@m.manalliaquat
+- Stack Overflow: https://stackoverflow.com/users/12815456/manal-liaquat
+- X / Twitter: https://twitter.com/manalliaquat
+- CodePen: https://codepen.io/ManalLiaquat
+- freeCodeCamp: https://www.freecodecamp.org/manalliaquat
