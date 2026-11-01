@@ -11,6 +11,7 @@ import useReducedMotion from "../../hooks/useReducedMotion";
 import useReveal from "../../hooks/useReveal";
 import NodeField from "./NodeField.jsx";
 import Magnetic from "./Magnetic.jsx";
+import Companions from "./Companions.jsx";
 import "./motion.css";
 
 function SplitWord({text, delay = 0}) {
@@ -270,6 +271,7 @@ export default function MotionTheme() {
           © {new Date().getFullYear()} {profile.name}
         </p>
       </section>
+      <Companions reduced={reduced} />
     </div>
   );
 }
