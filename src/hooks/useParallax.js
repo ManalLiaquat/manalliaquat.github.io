@@ -3,7 +3,8 @@ import {useEffect} from "react";
 // Scroll + pointer parallax for every `[data-px]` element inside `rootRef`.
 //
 // Each element is measured against its closest `[data-px-scope]` (an untransformed
-// section), so the offset is zero when that section sits centred in the viewport.
+// section), so the offset is zero when that section sits centred in the viewport,
+// or, for `data-px-scope="top"` (a scope at the top of the page), at scroll 0.
 //   data-px-y="0.3"    vertical drift per scrolled px (+ lags behind, - runs ahead)
 //   data-px-x="0.15"   horizontal drift per scrolled px
 //   data-px-depth="12" max px the layer leans with a fine pointer
@@ -22,7 +23,8 @@ export default function useParallax(rootRef, enabled) {
       y: parseFloat(el.dataset.pxY) || 0,
       x: parseFloat(el.dataset.pxX) || 0,
       depth: parseFloat(el.dataset.pxDepth) || 0,
-      fade: "pxFade" in el.dataset
+      fade: "pxFade" in el.dataset,
+      fromTop: (el.closest("[data-px-scope]") || {}).dataset?.pxScope === "top"
     }));
     const finePointer = window.matchMedia("(pointer: fine)").matches;
     const pointer = {x: 0, y: 0, tx: 0, ty: 0};
@@ -39,7 +41,11 @@ export default function useParallax(rootRef, enabled) {
         let r = rects.get(l.scope);
         if (!r) rects.set(l.scope, (r = l.scope.getBoundingClientRect()));
         if (r.bottom < -vh || r.top > vh * 2) continue; // far offscreen
-        const delta = vh / 2 - (r.top + r.height / 2);
+        // A scope marked "top" (the hero) rests at zero at scroll 0; others
+        // rest when centred in the viewport.
+        const delta = l.fromTop
+          ? window.scrollY
+          : vh / 2 - (r.top + r.height / 2);
         const dx = delta * l.x + pointer.x * l.depth;
         const dy = delta * l.y + pointer.y * l.depth;
         l.el.style.translate = `${dx.toFixed(1)}px ${dy.toFixed(1)}px`;

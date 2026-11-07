@@ -161,6 +161,7 @@ html {
 
 /* hero */
 .hero {
+  overflow: clip;
   padding: clamp(28px, 4vw, 48px) var(--gutter) 24px;
 }
 .hero-head {
@@ -245,7 +246,8 @@ html {
   height: auto;
   overflow: visible;
 }
-.nm-zones {
+.nm-zones,
+.nm-labels {
   position: absolute;
   inset: 0;
 }
@@ -273,12 +275,10 @@ html {
 .nm-term {
   animation: nm-fade 0.4s 1.2s ease both;
 }
-.nm-open {
-  stroke-width: 6;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  animation: nm-fade 0.4s 1.3s ease both;
+.nm-hit {
+  fill: transparent;
 }
+.nm-mark,
 .nm-station {
   animation: nm-fade 0.5s ease both;
   text-decoration: none;
@@ -295,8 +295,16 @@ html {
 .nm-tick {
   fill: var(--frontend);
 }
-.nm-station:hover .nm-ring,
-.nm-station:focus-visible .nm-ring {
+/* hovering a label (near plane) lifts its ring (mid plane) */
+.nm:has(.nm-station[data-st="0"]:is(:hover, :focus-visible))
+  .nm-mark[data-st="0"]
+  .nm-ring,
+.nm:has(.nm-station[data-st="2"]:is(:hover, :focus-visible))
+  .nm-mark[data-st="2"]
+  .nm-ring,
+.nm:has(.nm-station[data-st="3"]:is(:hover, :focus-visible))
+  .nm-mark[data-st="3"]
+  .nm-ring {
   stroke-width: 8;
 }
 .nm-station:hover .nm-name,
@@ -615,7 +623,7 @@ html {
 .timetable thead th {
   background: var(--ink);
   color: var(--paper);
-  font: 600 13px var(--mono);
+  font: 800 13px var(--sans);
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-align: left;
@@ -774,7 +782,7 @@ html {
 }
 .foot {
   margin: 56px 0 0;
-  font: 400 13px var(--mono);
+  font-size: 14px;
   color: #aab0bd;
 }
 
@@ -798,8 +806,43 @@ html {
   .hero-head {
     grid-template-columns: 1fr;
   }
+  /* the boxed key becomes a compact legend strip */
   .key {
-    justify-self: start;
+    justify-self: stretch;
+    border: 0;
+    border-top: 2px solid var(--ink);
+    border-radius: 0;
+    background: none;
+    padding: 10px 0 0;
+    font-size: 13px;
+  }
+  .key-h {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+  }
+  .key ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+  }
+  .key li {
+    gap: 6px;
+  }
+  .key-line {
+    width: 18px;
+  }
+  .key-ring,
+  .key-term {
+    margin: 0 2px;
+  }
+  .hero-head {
+    gap: 18px;
+  }
+  .title h1 {
+    margin-bottom: 10px;
   }
   .nm-horizontal {
     display: none;
@@ -861,7 +904,7 @@ html {
 @media (prefers-reduced-motion: reduce) {
   .nm-line,
   .nm-term,
-  .nm-open,
+  .nm-mark,
   .nm-station {
     animation: none;
   }

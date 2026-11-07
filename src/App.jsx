@@ -49,7 +49,7 @@ function Header() {
 
 function Hero() {
   return (
-    <section className="hero" id="top" data-px-scope>
+    <section className="hero" id="top" data-px-scope="top">
       <div className="hero-head">
         <div className="title" data-px data-px-y="0.1" data-px-depth="-4">
           <h1>{profile.name}</h1>

@@ -44,7 +44,8 @@ function geometry(kind) {
     mobEnd: along(toYear(sa.end))
   };
   const {backend: B, frontend: F, mobile: M} = o.lane;
-  const lineLen = kind === "horizontal" ? o.w : o.h;
+  // The backend line bleeds off the page edge (the hero clips it): ongoing work.
+  const bleed = kind === "horizontal" ? o.w + 600 : o.h + 24;
 
   return {
     o,
@@ -73,9 +74,8 @@ function geometry(kind) {
         d: path([
           [a.im, F],
           [a.im + d, B],
-          [lineLen - 6, B]
-        ]),
-        open: [lineLen - 6, B]
+          [bleed, B]
+        ])
       }
     ],
     stations: [
@@ -132,14 +132,15 @@ function Map({kind}) {
 
   return (
     <div className={`nm nm-${kind}`}>
-      {/* far plane: one fare-zone band per year */}
+      {/* far plane: one fare-zone band per year. On the vertical map the bands
+          run along the time axis, so they must not drift or dates misread. */}
       <svg
         className="nm-zones"
         viewBox={`0 0 ${o.w} ${o.h}`}
         aria-hidden="true"
-        data-px
-        data-px-y="0.12"
-        data-px-depth="-6"
+        {...(kind === "horizontal"
+          ? {"data-px": "", "data-px-y": "0.12", "data-px-depth": "-6"}
+          : {})}
       >
         {years.map((y, i) => {
           const a0 = g.along(y);
@@ -166,16 +167,13 @@ function Map({kind}) {
         })}
       </svg>
 
-      {/* line plane */}
+      {/* mid plane: lines and station markers */}
       <svg
         className="nm-lines"
         viewBox={`0 0 ${o.w} ${o.h}`}
-        role="img"
-        aria-label={`Career map: ${experience
-          .map(e => `${e.company} (${e.start} to ${e.end})`)
-          .join(", ")}`}
+        aria-hidden="true"
         data-px
-        data-px-depth="8"
+        data-px-depth="6"
       >
         {g.paths.map((p, i) => (
           <g key={p.id}>
@@ -189,19 +187,17 @@ function Map({kind}) {
               }}
             />
             {p.end && <Terminus g={g} at={p.end} id={p.id} kind={kind} />}
-            {p.open && <OpenEnd g={g} at={p.open} id={p.id} kind={kind} />}
           </g>
         ))}
         {g.stations.map((s, i) => {
           const [x, y] = g.pt(...s.at);
           return (
-            <a
+            <g
               key={s.job.company}
-              href={`#station-${slug(s.job.company)}`}
-              className={`nm-station nm-${s.kind}`}
+              className={`nm-mark nm-${s.kind}`}
+              data-st={i}
               style={{animationDelay: `${0.9 + i * 0.12}s`}}
             >
-              <title>{`${s.job.company}: ${s.job.role}, ${s.job.start} – ${s.job.end}`}</title>
               {s.kind === "stop" ? (
                 <rect
                   className="nm-tick"
@@ -213,6 +209,33 @@ function Map({kind}) {
               ) : (
                 <circle className="nm-ring" cx={x} cy={y} r="12" />
               )}
+              {s.kind === "current" && (
+                <circle cx={x} cy={y} r="5" className="nm-here-dot" />
+              )}
+            </g>
+          );
+        })}
+      </svg>
+
+      {/* near plane: station names, which link to each station's guide entry */}
+      <svg
+        className="nm-labels"
+        viewBox={`0 0 ${o.w} ${o.h}`}
+        aria-label="Career map"
+        data-px
+        data-px-depth="14"
+      >
+        {g.stations.map((s, i) => {
+          const [x, y] = g.pt(...s.at);
+          return (
+            <a
+              key={s.job.company}
+              href={`#station-${slug(s.job.company)}`}
+              className="nm-station"
+              data-st={i}
+              style={{animationDelay: `${0.9 + i * 0.12}s`}}
+            >
+              <circle className="nm-hit" cx={x} cy={y} r="20" />
               <Label g={g} s={s} kind={kind} />
               {s.kind === "current" && <YouAreHere x={x} y={y} kind={kind} />}
             </a>
@@ -239,28 +262,10 @@ function Terminus({g, at, id, kind}) {
   );
 }
 
-// The backend line runs on past the frame: the work is ongoing.
-function OpenEnd({g, at, id, kind}) {
-  const [x, y] = g.pt(...at);
-  const pts =
-    kind === "horizontal"
-      ? `${x - 22},${y - 18} ${x},${y} ${x - 22},${y + 18}`
-      : `${x - 18},${y - 22} ${x},${y} ${x + 18},${y - 22}`;
-  return (
-    <polyline
-      className="nm-open"
-      points={pts}
-      style={{stroke: COLOR[id]}}
-      fill="none"
-    />
-  );
-}
-
 function YouAreHere({x, y, kind}) {
   const [px, py] = kind === "horizontal" ? [x + 26, y + 44] : [226, y + 62];
   return (
     <g className="nm-here" aria-hidden="true">
-      <circle cx={x} cy={y} r="5" className="nm-here-dot" />
       <rect x={px - 6} y={py - 19} width="122" height="28" rx="14" />
       <text x={px + 55} y={py} textAnchor="middle">
         You are here
