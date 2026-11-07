@@ -10,9 +10,9 @@ body {
 }
 body {
   -webkit-font-smoothing: antialiased;
-  font-family: "Overpass", "Helvetica Neue", Arial, sans-serif;
-  background: #f8f9fa;
-  color: #16181d;
+  font-family: "Onest Variable", system-ui, sans-serif;
+  background: #0b0b0d;
+  color: #f3f1ec;
 }
 img {
   max-width: 100%;
@@ -39,7 +39,7 @@ a {
   line-height: 1.6;
 }
 .prerender a {
-  color: #1a5fc9;
+  color: #8f9dff;
 }
 .prerender h3 {
   margin: 0;

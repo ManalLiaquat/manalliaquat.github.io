@@ -26,10 +26,16 @@ A backend engineer and team lead who has also shipped frontend (React, Next.js) 
 ## Capabilities and Constraints
 
 - Static site on GitHub Pages, built with Vite + React 18 and deployed to the `gh-pages` branch by `.github/workflows/deploy.yml`.
-- One design. The three-theme switcher (Terminal, Motion, Desktop) is being retired (confirmed by the user, 2026-11-07).
+- One design. The three-theme switcher (Terminal, Motion, Desktop) is retired (confirmed by the user, 2026-11-07).
 - No existing feature must survive: the 3D companions, the typeable terminal and the parallax added earlier are all optional. Only the content is binding.
 - All content lives in `src/data/portfolio.js`; `seo/seoPlugin.js` generates prerendered HTML, meta tags, JSON-LD, sitemap, robots.txt, llms.txt and resume.json from it. This SEO and AI-agent support must keep working.
 - `prefers-reduced-motion` must be respected; the site must be keyboard accessible.
+
+## Brand Commitments
+
+- Visual standard (confirmed by the user, 2026-11-07): a premium, familiar developer portfolio executed at top-studio quality, not a themed concept. The user rejected the transit-map concept.
+- Quality bar set by the user: Apple product pages (cinematic scroll storytelling) and Awwwards-level studio sites (kinetic type, cursor interaction, bold transitions).
+- Rich interaction, animation and transitions are expected; a static page reads as "not pro" to this user.
 
 ## Evidence on Hand
 

@@ -7,21 +7,21 @@ related_targets: []
 
 # Surface: portfolio home (/)
 
-Scope: the whole single-page portfolio. Mode: Experience. Replaces the Terminal, Motion and Desktop themes and the theme switcher.
-Audience: recruiters/hiring managers and freelance clients, equally (see PRODUCT.md). Action: email Manal or open a profile. Constraint: content only from src/data/portfolio.js; parallax/depth requested by the user.
+Scope: the whole single-page portfolio. Mode: Experience. Replaces the transit-map design (rejected by the user).
+Audience: recruiters/hiring managers and freelance clients, equally (see PRODUCT.md). Action: email Manal or open a profile. Constraint: content only from src/data/portfolio.js.
 
 ## Direction contract
 
-THESIS: Manal's career is a metro network map: disciplines are coloured lines, employers are stations, interchanges are roles that spanned disciplines. Refuses the dev-portfolio default of hero + subcopy + a row of project cards.
+THESIS: The premium standard, played straight at studio fidelity: a dark, cinematic single-page portfolio whose scroll is choreographed like a product launch page. Refuses the static template (hero, then sections of equal cards with fade-ups).
 
-OWN-WORLD: White map paper, ink black, four saturated line colours as named roles (Backend red, Frontend blue, Mobile green, Tooling amber), 45° line geometry, white station discs with ink rings, overpass-style signage type (Overpass) with Overpass Mono only for dates and codes. Recognisable with content removed: thick coloured strokes meeting at ringed interchanges.
+OWN-WORLD: Near-black stage (#0b0b0d) with warm off-white type, one periwinkle accent, and a late shift to a light paper section for credentials and writing. Bricolage Grotesque at very large display sizes with tight but legal tracking; Onest for reading. Hairline rules, 16px-radius panels, pill controls. No gradient text, no glass cards, no glow halos.
 
-STORY: The visitor reads the network left to right (2019 to now), sees Manal moved from mobile and frontend onto the backend line and is "here" at Plai, scans the line strip maps for skills, checks credentials in a timetable, then emails.
+STORY: The visitor meets the name at full scale, reads the summary as it lights up word by word, steps through each role as stacked cards, feels the breadth of skills in moving rows, checks credentials and writing, and ends on a full-bleed call to email.
 
-FIRST VIEWPORT: Title block top-left (name at display scale, title, tagline). The network map fills the viewport: three lines crossing four stations by start date, "You are here" at Plai, the Backend line running on past the frame edge. Legend strip and the primary "Email Manal" sign at top-right.
+FIRST VIEWPORT: The name set across the full width in two lines at display scale, letters rising in; a "Currently Backend Team Lead @ Plai" badge with a live dot above it; the tagline and two magnetic buttons (Email me, See the work) bottom-left; a scroll cue bottom-right. Pill nav floating at top.
 
-FORM: Transit map career. Position 1 on the ordered list (Impeccable's pick, chosen by the user over the assigned candidate 7). seed:7c36d687a02cacfd
+FORM: Premium standard (the standing exit, chosen by the user over the re-rolled hand). Quality bar: Apple product pages and Awwwards studio sites. seed:7c36d687a02cacfd
 
-Signature interaction: the lines draw themselves along scroll and the stations light as reached; hover/focus a station to read its board. Motion grammar: scroll-tied stroke drawing plus layered parallax (district shading far, lines mid, labels near); off under prefers-reduced-motion.
+Signature interaction: scroll-scrubbed storytelling (GSAP ScrollTrigger + Lenis smooth scroll): pinned word-by-word summary, stacking experience cards that recede, velocity-reactive skill marquees, hover-follow logos on credential rows, a cursor-follower ring that grows over interactive targets, a one-time intro curtain. All off under prefers-reduced-motion.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

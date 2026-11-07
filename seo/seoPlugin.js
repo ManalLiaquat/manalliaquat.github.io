@@ -183,7 +183,7 @@ ${profile.summary}
 
 ## Key pages
 
-- [Portfolio](${SITE}): career network map, skills, credentials, writing and contact
+- [Portfolio](${SITE}): experience, skills, credentials, writing and contact
 - [Full profile for LLMs](${SITE}llms-full.txt): complete experience, skills, certifications and writing in Markdown
 - [Résumé JSON](${SITE}resume.json): machine-readable résumé (JSON Resume schema)
 
