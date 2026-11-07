@@ -31,6 +31,11 @@
   padding: 0 clamp(16px, 6vw, 96px);
   overflow: hidden;
 }
+/* far parallax plane: bleeds past the hero so pointer lean never shows an edge */
+.m-hero-depth {
+  position: absolute;
+  inset: -40px;
+}
 .m-canvas {
   position: absolute;
   inset: 0;
@@ -151,6 +156,9 @@
   font-size: clamp(22px, 3vw, 36px);
   font-weight: 500;
   white-space: nowrap;
+}
+.m-marquee-drift {
+  margin-left: calc(-60vw - 80px);
 }
 .m-marquee-track {
   display: inline-flex;

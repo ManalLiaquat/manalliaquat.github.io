@@ -1,4 +1,4 @@
-import React, {useEffect, useRef, useState} from "react";
+import React, {useCallback, useEffect, useRef, useState} from "react";
 import {
   profile,
   socials,
@@ -9,14 +9,15 @@ import {
 } from "../../data/portfolio";
 import useReducedMotion from "../../hooks/useReducedMotion";
 import useReveal from "../../hooks/useReveal";
+import useParallax from "../../hooks/useParallax";
 import NodeField from "./NodeField.jsx";
 import Magnetic from "./Magnetic.jsx";
 import Companions from "./Companions.jsx";
 import "./motion.css";
 
-function SplitWord({text, delay = 0}) {
+function SplitWord({text, delay = 0, ...rest}) {
   return (
-    <span className="m-split" aria-label={text}>
+    <span className="m-split" aria-label={text} {...rest}>
       {[...text].map((ch, i) => (
         <span
           key={i}
@@ -94,6 +95,36 @@ function Rail({reduced}) {
     return () => desktop.removeEventListener("change", update);
   }, [reduced]);
 
+  // Cards sit at alternating depths: as each one crosses the viewport it rises or
+  // sinks a little, and its logo slides against the card face.
+  const drift = useCallback(() => {
+    if (reduced) return;
+    const mid = window.innerWidth / 2;
+    trackRef.current.querySelectorAll(".m-card").forEach((card, i) => {
+      const r = card.getBoundingClientRect();
+      const d = (r.left + r.width / 2 - mid) / window.innerWidth;
+      if (Math.abs(d) > 1.2) return;
+      card.style.translate = `0 ${(d * (i % 2 ? 56 : -40)).toFixed(1)}px`;
+      const img = card.querySelector("img, h3");
+      if (img) img.style.translate = `${(-d * 36).toFixed(1)}px 0`;
+    });
+  }, [reduced]);
+
+  useEffect(() => {
+    if (pinned || reduced) return;
+    const scroller = sectionRef.current.querySelector(".m-rail-sticky");
+    drift();
+    scroller.addEventListener("scroll", drift, {passive: true});
+    return () => scroller.removeEventListener("scroll", drift);
+  }, [pinned, reduced, drift]);
+
+  useEffect(() => {
+    if (!reduced) return;
+    trackRef.current
+      .querySelectorAll(".m-card, .m-card img, .m-card h3")
+      .forEach(el => (el.style.translate = ""));
+  }, [reduced]);
+
   useEffect(() => {
     const section = sectionRef.current;
     const track = trackRef.current;
@@ -116,6 +147,7 @@ function Rail({reduced}) {
       track.style.transform = `translate3d(${
         -progress * Math.max(distance, 0)
       }px,0,0)`;
+      drift();
     };
     layout();
     onScroll();
@@ -125,7 +157,7 @@ function Rail({reduced}) {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", layout);
     };
-  }, [pinned]);
+  }, [pinned, drift]);
 
   return (
     <section
@@ -188,23 +220,66 @@ export default function MotionTheme() {
   const reduced = useReducedMotion();
   const rootRef = useRef(null);
   useReveal(rootRef);
+  useParallax(rootRef, !reduced);
 
   return (
     <div
       className={`motion-theme ${reduced ? "is-reduced" : ""}`}
       ref={rootRef}
     >
-      <header className="m-hero">
-        <NodeField reduced={reduced} />
+      <header className="m-hero" data-px-scope>
+        <div
+          className="m-hero-depth"
+          data-px
+          data-px-y="0.55"
+          data-px-depth="-18"
+        >
+          <NodeField reduced={reduced} />
+        </div>
         <div className="m-hero-inner">
-          <p className="m-eyebrow m-fade">{profile.currentTitle}</p>
+          <p
+            className="m-eyebrow m-fade"
+            data-px
+            data-px-y="0.08"
+            data-px-depth="6"
+            data-px-fade
+          >
+            {profile.currentTitle}
+          </p>
           <h1>
-            <SplitWord text="Manal" />
+            <SplitWord
+              text="Manal"
+              data-px
+              data-px-y="0.16"
+              data-px-x="0.1"
+              data-px-depth="10"
+            />
             <br />
-            <SplitWord text="Liaquat." delay={0.2} />
+            <SplitWord
+              text="Liaquat."
+              delay={0.2}
+              data-px
+              data-px-y="0.3"
+              data-px-x="-0.1"
+              data-px-depth="16"
+            />
           </h1>
-          <p className="m-lede m-fade">{profile.tagline}</p>
-          <div className="m-ctas m-fade">
+          <p
+            className="m-lede m-fade"
+            data-px
+            data-px-y="0.45"
+            data-px-depth="22"
+            data-px-fade
+          >
+            {profile.tagline}
+          </p>
+          <div
+            className="m-ctas m-fade"
+            data-px
+            data-px-y="0.56"
+            data-px-depth="28"
+            data-px-fade
+          >
             <Magnetic href="#m-work" className="m-btn m-btn-solid">
               See the work
             </Magnetic>
@@ -213,22 +288,30 @@ export default function MotionTheme() {
             </Magnetic>
           </div>
         </div>
-        <span className="m-scroll" aria-hidden="true">
+        <span
+          className="m-scroll"
+          aria-hidden="true"
+          data-px
+          data-px-y="-0.5"
+          data-px-fade
+        >
           scroll
         </span>
       </header>
 
-      <div className="m-marquee" aria-label="Skills">
-        <div className="m-marquee-track">
-          {[0, 1].map(k => (
-            <span key={k} aria-hidden={k === 1}>
-              {allSkills.map(s => (
-                <React.Fragment key={s}>
-                  {s} <i>✦</i>{" "}
-                </React.Fragment>
-              ))}
-            </span>
-          ))}
+      <div className="m-marquee" aria-label="Skills" data-px-scope>
+        <div className="m-marquee-drift" data-px data-px-x="0.45">
+          <div className="m-marquee-track">
+            {[0, 1].map(k => (
+              <span key={k} aria-hidden={k === 1}>
+                {allSkills.map(s => (
+                  <React.Fragment key={s}>
+                    {s} <i>✦</i>{" "}
+                  </React.Fragment>
+                ))}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -248,11 +331,13 @@ export default function MotionTheme() {
 
       <Rail reduced={reduced} />
 
-      <section className="m-contact" id="m-contact">
+      <section className="m-contact" id="m-contact" data-px-scope>
         <p className="m-eyebrow" data-reveal>
           Contact
         </p>
-        <h2 data-reveal>Let's build something.</h2>
+        <div data-px data-px-y="-0.12">
+          <h2 data-reveal>Let's build something.</h2>
+        </div>
         <Magnetic
           href={`mailto:${profile.email}`}
           className="m-mail"
