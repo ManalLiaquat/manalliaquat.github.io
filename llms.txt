@@ -10,7 +10,7 @@ Full stack JavaScript engineer with 7+ years building web and mobile application
 
 ## Key pages
 
-- [Portfolio](https://manalliaquat.github.io/): interactive portfolio (terminal, motion and desktop themes)
+- [Portfolio](https://manalliaquat.github.io/): career network map, skills, credentials, writing and contact
 - [Full profile for LLMs](https://manalliaquat.github.io/llms-full.txt): complete experience, skills, certifications and writing in Markdown
 - [Résumé JSON](https://manalliaquat.github.io/resume.json): machine-readable résumé (JSON Resume schema)
 
