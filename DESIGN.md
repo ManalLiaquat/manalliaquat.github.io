@@ -1,291 +1,335 @@
 ---
 name: Manal Liaquat
-description: A backend engineer's career drawn as a metro network map.
+description: A dark, cinematic single-page portfolio whose scroll is choreographed like a product launch.
 colors:
-  map-paper: "#f8f9fa"
-  fare-zone: "#eef0f3"
-  station-white: "#ffffff"
-  signal-ink: "#16181d"
-  timetable-grey: "#555b69"
-  track-rule: "#d5d9df"
-  backend-red: "#d42a30"
-  frontend-blue: "#1a5fc9"
-  mobile-green: "#0d8346"
-  tooling-amber: "#f2a900"
-  night-rule: "#3a3e48"
-  night-muted: "#aab0bd"
-  night-focus: "#8fb6ff"
+  stage: "#0b0b0d"
+  stage-panel: "#141417"
+  stage-panel-raised: "#1b1b20"
+  stage-ink: "#f3f1ec"
+  stage-muted: "#a3a3ad"
+  stage-line: "rgba(243, 241, 236, 0.12)"
+  periwinkle: "#8f9dff"
+  paper: "#efede8"
+  paper-panel: "#ffffff"
+  paper-panel-raised: "#f7f6f2"
+  paper-ink: "#111113"
+  paper-muted: "#5d5d66"
+  paper-line: "rgba(17, 17, 19, 0.12)"
+  cobalt: "#4152d9"
+  live-green: "#4ade80"
 typography:
   display:
-    fontFamily: "Overpass, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(52px, 8.4vw, 6rem)"
-    fontWeight: 800
-    lineHeight: 0.92
-    letterSpacing: "-0.03em"
+    fontFamily: "Bricolage Grotesque Variable, Onest Variable, system-ui, sans-serif"
+    fontSize: "clamp(64px, 23.6vw, 30rem)"
+    fontWeight: 700
+    lineHeight: 0.84
+    letterSpacing: "-0.04em"
+    fontVariation: "\"opsz\" 96"
+  display-closing:
+    fontFamily: "Bricolage Grotesque Variable, Onest Variable, system-ui, sans-serif"
+    fontSize: "clamp(56px, 13vw, 13rem)"
+    fontWeight: 700
+    lineHeight: 0.9
+    letterSpacing: "-0.045em"
+  display-company:
+    fontFamily: "Bricolage Grotesque Variable, Onest Variable, system-ui, sans-serif"
+    fontSize: "clamp(44px, 8vw, 8rem)"
+    fontWeight: 700
+    lineHeight: 0.95
+    letterSpacing: "-0.04em"
   headline:
-    fontFamily: "Overpass, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(38px, 5.4vw, 72px)"
-    fontWeight: 800
-    lineHeight: 1
+    fontFamily: "Bricolage Grotesque Variable, Onest Variable, system-ui, sans-serif"
+    fontSize: "clamp(48px, 9vw, 9rem)"
+    fontWeight: 700
+    lineHeight: 0.92
+    letterSpacing: "-0.04em"
+  statement:
+    fontFamily: "Bricolage Grotesque Variable, Onest Variable, system-ui, sans-serif"
+    fontSize: "clamp(30px, 4.6vw, 72px)"
+    fontWeight: 600
+    lineHeight: 1.12
     letterSpacing: "-0.03em"
+  panel-heading:
+    fontFamily: "Bricolage Grotesque Variable, Onest Variable, system-ui, sans-serif"
+    fontSize: "clamp(34px, 4.4vw, 64px)"
+    fontWeight: 700
+    lineHeight: 1
+    letterSpacing: "-0.035em"
+  pill:
+    fontFamily: "Bricolage Grotesque Variable, Onest Variable, system-ui, sans-serif"
+    fontSize: "clamp(22px, 3vw, 44px)"
+    fontWeight: 600
+    letterSpacing: "-0.02em"
   title:
-    fontFamily: "Overpass, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(30px, 4vw, 46px)"
-    fontWeight: 800
-    lineHeight: 1.05
-    letterSpacing: "-0.025em"
-  title-sm:
-    fontFamily: "Overpass, Helvetica Neue, Arial, sans-serif"
-    fontSize: "26px"
-    fontWeight: 800
+    fontFamily: "Bricolage Grotesque Variable, Onest Variable, system-ui, sans-serif"
+    fontSize: "clamp(22px, 2.8vw, 38px)"
+    fontWeight: 600
     lineHeight: 1.1
     letterSpacing: "-0.02em"
-  subtitle:
-    fontFamily: "Overpass, Helvetica Neue, Arial, sans-serif"
-    fontSize: "20px"
-    fontWeight: 700
-    lineHeight: 1.3
-  lede:
-    fontFamily: "Overpass, Helvetica Neue, Arial, sans-serif"
-    fontSize: "clamp(19px, 2vw, 24px)"
+  lead:
+    fontFamily: "Onest Variable, system-ui, sans-serif"
+    fontSize: "clamp(19px, 2vw, 26px)"
     fontWeight: 400
-    lineHeight: 1.45
+    lineHeight: 1.35
   body:
-    fontFamily: "Overpass, Helvetica Neue, Arial, sans-serif"
+    fontFamily: "Onest Variable, system-ui, sans-serif"
     fontSize: "17px"
     fontWeight: 400
-    lineHeight: 1.55
-  body-sm:
-    fontFamily: "Overpass, Helvetica Neue, Arial, sans-serif"
-    fontSize: "15px"
-    fontWeight: 600
-    lineHeight: 1.4
-  caption:
-    fontFamily: "Overpass, Helvetica Neue, Arial, sans-serif"
-    fontSize: "14px"
-    fontWeight: 600
-    lineHeight: 1.4
+    lineHeight: 1.6
   label:
-    fontFamily: "Overpass, Helvetica Neue, Arial, sans-serif"
-    fontSize: "13px"
-    fontWeight: 800
-    letterSpacing: "0.06em"
-  code:
-    fontFamily: "Overpass Mono, ui-monospace, monospace"
-    fontSize: "13px"
+    fontFamily: "Onest Variable, system-ui, sans-serif"
+    fontSize: "15px"
     fontWeight: 400
+    lineHeight: 1.6
+  caption:
+    fontFamily: "Onest Variable, system-ui, sans-serif"
+    fontSize: "14px"
+    fontWeight: 400
+    lineHeight: 1.6
+  micro:
+    fontFamily: "Onest Variable, system-ui, sans-serif"
+    fontSize: "13px"
+    fontWeight: 600
 rounded:
-  tag: "2px"
-  focus: "4px"
-  sign: "8px"
-  panel: "10px"
-  tile: "14px"
+  focus: "6px"
+  panel: "16px"
   pill: "999px"
-  disc: "50%"
+  circle: "50%"
 spacing:
-  gutter: "clamp(16px, 5vw, 72px)"
-  band: "clamp(72px, 9vw, 128px)"
   xs: "8px"
-  sm: "14px"
-  md: "24px"
-  lg: "44px"
-  xl: "64px"
+  sm: "12px"
+  md: "16px"
+  lg: "20px"
+  gutter: "clamp(16px, 4.5vw, 64px)"
+  section: "clamp(80px, 10vw, 160px)"
+  stack-gap: "8vh"
 components:
-  sign-primary:
-    backgroundColor: "{colors.signal-ink}"
-    textColor: "{colors.map-paper}"
-    rounded: "{rounded.sign}"
-    padding: "9px 14px 7px"
-  sign-primary-hover:
-    backgroundColor: "{colors.backend-red}"
-    textColor: "{colors.map-paper}"
-  sign-large:
-    backgroundColor: "{colors.signal-ink}"
-    textColor: "{colors.map-paper}"
-    rounded: "{rounded.sign}"
-    padding: "20px 26px 17px"
-  sign-on-night:
-    backgroundColor: "{colors.map-paper}"
-    textColor: "{colors.signal-ink}"
-    rounded: "{rounded.sign}"
-  line-tag:
-    backgroundColor: "{colors.station-white}"
-    textColor: "{colors.signal-ink}"
+  button-primary:
+    backgroundColor: "{colors.stage-ink}"
+    textColor: "{colors.stage}"
     rounded: "{rounded.pill}"
-    padding: "3px 12px 2px 4px"
-  line-bullet:
-    backgroundColor: "{colors.backend-red}"
-    textColor: "{colors.station-white}"
-    rounded: "{rounded.disc}"
-    size: "30px"
-  map-key:
-    backgroundColor: "{colors.station-white}"
-    textColor: "{colors.signal-ink}"
-    rounded: "{rounded.panel}"
-    padding: "14px 18px 12px"
-  you-are-here:
-    backgroundColor: "{colors.signal-ink}"
-    textColor: "{colors.station-white}"
+    padding: "15px 26px"
+  button-primary-hover:
+    backgroundColor: "{colors.periwinkle}"
+    textColor: "{colors.stage}"
+  button-ghost:
+    backgroundColor: "transparent"
+    textColor: "{colors.stage-ink}"
     rounded: "{rounded.pill}"
-    height: "28px"
-  timetable-head:
-    backgroundColor: "{colors.signal-ink}"
-    textColor: "{colors.map-paper}"
+    padding: "15px 26px"
+  button-ghost-hover:
+    backgroundColor: "{colors.stage-ink}"
+    textColor: "{colors.stage}"
+  button-sm:
     typography: "{typography.label}"
-    padding: "12px 20px 10px"
-  station-logo:
-    backgroundColor: "{colors.station-white}"
-    rounded: "{rounded.tile}"
-    size: "112px"
-    padding: "14px"
+    rounded: "{rounded.pill}"
+    padding: "9px 18px"
+  button-lg:
+    rounded: "{rounded.pill}"
+    padding: "22px 34px"
+  nav:
+    backgroundColor: "{colors.stage-panel}"
+    rounded: "{rounded.pill}"
+    padding: "8px 8px 8px 18px"
+  nav-link:
+    textColor: "{colors.stage-muted}"
+    typography: "{typography.label}"
+    rounded: "{rounded.pill}"
+    padding: "8px 14px"
+  nav-link-active:
+    backgroundColor: "{colors.stage-line}"
+    textColor: "{colors.stage-ink}"
+  badge:
+    textColor: "{colors.stage-muted}"
+    typography: "{typography.label}"
+    rounded: "{rounded.pill}"
+    padding: "8px 16px 8px 12px"
+  card-experience:
+    backgroundColor: "{colors.stage-panel}"
+    textColor: "{colors.stage-ink}"
+    rounded: "{rounded.panel}"
+    padding: "clamp(28px, 4vw, 56px)"
+  chip-note:
+    textColor: "{colors.stage-muted}"
+    typography: "{typography.label}"
+    rounded: "{rounded.pill}"
+    padding: "7px 14px"
+  pill-skill:
+    backgroundColor: "{colors.stage-panel}"
+    textColor: "{colors.stage-ink}"
+    typography: "{typography.pill}"
+    rounded: "{rounded.pill}"
+    padding: "14px 28px"
+  pill-skill-hover:
+    backgroundColor: "{colors.periwinkle}"
+    textColor: "{colors.stage}"
+  row-credential:
+    textColor: "{colors.paper-ink}"
+    typography: "{typography.title}"
+    padding: "26px 8px"
+  post-panel:
+    backgroundColor: "{colors.paper-panel}"
+    textColor: "{colors.paper-ink}"
+    typography: "{typography.panel-heading}"
+    rounded: "{rounded.panel}"
+    padding: "clamp(24px, 3vw, 40px)"
+  social-link:
+    textColor: "{colors.stage-ink}"
+    rounded: "{rounded.pill}"
+    padding: "10px 18px"
 ---
 
 # Design System: Manal Liaquat
 
 ## Overview
 
-**Creative North Star: "The Network Map"**
+**Creative North Star: "The Launch Keynote"**
 
-The whole site is printed transit cartography. A pale map paper carries ink-black signage and four thick, saturated line colours, each of which names a discipline (Backend, Frontend, Mobile, Tooling). Content is arranged the way a metro authority arranges information: a map with a key, a station guide, strip maps per line, a timetable, and a terminus. Strip every word away and the system is still recognisable: 10 to 12px coloured strokes on 45° diagonals, white discs with heavy ink rings where lines meet, rectangular end-of-line bars, and alternating fare-zone bands behind them.
+The site plays like a product launch on a dark stage. The name arrives at full width and full weight. The summary lights up word by word while the page holds still. Each role slides in as a panel over the last one, and the skills run past in rows. Then the house lights come up: the page fades to warm paper for credentials and writing, goes dark again, and closes on a full-bleed call to email. Scroll sets the pace. Every movement is tied to the reader's scroll position or pointer, and almost nothing moves on a timer.
 
-Density is calm and wayfinding-first. Type is large, heavy and direct, set in Overpass, a face descended from highway signage; Overpass Mono appears only for dates, years and codes, the way a timetable sets departure times. Depth comes from layered planes (zone bands far, lines and stations mid, labels near) that drift apart with scroll and pointer, never from shadows or blur. Motion is cartographic, and every move is something a network does. On arrival the name wipes in, the lines draw themselves along their paths, stations appear once the line reaches them, a train runs the backend line into Plai, and "You are here" pops in. Scrolling past the map sends the train on along the line. Hovering or focusing a station opens its board (logo, role, dates, highlights, lines). The header's bottom rule fills red as scroll progress, and the nav underlines the section in view. Each section enters in its own way: headings rise with a short bar in their line colour, the station guide's track fills and dims stations not yet reached, the strip maps draw across and their stops pop in order, timetable rows flip in like a departures board, writing slides in, and the terminus line draws to its station ring. Signs fill red from the left on hover. All of it switches off under `prefers-reduced-motion`, and the content reads completely without it.
+Density is low and scale is extreme. One or two very large Bricolage Grotesque words own each section, and Onest body text sits quietly beneath them. The material is plain: flat near-black panels, 1px hairlines at 12% ink, pill controls and 16px-radius panels. Depth comes from motion (scale, brightness and stacking order), not from shadow, glass or glow. The one periwinkle accent marks the second line of the name, roles, links and the filled state of a control, and nothing else.
 
-The hero map draws on load as a timed sequence (about 3.5s end to end); the scroll-tied drawing lives in the train's departure and the station guide. Entrances are hidden only under `.anim-on`, which the app sets when motion is allowed, so content is visible if scripts fail.
+Every effect is optional. Under `prefers-reduced-motion` the intro, smooth scroll, scrubbing, marquees, magnetic pull and cursor ring all switch off, and the page shows its final state at once. The native cursor always stays.
 
 **Key Characteristics:**
-- Map paper, ink, and four line colours as named roles; nothing else carries hue.
-- Thick round-capped strokes, 45° diagonals only, white ringed interchanges.
-- Overpass at weight 800 for every heading; Overpass Mono only for time and codes.
-- Flat surfaces; depth is parallax between map planes, not shadow.
-- Ink-filled "signs" with an arrow are the only buttons.
-- One dark surface, the terminus, where the backend line runs into contact.
+- Near-black stage, warm off-white ink, one periwinkle accent; a single shift to paper for the credentials and writing sections.
+- Display type at extreme scale (up to 30rem) with tight but legible tracking (-0.04em).
+- Hairline rules, 16px-radius panels and fully rounded pill controls; no shadows.
+- Scroll-scrubbed choreography (GSAP ScrollTrigger with Lenis) on one shared ease curve.
+- All motion removed under reduced motion; content and layout never depend on it.
 
 ## Colors
 
-A near-white map paper and cool ink with four transit-saturated line colours that function strictly as labels for disciplines.
+The page uses two tonal scenes, a dark stage and a light paper, and each has exactly one accent.
 
 ### Primary
-- **Backend Red** (backend-red): the current line, the one that runs off the page edge. Strokes, the "You are here" dot, the terminus line and disc, and the hover state of every ink sign and nav underline. The most important colour because it marks where the career is now.
-
-### Secondary
-- **Frontend Blue** (frontend-blue): the frontend line, and the system's interactive colour: focus outlines (3px, offset 3px), text selection, "Verify" and "Read on Medium" links, the intermediate stop tick on the map, and focused station labels.
-
-### Tertiary
-- **Mobile Green** (mobile-green): the mobile line, on the map, the station guide track and the line bullets.
-- **Tooling Amber** (tooling-amber): the tooling line. It appears only as a fill (strip-map track and bullet), always carrying ink text, never white text and never as text on paper.
+- **Periwinkle** (`periwinkle`): the accent on the dark stage. Used for the second line of the hero name, each role title, the second line of the contact headline, the focus outline, selected text, link affordances ("Verify"), the skill-pill hover fill, the hover fill of the solid button and the labelled cursor ring.
+- **Cobalt** (`cobalt`): the same accent role on the paper scene, deepened so it meets AA contrast on paper. It takes over automatically when a section is marked as light; never place it on the dark stage.
 
 ### Neutral
-- **Map Paper** (map-paper): page background, header background, alternate fare-zone bands, and text on ink surfaces. Also the `theme-color`.
-- **Fare Zone** (fare-zone): the alternating year bands behind the map, the Lines section background, even timetable rows, and the scrollbar track.
-- **Station White** (station-white): the fill of every station disc, ring and strip-map stop; the map key panel, line tags and logo tiles. Pure white reads as "the station" against off-white paper.
-- **Signal Ink** (signal-ink): all text, station rings, header and section rules (2px), sign backgrounds, the timetable head, the "You are here" pill, and the terminus surface.
-- **Timetable Grey** (timetable-grey): secondary text (taglines, highlights, issuers, post descriptions), dates and year labels.
-- **Track Rule** (track-rule): 1 to 1.5px dividers, tag and tile borders, and the unreached station-guide track and disc rings.
-- **Night Rule / Night Muted / Night Focus** (night-rule, night-muted, night-focus): the terminus only. Dividers between connections, secondary text, and a lightened focus outline that keeps the blue focus language legible on ink.
+- **Stage Black** (`stage`): the page background and the ink on filled light controls (solid button, hover fills, the intro curtain's type). It doubles as the accent-ink on the dark stage.
+- **Stage Panel** (`stage-panel`): experience cards, skill pills and the base of the floating nav. `stage-panel-raised` is defined for a second tier but rarely used.
+- **Warm Ink** (`stage-ink`): all primary text on dark, the solid button fill, the hover fill of ghost buttons and socials, and the intro curtain.
+- **Ash** (`stage-muted`): dates, counts, the badge, chip notes, marquee labels, nav links at rest, footer text.
+- **Hairline** (`stage-line`): every border and rule on dark, and the background of the active nav link.
+- **Paper** (`paper`), **Paper White** (`paper-panel`), **Paper Raised** (`paper-panel-raised`), **Paper Ink** (`paper-ink`), **Graphite** (`paper-muted`), **Paper Hairline** (`paper-line`): the light scene's equivalents, swapped in as a set. Paper White is also the accent-ink on paper and the backing tile behind company logos.
+- **Live Green** (`live-green`): only the pulsing "currently" dot in the hero badge. It is a status signal, not an accent.
 
 ### Named Rules
-**The Line Colour Rule.** Red, blue, green and amber each name a discipline. A line colour appears only where that discipline is meant (a stroke, a bullet, a tag, a strip track), with two sanctioned interaction uses: blue for focus and links, red for hover on signs and underlines. No line colour is ever decoration.
+**The One Accent Rule.** Each scene has exactly one accent: periwinkle on the stage, cobalt on paper. A second hue (Live Green excepted) never enters.
 
-**The Ink On Amber Rule.** Text set on a line colour is white on red, blue and green, and ink on amber.
+**The Scene Swap Rule.** Colors are always assigned through the role variables (background, panel, ink, muted, line, accent, accent-ink), never as raw hex values in a component. The light scene is a full swap of those roles on the page root, cross-faded over 0.7s, so every component works in both scenes without its own light variant.
 
 ## Typography
 
-**Display Font:** Overpass (with Helvetica Neue, Arial, sans-serif), self-hosted at 400, 600, 700, 800.
-**Body Font:** Overpass.
-**Label/Mono Font:** Overpass Mono (with ui-monospace, monospace), self-hosted at 400 and 600.
+**Display Font:** Bricolage Grotesque Variable (with Onest Variable, system-ui)
+**Body Font:** Onest Variable (with system-ui, sans-serif)
 
-**Character:** Signage type. Overpass at 800 with tight negative tracking gives every heading the weight of a station name board; Overpass Mono beside it reads as a printed timetable.
+Both are self-hosted variable fonts loaded from `@fontsource-variable`.
+
+**Character:** Bricolage carries the voice: heavy, slightly quirky, tracked tight and set enormous. Onest is the plain, even reading face that stays out of its way. All h1 to h3 headings use Bricolage, with `text-wrap: balance`.
 
 ### Hierarchy
-- **Display** (800, clamp(52px, 8.4vw, 6rem), 0.92, -0.03em): the name in the hero, and the terminus heading at a slightly larger clamp (up to 6rem, 0.95).
-- **Headline** (800, clamp(38px, 5.4vw, 72px), 1, -0.03em): section names (Stations, Lines, Credentials, Writing).
-- **Title** (800, clamp(30px, 4vw, 46px), 1.05, -0.025em): station names in the guide; post titles a step smaller (clamp(26px, 3.2vw, 38px)); map station names at 20px.
-- **Title Small** (800, 26px, -0.02em): strip-map line names and the floor of post titles.
-- **Subtitle** (700, 19 to 24px): role lines under names (hero title, station role).
-- **Lede** (400, clamp(19px, 2vw, 24px), 1.45, max 38em): section introductions; descriptions cap at 60ch.
-- **Body** (400, 17px, 1.55): highlights, table cells, descriptions.
-- **Body Small** (600, 15px): nav links, the header sign, map roles, connection handles, mono dates in the guide.
-- **Caption** (600, 14px): map key entries, line tags, the "You are here" pill, the footer.
-- **Label** (800, 13px, 0.06em, uppercase): the map key heading and timetable column heads only.
-- **Code** (Overpass Mono 400, 12 to 15px): dates, years on the fare-zone bands, date ranges in the guide.
+- **Display** (700, clamp 64px to 30rem, 0.84 line height, -0.04em, optical size 96): the hero name only, set across the full width in two lines (26.5vw on mobile).
+- **Display Closing** (700, clamp 56px to 13rem, 0.9, -0.045em): the two-line contact headline, whose second line is in the accent.
+- **Display Company** (700, clamp 44px to 8rem, 0.95, -0.04em): company names on the experience cards.
+- **Headline** (700, clamp 48px to 9rem, 0.92, -0.04em): section titles, one or two words, revealed line by line out of a mask.
+- **Statement** (600, clamp 30px to 72px, 1.12, -0.03em, max 21em): the pinned summary paragraph that lights up word by word.
+- **Panel Heading** (700, clamp 34px to 64px, 1, -0.035em): writing-panel titles.
+- **Pill** (600, clamp 22px to 44px, -0.02em): skill pills in the marquees.
+- **Title** (600, clamp 22px to 38px, 1.1, -0.02em): credential row titles.
+- **Lead** (400, clamp 19px to 26px, 1.35): the hero tagline (max 22ch) and role titles (500 weight, in the accent color).
+- **Body** (400, 17px, 1.6): running text. Post summaries are capped at 44ch.
+- **Label** (400 to 500, 15px): nav links, the badge, dates (tabular numerals), chip notes, marquee labels, small buttons.
+- **Caption** (14px): the footer.
+- **Micro** (600, 13px): the label inside the cursor ring and the ML monogram (Bricolage 700 there). The hero's vertical scroll cue is also 13px, but it is uppercase with 0.2em tracking, which makes it a one-off rather than a reusable label style.
 
 ### Named Rules
-**The Mono Is Time Rule.** Overpass Mono is reserved for dates, years and codes. Names, roles and prose are always Overpass.
+**The Two Voices Rule.** Bricolage is for things you look at, Onest is for things you read. Never set a paragraph in Bricolage below statement size, and never set a heading in Onest.
 
-**The Baseline Lift Rule.** Overpass sits high in its box, so filled elements carry 2 to 3px more padding on top than on bottom (signs 9/7 and 20/17, tags 3/2, bullets padding-top 0.12em). Keep the asymmetry when adding filled labels.
+**The Tight-But-Legal Rule.** Display tracking runs between -0.02em and -0.045em, getting tighter as the size grows; it never goes tight enough for letters to collide.
 
 ## Layout
 
-A full-bleed page with a fluid side gutter (gutter) and generous vertical bands (band padding). The header is a 64px sticky bar on map paper with a 2px ink bottom rule; anchor scrolling is offset by 84px to clear it. The hero is a two-column grid (title block, then the map key aligned to the bottom right) above a full-width SVG network map whose current line bleeds past the right edge, clipped by the hero.
+The layout is a single full-bleed column with a fluid gutter (clamp 16px to 64px) on both sides. Sections are separated by generous fluid padding (clamp 80px to 160px at the top for experience, 80px to 140px for credentials and writing, 100px to 200px for contact). Each section opens with a heading block: a huge title on the left, an optional muted count on the right, and a hairline rule below, with clamp 32px to 64px of space before the content.
 
-The station guide is a two-column grid (intro at minmax(280px, 1fr), list at 1.7fr) with a sticky intro (top 112px). Each stop is a three-column row: a 60px track gutter with a 10px vertical track, the body, and a 112px logo tile. Strip maps are a 200px name column beside a horizontal track with evenly flexed stops (max 190px each). Lists and posts cap at 980px. Connections use an auto-fill grid of 260px minimum columns.
+- **Hero:** at least one full viewport (`100svh`), content aligned to the bottom. The badge, name, tagline and buttons stack in the lower left, with a vertical scroll cue in the lower right.
+- **Statement:** a 260vh track with a sticky, viewport-tall frame, so the paragraph stays put while its words light up.
+- **Experience:** an ordered list of sticky cards with 8vh between them. Each sticks at `96px + index × 22px` (84px + index × 14px on mobile), so the edges of earlier cards stay visible above the current one.
+- **Skills:** full-bleed marquee rows. Each row has a fixed label column (`minmax(120px, 13vw)`) and a masked viewport that fades out at 6% from each edge.
+- **Credentials:** a three-column row grid (title, issuer, action at 100px) between hairlines.
+- **Writing:** two equal panels with a 20px gap.
+- **Small gaps** run on 8, 12, 16 and 20px steps; pills and chips use 8 to 14px gaps.
 
-At 900px and below: the nav hides (the Email sign stays), the key becomes an unboxed legend strip under a 2px ink rule, the map swaps to a vertical drawing where time runs top to bottom, strip maps turn vertical, the guide intro stops sticking, and logos shrink to 56px tiles in the corner of each stop. At 600px the timetable drops its header and each row becomes a two-column card.
+One breakpoint at **860px**. Below it the nav hides its links and name, keeping the monogram and the Contact button. The scroll cue disappears. The hero drops its full-height rule and takes 140px of top padding. Marquee labels stack above their rows, credential rows collapse to two columns, and writing panels go to one column.
 
 ## Elevation & Depth
 
-The system is flat: there is no `box-shadow`, gradient or blur anywhere. Separation comes from 2px ink rules, 1 to 1.5px track-rule borders, the fare-zone tint, and the single ink terminus surface. Depth is spatial instead: the hero map is three stacked SVG planes (fare-zone bands far, lines and stations mid, labels near) that translate at different rates with scroll and a fine pointer, and the title block drifts slightly against the map. Hovering a station label thickens its ring on the mid plane, so the planes answer each other.
+The system is flat at rest and has no `box-shadow` anywhere. Depth comes from three sources. First, tonal layering: a panel sits one step above the background, with a 1px hairline. Second, stacking: sticky cards physically overlap. Third, motion: as the next card slides over a card, the earlier one scales to 0.93 and dims to 62% brightness, and the hero recedes (moves up 18%, scales to 0.94, fades to 0.15 opacity) as you scroll past it. The floating nav is the only surface with a backdrop blur (14px over an 82% panel tint), and that is what lets it float over the content.
 
 ### Named Rules
-**The Paper Map Rule.** Nothing floats above the paper. Depth is planes sliding against each other, never a cast shadow.
+**The Recede, Don't Lift Rule.** To show something is behind, push it back with scale and brightness tied to scroll. Never add a drop shadow to bring something forward.
+
+**The Hover Lift Exception.** Writing panels are the only panels that rise on hover (up 6px over 0.6s). They also show a soft accent wash that follows the cursor (18% accent, 420px radius), which only appears while hovering.
 
 ## Shapes
 
-Strokes are thick and round: 12px map lines and 10px guide and strip tracks, all with round caps and joins, turning only at 45°. Stations are circles: 24px strip stops and 40px guide discs in white with 5 to 7px rings, 12px-radius map interchanges with a 5px ink ring (6px at the current station, 8px on hover). Line ends are flat rectangular bars (2px radius). Bars and tracks with rounded ends take half their thickness as radius (3px on the 6px key swatch, 5px on the 10px strip track, 6px where the 12px terminus line ends). The focus outline carries a 4px radius. Containers are soft rectangles: signs at 8px, the map key and timetable at 10px, logo tiles at 14px; tags and the "You are here" marker are full pills. Line bullets are solid circles bearing a single letter.
+The shape language is pill plus panel. Every control (buttons, nav, nav links, badge, chip notes, skill pills, social links, the skip link) is fully rounded (999px). Every content container (experience cards, writing panels, logo tiles, the floating credential preview) uses a 16px radius. Circles appear only for the nav monogram, the live dot and the cursor ring. The focus outline is 2px in the accent, offset 4px with a 6px radius. Borders are always 1px hairlines in the line color. Interface icons are a single 16px stroked arrow (1.8 stroke, round caps), straight for actions and diagonal for external links. On hover it nudges 2 to 3px in the direction it points.
 
 ## Components
 
-### Buttons (Signs)
-Ink panels that read like station direction signs.
-- **Shape:** gently rounded (8px).
-- **Primary:** signal ink fill, map paper text, 700 weight, a trailing 16px stroked arrow; small (15px, 9px 14px 7px) in the header, large (clamp(18px, 2.6vw, 30px), 20px 26px 17px) for the email address at the terminus.
-- **Hover / Focus:** fill turns backend red in 0.15s and the arrow slides 3px right; focus is the 3px blue outline. On the ink terminus the sign inverts to paper with ink text, then red with white text on hover.
+All transitions share one curve, `cubic-bezier(0.16, 1, 0.3, 1)` (a fast start with a long, soft settle), unless noted.
 
-### Chips (Line Tags)
-- **Style:** white pill with a 1.5px track-rule border, 14px 600 text, led by a 22px line bullet.
-- **State:** static labels; no selected state.
+### Buttons
+- **Shape:** full pill, 1px hairline border, Onest 500, with an optional trailing arrow.
+- **Primary (solid):** ink fill with stage-colored text. On hover a periwinkle layer rises from below (translateY 101% to 0 over 0.5s) and the text switches to accent-ink.
+- **Ghost:** transparent with ink text. On hover an ink layer rises from below and the text turns stage black.
+- **Sizes:** default 15px by 26px padding; small 9px by 18px at 15px (nav Contact); large 22px by 34px at clamp 17px to 26px (the contact email, which may break anywhere).
+- **Magnetic:** hero and contact buttons lean toward a fine pointer (30% of the offset, 20% for the large one, 0.5s power3 easing) and spring back when the pointer leaves.
+- **Focus:** the global accent outline.
 
-### Line Bullets
-Solid line-coloured circles with the line's letter in 800 weight, at 22, 30 or 44px. They name a line wherever it is mentioned outside the map.
+### Chips
+- **Chip notes** (experience highlights): pill, hairline border, muted 15px text, 7px by 14px padding. They are static and have no hover state.
+- **Skill pills:** pill on the panel color, in Bricolage 600 at clamp 22px to 44px, 14px by 28px padding. On hover they fill with the accent and accent-ink text.
 
 ### Cards / Containers
-- **Corner Style:** 10px for the map key and timetable frame, 14px for logo tiles.
-- **Background:** station white on map paper.
-- **Shadow Strategy:** none (see Elevation & Depth).
-- **Border:** 2px signal ink for the key and timetable, 1.5px track rule for logo tiles.
-- **Internal Padding:** 14px 18px 12px (key), 14px (logo tile).
+- **Experience card:** 16px radius, panel background, hairline border, padding clamp 28px to 56px, minimum height min(56vh, 480px). A date (tabular) and a 64px logo on a white 16px tile sit at the top, then the company name at display scale, the role in the accent, and the chip notes. When it enters, its contents fade up 40px with a 0.06s stagger.
+- **Writing panel:** 16px radius, panel background, hairline border, padding clamp 24px to 40px, minimum height 300px (no minimum on mobile). The heading sits at the top, followed by a muted summary capped at 44ch, and a "Read on Medium" link pinned to the bottom. Hover adds the lift and cursor wash described under Elevation, and the border turns to the accent.
 
 ### Navigation
-600 weight 15px ink links spaced 26px apart, no underline at rest, underline in backend red on hover. The home link pairs the site mark (three short line strokes meeting at a white ringed interchange) with the name in 800. Below 900px the links hide; the Email sign remains.
+- **Floating pill nav:** fixed 16px from the top, centered, up to 980px wide, 82% panel tint with a 14px blur and a hairline border. It holds the ML monogram (a 32px ink circle that spins a full turn on hover), the name, section links and a small Contact button.
+- **Links:** muted 15px text in 8px by 14px pills. On hover, and on the active section (tracked by scroll position), they get ink text on a hairline-tinted fill.
+- **Scroll behavior:** the nav slides up out of view when scrolling down and returns when scrolling up or within 120px of the top (0.45s, power3.out). After 40px it switches to a 90% background tint.
 
-### Network Map (signature)
-An SVG metro map of the career: one lane per discipline, time along the long axis, 45° transfers between lanes, ringed interchanges where a role spanned two lines, a blue tick for a single-line stop, end bars where a line stops, and a ringed red-dot station with an ink "You are here" pill for the current role. Station labels are links to the guide entry (name 800 20px, role 400 15px, date in mono). Lines draw in sequence over 1.3s with the expo-out ease; stations fade in after.
+### Credential Rows (signature)
+These are full-width rows between hairlines. The title is set in Bricolage, the issuer is muted, and verifiable rows end with an accent "Verify" and a diagonal arrow. On hover the row slides 20px inward (8px to 28px left padding) and the title turns to the accent. With a mouse, a 150px white tile showing the certificate image follows the cursor, appearing from 0.5 scale and -8° rotation. When the list scrolls in, the rows wipe in from the left (clip-path, 1s power4.inOut, 0.07s stagger).
 
-### Station Guide (signature)
-A vertical line diagram of the career. Each stop's track segment takes the colour of the line that joins it to the next stop and fills top-down as the reader scrolls; its disc ring turns from track rule to ink when reached.
+### Skill Marquees (signature)
+Rows of skill pills scroll sideways in alternating directions on a 38s loop. Their speed jumps with scroll velocity (up to 7× normal) and settles back over 1.2s. A group with fewer than three items stays still and unmasked rather than repeating itself. Under reduced motion, each row shows one wrapped set of pills.
 
-### Strip Maps
-One per line: the line bullet and name, then a 10px coloured track with white ink-ringed stops, one per skill, labelled beneath in 600 16px.
+### Kinetic Type (signature)
+Headings are split into masked letters or lines that rise into place. Hero letters rise from 115% (1.1s power4.out, 0.04s stagger). Section titles rise line by line from 110% when they enter the viewport. The contact headline scales up from 0.86 as you scroll to it. Supporting elements fade up 40px over 1s (power3.out). Screen readers get each string once, intact.
 
-### Timetable
-Credentials as a departures board: ink header row in uppercase labels, zebra fare-zone rows, 700 names, grey issuers, and a right-aligned blue "Verify" link with an external arrow.
+### Cursor Ring
+A 36px ring with a 1px border follows the native cursor (0.35s power3) in difference blend mode. Over links and buttons it grows to 64px and fills. Over targets that carry a label ("Verify", "Read") it grows to 84px, fills with the accent and shows the label. It shrinks to 26px while pressed. It only appears with a fine pointer and normal motion settings, and it never replaces the native cursor.
 
-### Terminus
-The contact section on signal ink. The backend line enters from the left edge and ends in a white disc with a red ring, followed by the display heading, the large email sign and a grid of connections divided by night rules.
+### Intro Curtain
+This plays once per session: the name assembles in stage black on an ink curtain with a 2px progress bar, the letters lift out, and the curtain slides up (0.8s power4.inOut). It is skipped on repeat visits and under reduced motion.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** give every discipline its line colour (backend-red, frontend-blue, mobile-green, tooling-amber) and use that colour every time the discipline appears.
-- **Do** draw connections as thick round-capped strokes (10 to 12px) that turn only at 45°, with white ringed discs at stations.
-- **Do** set headings in Overpass 800 with negative tracking, and dates and years in Overpass Mono.
-- **Do** keep primary actions as ink signs with an arrow that turn backend red on hover.
-- **Do** show keyboard focus as the 3px frontend-blue outline at 3px offset (night-focus on the terminus).
-- **Do** switch off stroke drawing, fades, entrances, the train run, guide fill and parallax under `prefers-reduced-motion`, leaving every element in its final state (the train parked at Plai).
+- **Do** assign every color through the role variables so a section marked as light swaps the whole palette at once.
+- **Do** keep one accent per scene: periwinkle on the stage, cobalt on paper.
+- **Do** use Bricolage at 600 to 700 with -0.02em to -0.045em tracking for anything meant to be looked at, and Onest at 17px with 1.6 line height for anything meant to be read.
+- **Do** make every control a 999px pill with a 1px hairline, and every content container a 16px-radius panel.
+- **Do** use `cubic-bezier(0.16, 1, 0.3, 1)` for CSS transitions and power3/power4 eases for GSAP, and tie large movements to scroll position.
+- **Do** show depth by receding with scale and brightness, not by lifting with shadows.
+- **Do** give every motion a reduced-motion path that shows the final state, and keep the native cursor and the 2px accent focus outline.
 
 ### Don't:
-- **Don't** add box shadows, gradients or blur; depth comes from parallax planes and rules.
-- **Don't** introduce a hue outside the four line colours, or use a line colour as decoration.
-- **Don't** put white text on tooling amber or set amber text on paper.
-- **Don't** draw curved or arbitrary-angle lines on the map; 45° diagonals only.
-- **Don't** set names, roles or prose in Overpass Mono.
+- **Don't** use gradient text, glass cards or glow halos. The nav's backdrop blur is the only frosted surface, and the writing panels' accent wash appears only on hover.
+- **Don't** add `box-shadow` to panels, cards or buttons.
+- **Don't** introduce a second accent hue or put cobalt on the dark stage.
+- **Don't** fall back to equal-card grids with generic fade-ups; each section has its own scroll behavior.
+- **Don't** hide the native cursor or make any content depend on hover, the pointer or motion.

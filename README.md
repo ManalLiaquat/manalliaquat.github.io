@@ -5,8 +5,9 @@
 I'm a Backend Engineer and Backend Team Lead at Plai, with 7+ years building
 web and mobile applications in JavaScript: Node.js, Express, MongoDB, React, Next.js and React Native.
 
-This repository is my portfolio. It is a dark, cinematic single-page portfolio with scroll-driven
-storytelling, built with React, GSAP and Lenis.
+This repository is my portfolio. It has two themes: **Terminal** (the default), a typeable
+terminal, and **Motion**, a dark cinematic page with scroll-driven animation built with GSAP and
+Lenis. Link to one with `?theme=terminal` or `?theme=motion`.
 
 ## For AI agents and crawlers
 

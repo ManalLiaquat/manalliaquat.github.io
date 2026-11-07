@@ -183,7 +183,7 @@ ${profile.summary}
 
 ## Key pages
 
-- [Portfolio](${SITE}): experience, skills, credentials, writing and contact
+- [Portfolio](${SITE}): portfolio with a terminal theme (default) and a motion theme
 - [Full profile for LLMs](${SITE}llms-full.txt): complete experience, skills, certifications and writing in Markdown
 - [Résumé JSON](${SITE}resume.json): machine-readable résumé (JSON Resume schema)
 

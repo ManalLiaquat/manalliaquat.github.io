@@ -1,6 +1,6 @@
 /* Stage: near-black with warm off-white type, one periwinkle accent; the page
    fades to paper for credentials and writing. */
-:root {
+.site {
   color-scheme: dark;
   --bg: #0b0b0d;
   --panel: #141417;
@@ -33,24 +33,21 @@
   transition: background-color 0.7s var(--ease), color 0.7s var(--ease);
   overflow-x: clip;
 }
-body {
-  background: var(--bg);
-}
-::selection {
+.site ::selection {
   background: var(--accent);
   color: var(--accent-ink);
 }
-:focus-visible {
+.site :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
   border-radius: 6px;
 }
-a {
+.site a {
   text-decoration: none;
 }
-h1,
-h2,
-h3 {
+.site h1,
+.site h2,
+.site h3 {
   font-family: var(--display);
   text-wrap: balance;
   margin: 0;

@@ -31,6 +31,13 @@ a {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+.theme-loading {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  font-family: "JetBrains Mono", ui-monospace, monospace;
+  color: #8b93a7;
+}
 /* Prerendered content for crawlers / no-JS; replaced once React mounts. */
 .prerender {
   max-width: 760px;
