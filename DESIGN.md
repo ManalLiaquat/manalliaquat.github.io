@@ -148,9 +148,9 @@ components:
 
 The whole site is printed transit cartography. A pale map paper carries ink-black signage and four thick, saturated line colours, each of which names a discipline (Backend, Frontend, Mobile, Tooling). Content is arranged the way a metro authority arranges information: a map with a key, a station guide, strip maps per line, a timetable, and a terminus. Strip every word away and the system is still recognisable: 10 to 12px coloured strokes on 45° diagonals, white discs with heavy ink rings where lines meet, rectangular end-of-line bars, and alternating fare-zone bands behind them.
 
-Density is calm and wayfinding-first. Type is large, heavy and direct, set in Overpass, a face descended from highway signage; Overpass Mono appears only for dates, years and codes, the way a timetable sets departure times. Depth comes from layered planes (zone bands far, lines and stations mid, labels near) that drift apart with scroll and pointer, never from shadows or blur. Motion is cartographic: strokes draw themselves along their path, stations fade in once the line reaches them, and the station guide's track fills as the reader scrolls. All of it switches off under `prefers-reduced-motion`, and the content reads completely without it.
+Density is calm and wayfinding-first. Type is large, heavy and direct, set in Overpass, a face descended from highway signage; Overpass Mono appears only for dates, years and codes, the way a timetable sets departure times. Depth comes from layered planes (zone bands far, lines and stations mid, labels near) that drift apart with scroll and pointer, never from shadows or blur. Motion is cartographic, and every move is something a network does. On arrival the name wipes in, the lines draw themselves along their paths, stations appear once the line reaches them, a train runs the backend line into Plai, and "You are here" pops in. Scrolling past the map sends the train on along the line. Hovering or focusing a station opens its board (logo, role, dates, highlights, lines). The header's bottom rule fills red as scroll progress, and the nav underlines the section in view. Each section enters in its own way: headings rise with a short bar in their line colour, the station guide's track fills and dims stations not yet reached, the strip maps draw across and their stops pop in order, timetable rows flip in like a departures board, writing slides in, and the terminus line draws to its station ring. Signs fill red from the left on hover. All of it switches off under `prefers-reduced-motion`, and the content reads completely without it.
 
-The build carries one known divergence from its original direction: on the hero map the lines draw on load (a timed CSS stroke animation), while the scroll-tied drawing lives in the station guide. Treat both as part of the system.
+The hero map draws on load as a timed sequence (about 3.5s end to end); the scroll-tied drawing lives in the train's departure and the station guide. Entrances are hidden only under `.anim-on`, which the app sets when motion is allowed, so content is visible if scripts fail.
 
 **Key Characteristics:**
 - Map paper, ink, and four line colours as named roles; nothing else carries hue.
@@ -281,7 +281,7 @@ The contact section on signal ink. The backend line enters from the left edge an
 - **Do** set headings in Overpass 800 with negative tracking, and dates and years in Overpass Mono.
 - **Do** keep primary actions as ink signs with an arrow that turn backend red on hover.
 - **Do** show keyboard focus as the 3px frontend-blue outline at 3px offset (night-focus on the terminus).
-- **Do** switch off stroke drawing, fades, guide fill and parallax under `prefers-reduced-motion`, leaving every element in its final state.
+- **Do** switch off stroke drawing, fades, entrances, the train run, guide fill and parallax under `prefers-reduced-motion`, leaving every element in its final state (the train parked at Plai).
 
 ### Don't:
 - **Don't** add box shadows, gradients or blur; depth comes from parallax planes and rules.

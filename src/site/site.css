@@ -943,3 +943,458 @@ html {
     display: none;
   }
 }
+
+/* ───────────── motion layer ─────────────
+   Everything below is visible by default; `.anim-on` (motion allowed, JS
+   running) hides entrances until `is-in` lands. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* header: scroll progress runs along the bottom rule */
+.top {
+  position: sticky;
+}
+.top-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 4px;
+  background: var(--backend);
+  transform-origin: left;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+.top nav a {
+  position: relative;
+  padding: 6px 0;
+}
+.top nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--ink);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s var(--ease);
+}
+.top nav a:hover {
+  text-decoration: none;
+}
+.top nav a:hover::after,
+.top nav a[aria-current]::after {
+  transform: scaleX(1);
+}
+.top nav a[aria-current]::after {
+  background: var(--backend);
+}
+
+/* signs: red fills in from the left */
+.sign {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.sign::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: var(--backend);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s var(--ease);
+}
+.sign:hover,
+.terminus .sign:hover {
+  background: var(--ink);
+}
+.terminus .sign:hover {
+  background: var(--paper);
+  color: #fff;
+}
+.sign:hover::before,
+.sign:focus-visible::before {
+  transform: scaleX(1);
+}
+.sign:active {
+  transform: translateY(1px);
+}
+
+/* hero arrival: the name wipes in, then title and key, then the map draws */
+.anim-on .title-wipe {
+  display: inline-block;
+  animation: wipe-in 0.9s var(--ease) both;
+}
+.anim-on .title-role,
+.anim-on .title-tag {
+  animation: rise 0.7s var(--ease) both;
+}
+.anim-on .title-role {
+  animation-delay: 0.25s;
+}
+.anim-on .title-tag {
+  animation-delay: 0.35s;
+}
+.anim-on .key li {
+  animation: rise 0.5s var(--ease) both;
+}
+.anim-on .key li:nth-child(1) {
+  animation-delay: 0.45s;
+}
+.anim-on .key li:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.anim-on .key li:nth-child(3) {
+  animation-delay: 0.95s;
+}
+.anim-on .key li:nth-child(4) {
+  animation-delay: 1.15s;
+}
+.anim-on .key li:nth-child(5) {
+  animation-delay: 1.25s;
+}
+@keyframes wipe-in {
+  from {
+    clip-path: inset(0 100% -0.2em 0);
+    transform: translateX(-0.15em);
+  }
+  to {
+    clip-path: inset(0 0 -0.2em 0);
+    transform: none;
+  }
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+/* map: train, You are here, station boards */
+.nm-train rect {
+  fill: var(--ink);
+  stroke: #fff;
+  stroke-width: 2.5;
+}
+.nm-train .nm-train-win {
+  fill: #fff;
+  stroke: none;
+}
+.anim-on .nm-here {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: pop 0.5s 3.3s var(--ease) both;
+}
+.anim-on .nm-current .nm-ring {
+  animation: arrive 0.8s 3.25s var(--ease) both;
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+}
+@keyframes arrive {
+  0% {
+    stroke: var(--ink);
+  }
+  35% {
+    stroke: var(--backend);
+    stroke-width: 9;
+  }
+  100% {
+    stroke: var(--ink);
+  }
+}
+.nm-board {
+  position: absolute;
+  z-index: 5;
+  width: 280px;
+  padding: 16px 18px 14px;
+  background: #fff;
+  border: 2px solid var(--ink);
+  border-radius: 12px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-24px, calc(-100% - 28px)) scale(0.96);
+  transform-origin: 24px 100%;
+  transition: opacity 0.12s ease, transform 0.12s ease;
+}
+.nm-board.is-open {
+  opacity: 1;
+  transform: translate(-24px, calc(-100% - 28px));
+  transition: opacity 0.2s ease, transform 0.25s var(--ease);
+}
+.nm-board.is-flip {
+  transform: translate(calc(-100% + 24px), calc(-100% - 28px)) scale(0.96);
+  transform-origin: calc(100% - 24px) 100%;
+}
+.nm-board.is-flip.is-open {
+  transform: translate(calc(-100% + 24px), calc(-100% - 28px));
+}
+.nm-board.is-below {
+  transform: translate(-24px, 28px) scale(0.96);
+  transform-origin: 24px 0;
+}
+.nm-board.is-below.is-open {
+  transform: translate(-24px, 28px);
+}
+.nm-board.is-flip.is-below {
+  transform: translate(calc(-100% + 24px), 28px) scale(0.96);
+  transform-origin: calc(100% - 24px) 0;
+}
+.nm-board.is-flip.is-below.is-open {
+  transform: translate(calc(-100% + 24px), 28px);
+}
+.nm-board.is-vert {
+  width: min(260px, 64vw);
+  transform: translate(-8px, 0) scale(0.96);
+  transform-origin: 0 0;
+}
+.nm-board.is-vert.is-open {
+  transform: translate(-8px, 0);
+}
+.nm-board-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.nm-board-head img {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  padding: 5px;
+  border: 1.5px solid var(--rule);
+  border-radius: 10px;
+}
+.nm-board-head strong {
+  display: block;
+  font-size: 18px;
+  line-height: 1.15;
+}
+.nm-board-head span {
+  font-size: 14px;
+  color: var(--muted);
+}
+.nm-board-date {
+  font: 400 13px var(--mono);
+  color: var(--muted);
+  margin: 10px 0 6px;
+}
+.nm-board ul {
+  margin: 0 0 10px;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.nm-board-lines {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+}
+.nm-station {
+  cursor: pointer;
+}
+
+/* section headings: a short bar in the section's line colour draws under them */
+.h2[data-anim]::after {
+  content: "";
+  display: block;
+  width: 72px;
+  height: 10px;
+  margin-top: 16px;
+  border-radius: 5px;
+  background: var(--line);
+  transform-origin: left;
+}
+.anim-on .h2[data-anim] {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.6s ease, transform 0.8s var(--ease);
+}
+.anim-on .h2[data-anim]::after {
+  transform: scaleX(0);
+  transition: transform 0.8s 0.25s var(--ease);
+}
+.anim-on .h2[data-anim].is-in {
+  opacity: 1;
+  transform: none;
+}
+.anim-on .h2[data-anim].is-in::after {
+  transform: scaleX(1);
+}
+
+/* station guide: upcoming stations wait dimmed until the line reaches them */
+.anim-on .stop .stop-body,
+.anim-on .stop .stop-logo {
+  transition: opacity 0.5s ease, transform 0.6s var(--ease);
+}
+.anim-on .stop:not(.is-reached) .stop-body {
+  opacity: 0.3;
+  transform: translateX(14px);
+}
+.anim-on .stop:not(.is-reached) .stop-logo {
+  opacity: 0;
+  transform: scale(0.85) rotate(-4deg);
+}
+.stop.is-reached .stop-disc {
+  transform: scale(1.08);
+}
+.stop-logo {
+  transition: transform 0.3s var(--ease);
+}
+.stop:hover .stop-logo {
+  transform: rotate(-3deg) scale(1.05);
+}
+
+/* lines: the strip draws across, then its stops pop in order */
+.anim-on .strip[data-anim] .strip-stops::before {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 1s var(--ease);
+}
+.anim-on .strip[data-anim] .strip-stops li {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease, transform 0.5s var(--ease);
+  transition-delay: calc(0.25s + var(--i) * 0.08s);
+}
+.anim-on .strip[data-anim] .strip-name {
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.4s ease, transform 0.6s var(--ease);
+}
+.anim-on .strip.is-in .strip-stops::before {
+  transform: none;
+}
+.anim-on .strip.is-in .strip-stops li,
+.anim-on .strip.is-in .strip-name {
+  opacity: 1;
+  transform: none;
+}
+.strip-stops li::before {
+  transition: background-color 0.2s ease, transform 0.25s var(--ease);
+}
+.strip-stops li:hover::before {
+  background: var(--line);
+  transform: scale(1.25);
+}
+.strip-stops li span {
+  transition: color 0.2s ease;
+}
+
+/* credentials: rows flip in like a departures board */
+.timetable {
+  perspective: 900px;
+}
+.anim-on .timetable[data-anim] tbody tr {
+  opacity: 0;
+  transform: rotateX(-80deg);
+  transform-origin: 50% 0;
+  transition: opacity 0.3s ease, transform 0.55s var(--ease);
+  transition-delay: calc(var(--i) * 0.09s);
+}
+.anim-on .timetable.is-in tbody tr {
+  opacity: 1;
+  transform: none;
+}
+.timetable tbody tr {
+  transition: background-color 0.15s ease;
+}
+.timetable tbody tr:hover {
+  background: #e3e8f2;
+}
+.tt-check a .arrow,
+.posts-go .arrow,
+.conn .arrow {
+  transition: transform 0.25s var(--ease);
+}
+.tt-check a:hover .arrow,
+.posts a:hover .posts-go .arrow,
+.conn a:hover .arrow {
+  transform: translate(2px, -2px);
+}
+
+/* writing: entries slide in; hover pulls the row forward */
+.anim-on .posts li[data-anim] {
+  opacity: 0;
+  transform: translateX(-28px);
+  transition: opacity 0.5s ease, transform 0.7s var(--ease);
+  transition-delay: calc(var(--i) * 0.12s);
+}
+.anim-on .posts li.is-in {
+  opacity: 1;
+  transform: none;
+}
+.posts a {
+  transition: padding 0.3s var(--ease), background-color 0.2s ease;
+  border-radius: 8px;
+}
+.posts a:hover {
+  padding-left: 18px;
+  background: var(--zone);
+}
+
+/* terminus: the backend line draws in to its station, then the heading lands */
+.anim-on .terminus-line[data-anim] span {
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.9s var(--ease);
+}
+.anim-on .terminus-line[data-anim]::after {
+  transform: scale(0);
+  transition: transform 0.4s 0.75s var(--ease);
+}
+.anim-on .terminus-line.is-in span,
+.anim-on .terminus-line.is-in::after {
+  transform: none;
+}
+.anim-on .terminus-h[data-anim] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s 0.3s ease, transform 0.9s 0.3s var(--ease);
+}
+.anim-on .terminus-h.is-in {
+  opacity: 1;
+  transform: none;
+}
+.anim-on .conn[data-anim] li {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.5s var(--ease);
+  transition-delay: calc(var(--i) * 0.06s);
+}
+.anim-on .conn.is-in li {
+  opacity: 1;
+  transform: none;
+}
+.conn strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.conn a {
+  transition: padding 0.3s var(--ease);
+}
+.conn a:hover {
+  padding-left: 10px;
+}
+
+@media (max-width: 900px) {
+  .anim-on .strip[data-anim] .strip-stops::before {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  .anim-on .strip[data-anim] .strip-stops li {
+    transform: translateX(-10px);
+  }
+}

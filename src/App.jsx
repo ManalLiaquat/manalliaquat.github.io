@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import {
   profile,
   socials,
@@ -10,6 +10,7 @@ import {
 } from "./data/portfolio";
 import useReducedMotion from "./hooks/useReducedMotion";
 import useParallax from "./hooks/useParallax";
+import useInView from "./hooks/useInView";
 import NetworkMap from "./site/NetworkMap.jsx";
 import {Arrow, Bullet, LineTag, Mark} from "./site/parts.jsx";
 import {slug} from "./site/time";
@@ -22,9 +23,50 @@ const NAV = [
   ["Writing", "#writing"]
 ];
 
+// Scroll progress runs as a line under the header; the nav marks the section
+// in view.
+function useWayfinding() {
+  const barRef = useRef(null);
+  const [active, setActive] = useState(null);
+  useEffect(() => {
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const p = max > 0 ? window.scrollY / max : 0;
+      if (barRef.current) barRef.current.style.transform = `scaleX(${p})`;
+    };
+    const onScroll = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    update();
+    window.addEventListener("scroll", onScroll, {passive: true});
+    window.addEventListener("resize", onScroll);
+    const io = new IntersectionObserver(
+      entries =>
+        entries.forEach(e => {
+          if (e.isIntersecting) setActive(`#${e.target.id}`);
+        }),
+      {rootMargin: "-45% 0px -50% 0px"}
+    );
+    document
+      .querySelectorAll("main > section[id]")
+      .forEach(sec => io.observe(sec));
+    return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+      io.disconnect();
+    };
+  }, []);
+  return {barRef, active};
+}
+
 function Header() {
+  const {barRef, active} = useWayfinding();
   return (
     <header className="top">
+      <span className="top-progress" ref={barRef} aria-hidden="true" />
       <a
         className="top-home"
         href="#top"
@@ -35,7 +77,11 @@ function Header() {
       </a>
       <nav aria-label="Sections">
         {NAV.map(([label, href]) => (
-          <a key={href} href={href}>
+          <a
+            key={href}
+            href={href}
+            aria-current={active === href ? "true" : undefined}
+          >
             {label}
           </a>
         ))}
@@ -47,12 +93,14 @@ function Header() {
   );
 }
 
-function Hero() {
+function Hero({reduced}) {
   return (
     <section className="hero" id="top" data-px-scope="top">
       <div className="hero-head">
         <div className="title" data-px data-px-y="0.1" data-px-depth="-4">
-          <h1>{profile.name}</h1>
+          <h1>
+            <span className="title-wipe">{profile.name}</span>
+          </h1>
           <p className="title-role">{profile.currentTitle}</p>
           <p className="title-tag">{profile.tagline}</p>
         </div>
@@ -76,7 +124,7 @@ function Hero() {
           </ul>
         </aside>
       </div>
-      <NetworkMap />
+      <NetworkMap reduced={reduced} />
     </section>
   );
 }
@@ -126,7 +174,9 @@ function Stations({reduced}) {
   return (
     <section className="band stations" id="stations">
       <div className="stations-intro">
-        <h2 className="h2">Stations</h2>
+        <h2 className="h2 line-backend" data-anim>
+          Stations
+        </h2>
         <p className="lede">{profile.summary}</p>
       </div>
       <ol className="guide" ref={listRef}>
@@ -170,20 +220,22 @@ function Stations({reduced}) {
 function Lines() {
   return (
     <section className="band lines" id="lines">
-      <h2 className="h2">Lines</h2>
+      <h2 className="h2 line-frontend" data-anim>
+        Lines
+      </h2>
       <p className="lede lede-sm">Every tool I work with, by line.</p>
       <div className="strips">
         {skillGroups.map(g => {
           const id = g.group.toLowerCase();
           return (
-            <div key={id} className={`strip line-${id}`}>
+            <div key={id} className={`strip line-${id}`} data-anim>
               <h3 className="strip-name">
                 <Bullet id={id} size="lg" />
                 {g.group}
               </h3>
               <ol className="strip-stops">
-                {g.items.map(s => (
-                  <li key={s}>
+                {g.items.map((s, i) => (
+                  <li key={s} style={{"--i": i}}>
                     <span>{s}</span>
                   </li>
                 ))}
@@ -199,9 +251,11 @@ function Lines() {
 function Credentials() {
   return (
     <section className="band" id="credentials">
-      <h2 className="h2">Credentials</h2>
+      <h2 className="h2 line-mobile" data-anim>
+        Credentials
+      </h2>
       <div className="table-wrap">
-        <table className="timetable">
+        <table className="timetable" data-anim>
           <thead>
             <tr>
               <th scope="col">Credential</th>
@@ -212,8 +266,8 @@ function Credentials() {
             </tr>
           </thead>
           <tbody>
-            {certifications.map(c => (
-              <tr key={c.title}>
+            {certifications.map((c, i) => (
+              <tr key={c.title} style={{"--i": i}}>
                 <th scope="row">{c.title}</th>
                 <td>{c.issuer}</td>
                 <td className="tt-check">
@@ -239,10 +293,12 @@ function Credentials() {
 function Writing() {
   return (
     <section className="band" id="writing">
-      <h2 className="h2">Writing</h2>
+      <h2 className="h2 line-tooling" data-anim>
+        Writing
+      </h2>
       <ul className="posts">
-        {blogs.map(b => (
-          <li key={b.url}>
+        {blogs.map((b, i) => (
+          <li key={b.url} data-anim style={{"--i": i}}>
             <a href={b.url} target="_blank" rel="noreferrer">
               <h3>{b.title}</h3>
               <p>{b.description}</p>
@@ -260,19 +316,23 @@ function Writing() {
 function Contact() {
   return (
     <section className="terminus" id="contact" data-px-scope>
-      <div className="terminus-line" aria-hidden="true">
+      <div className="terminus-line" aria-hidden="true" data-anim>
         <span />
       </div>
-      <h2 className="terminus-h">Where to next?</h2>
+      <h2 className="terminus-h" data-anim>
+        Where to next?
+      </h2>
       <a className="sign sign-lg" href={`mailto:${profile.email}`}>
         {profile.email} <Arrow />
       </a>
       <h3 className="conn-h">Connections</h3>
-      <ul className="conn">
-        {socials.map(s => (
-          <li key={s.name}>
+      <ul className="conn" data-anim>
+        {socials.map((s, i) => (
+          <li key={s.name} style={{"--i": i}}>
             <a href={s.url} target="_blank" rel="me noreferrer">
-              <strong>{s.name}</strong>
+              <strong>
+                {s.name} <Arrow external />
+              </strong>
               <span>{s.short}</span>
             </a>
           </li>
@@ -289,14 +349,15 @@ export default function App() {
   const reduced = useReducedMotion();
   const rootRef = useRef(null);
   useParallax(rootRef, !reduced);
+  useInView(rootRef, !reduced);
   return (
-    <div className="site" ref={rootRef}>
+    <div className={`site ${reduced ? "" : "anim-on"}`} ref={rootRef}>
       <a className="skip" href="#stations">
         Skip to content
       </a>
       <Header />
       <main>
-        <Hero />
+        <Hero reduced={reduced} />
         <Stations reduced={reduced} />
         <Lines />
         <Credentials />
