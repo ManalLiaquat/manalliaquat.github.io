@@ -1,0 +1,410 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-07T16:02:41+00:00",
+  "title": "Design System: Manal Liaquat",
+  "extensions": {
+    "colorMeta": {
+      "map-paper": {
+        "role": "neutral",
+        "displayName": "Map Paper",
+        "canonical": "oklch(98.2% 0.002 248)",
+        "tonalRamp": [
+          "oklch(15% 0.003 248)",
+          "oklch(25% 0.004 248)",
+          "oklch(35% 0.006 248)",
+          "oklch(45% 0.006 248)",
+          "oklch(55% 0.006 248)",
+          "oklch(65% 0.006 248)",
+          "oklch(80% 0.003 248)",
+          "oklch(95% 0.001 248)"
+        ]
+      },
+      "fare-zone": {
+        "role": "neutral",
+        "displayName": "Fare Zone",
+        "canonical": "oklch(95.4% 0.005 258)",
+        "tonalRamp": [
+          "oklch(15% 0.003 258)",
+          "oklch(25% 0.006 258)",
+          "oklch(35% 0.008 258)",
+          "oklch(45% 0.008 258)",
+          "oklch(55% 0.008 258)",
+          "oklch(65% 0.008 258)",
+          "oklch(80% 0.005 258)",
+          "oklch(95% 0.001 258)"
+        ]
+      },
+      "station-white": {
+        "role": "neutral",
+        "displayName": "Station White",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0.000 0)",
+          "oklch(25% 0.000 0)",
+          "oklch(35% 0.000 0)",
+          "oklch(45% 0.000 0)",
+          "oklch(55% 0.000 0)",
+          "oklch(65% 0.000 0)",
+          "oklch(80% 0.000 0)",
+          "oklch(95% 0.000 0)"
+        ]
+      },
+      "signal-ink": {
+        "role": "neutral",
+        "displayName": "Signal Ink",
+        "canonical": "oklch(20.9% 0.010 268)",
+        "tonalRamp": [
+          "oklch(15% 0.005 268)",
+          "oklch(25% 0.009 268)",
+          "oklch(35% 0.012 268)",
+          "oklch(45% 0.012 268)",
+          "oklch(55% 0.012 268)",
+          "oklch(65% 0.012 268)",
+          "oklch(80% 0.007 268)",
+          "oklch(95% 0.002 268)"
+        ]
+      },
+      "timetable-grey": {
+        "role": "neutral",
+        "displayName": "Timetable Grey",
+        "canonical": "oklch(47.1% 0.024 267)",
+        "tonalRamp": [
+          "oklch(15% 0.010 267)",
+          "oklch(25% 0.017 267)",
+          "oklch(35% 0.024 267)",
+          "oklch(45% 0.024 267)",
+          "oklch(55% 0.024 267)",
+          "oklch(65% 0.024 267)",
+          "oklch(80% 0.014 267)",
+          "oklch(95% 0.003 267)"
+        ]
+      },
+      "track-rule": {
+        "role": "neutral",
+        "displayName": "Track Rule",
+        "canonical": "oklch(88.4% 0.009 258)",
+        "tonalRamp": [
+          "oklch(15% 0.005 258)",
+          "oklch(25% 0.009 258)",
+          "oklch(35% 0.012 258)",
+          "oklch(45% 0.012 258)",
+          "oklch(55% 0.012 258)",
+          "oklch(65% 0.012 258)",
+          "oklch(80% 0.007 258)",
+          "oklch(95% 0.002 258)"
+        ]
+      },
+      "backend-red": {
+        "role": "primary",
+        "displayName": "Backend Red",
+        "canonical": "oklch(56.6% 0.204 25)",
+        "tonalRamp": [
+          "oklch(15% 0.087 25)",
+          "oklch(25% 0.146 25)",
+          "oklch(35% 0.204 25)",
+          "oklch(45% 0.204 25)",
+          "oklch(55% 0.204 25)",
+          "oklch(65% 0.204 25)",
+          "oklch(80% 0.117 25)",
+          "oklch(95% 0.029 25)"
+        ]
+      },
+      "frontend-blue": {
+        "role": "secondary",
+        "displayName": "Frontend Blue",
+        "canonical": "oklch(50.8% 0.178 260)",
+        "tonalRamp": [
+          "oklch(15% 0.076 260)",
+          "oklch(25% 0.127 260)",
+          "oklch(35% 0.178 260)",
+          "oklch(45% 0.178 260)",
+          "oklch(55% 0.178 260)",
+          "oklch(65% 0.178 260)",
+          "oklch(80% 0.102 260)",
+          "oklch(95% 0.025 260)"
+        ]
+      },
+      "mobile-green": {
+        "role": "tertiary",
+        "displayName": "Mobile Green",
+        "canonical": "oklch(53.6% 0.134 153)",
+        "tonalRamp": [
+          "oklch(15% 0.057 153)",
+          "oklch(25% 0.096 153)",
+          "oklch(35% 0.134 153)",
+          "oklch(45% 0.134 153)",
+          "oklch(55% 0.134 153)",
+          "oklch(65% 0.134 153)",
+          "oklch(80% 0.077 153)",
+          "oklch(95% 0.019 153)"
+        ]
+      },
+      "tooling-amber": {
+        "role": "tertiary",
+        "displayName": "Tooling Amber",
+        "canonical": "oklch(78.5% 0.164 78)",
+        "tonalRamp": [
+          "oklch(15% 0.070 78)",
+          "oklch(25% 0.117 78)",
+          "oklch(35% 0.164 78)",
+          "oklch(45% 0.164 78)",
+          "oklch(55% 0.164 78)",
+          "oklch(65% 0.164 78)",
+          "oklch(80% 0.094 78)",
+          "oklch(95% 0.023 78)"
+        ]
+      },
+      "night-rule": {
+        "role": "neutral",
+        "displayName": "Night Rule",
+        "canonical": "oklch(36.4% 0.018 268)",
+        "tonalRamp": [
+          "oklch(15% 0.008 268)",
+          "oklch(25% 0.013 268)",
+          "oklch(35% 0.018 268)",
+          "oklch(45% 0.018 268)",
+          "oklch(55% 0.018 268)",
+          "oklch(65% 0.018 268)",
+          "oklch(80% 0.010 268)",
+          "oklch(95% 0.003 268)"
+        ]
+      },
+      "night-muted": {
+        "role": "neutral",
+        "displayName": "Night Muted",
+        "canonical": "oklch(75.7% 0.020 266)",
+        "tonalRamp": [
+          "oklch(15% 0.009 266)",
+          "oklch(25% 0.014 266)",
+          "oklch(35% 0.020 266)",
+          "oklch(45% 0.020 266)",
+          "oklch(55% 0.020 266)",
+          "oklch(65% 0.020 266)",
+          "oklch(80% 0.011 266)",
+          "oklch(95% 0.003 266)"
+        ]
+      },
+      "night-focus": {
+        "role": "secondary",
+        "displayName": "Night Focus",
+        "canonical": "oklch(77.6% 0.113 262)",
+        "tonalRamp": [
+          "oklch(15% 0.048 262)",
+          "oklch(25% 0.081 262)",
+          "oklch(35% 0.113 262)",
+          "oklch(45% 0.113 262)",
+          "oklch(55% 0.113 262)",
+          "oklch(65% 0.113 262)",
+          "oklch(80% 0.065 262)",
+          "oklch(95% 0.016 262)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name in the hero and the terminus heading."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section names."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Station names, post titles, strip-map line names."
+      },
+      "title-sm": {
+        "displayName": "Title Small",
+        "purpose": "Strip-map line names and the floor of post titles."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Role lines under names."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "Section introductions, max 38em."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Highlights, table cells, descriptions."
+      },
+      "body-sm": {
+        "displayName": "Body Small",
+        "purpose": "Nav links, header sign, map roles, connection handles."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Map key entries, line tags, You are here pill, footer."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase map key heading and timetable column heads only."
+      },
+      "code": {
+        "displayName": "Code",
+        "purpose": "Overpass Mono for dates, years and codes only."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "Expo-out ease for line drawing, arrow slide and disc transitions."
+      },
+      {
+        "name": "line-draw",
+        "value": "1.3s cubic-bezier(0.16, 1, 0.3, 1), staggered 0.25s per line",
+        "purpose": "Map strokes draw along their path (stroke-dashoffset 1 to 0)."
+      },
+      {
+        "name": "station-fade",
+        "value": "0.4s to 0.5s ease, staggered 0.12s from 0.9s",
+        "purpose": "Stations, labels and end bars fade in after their line arrives."
+      },
+      {
+        "name": "state",
+        "value": "0.15s ease",
+        "purpose": "Sign fill and ring stroke-width on hover."
+      },
+      {
+        "name": "reach",
+        "value": "0.3s ease border-color; scroll-tied scaleY fill",
+        "purpose": "Station guide track fills with scroll and discs ink when reached at 62% of viewport height."
+      },
+      {
+        "name": "parallax",
+        "value": "translate only; far y 0.12 depth -6, mid depth 6, near depth 14, title y 0.1 depth -4; pointer lerp 0.08",
+        "purpose": "Map planes drift apart with scroll and fine pointer. Disabled under prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "900px"
+      },
+      {
+        "name": "compact",
+        "value": "600px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Sign (primary)",
+      "kind": "button",
+      "refersTo": "sign-primary",
+      "description": "Ink direction sign with arrow; the only button style. Header size.",
+      "html": "<a class=\"ds-sign\" href=\"#\">Email Manal <svg class=\"ds-arrow\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
+      "css": ".ds-arrow { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-sign { display: inline-flex; align-items: center; gap: 10px; font-family: var(--sans, \"Overpass\", \"Helvetica Neue\", Arial, sans-serif); background: var(--ink, #16181d); color: var(--paper, #f8f9fa); font-weight: 700; font-size: 15px; padding: 9px 14px 7px; border-radius: 8px; text-decoration: none; transition: background-color 0.15s ease; } .ds-sign:hover { background: var(--backend, #d42a30); } .ds-sign:hover .ds-arrow { transform: translateX(3px); } .ds-sign:focus-visible { outline: 3px solid var(--frontend, #1a5fc9); outline-offset: 3px; }"
+    },
+    {
+      "name": "Sign (large, on terminus)",
+      "kind": "button",
+      "refersTo": "sign-on-night",
+      "description": "Inverted large sign carrying the email address on the ink terminus.",
+      "html": "<div class=\"ds-night\"><a class=\"ds-sign-lg\" href=\"#\">m.manalliaquat@gmail.com <svg class=\"ds-arrow\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a></div>",
+      "css": ".ds-arrow { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-night { background: var(--ink, #16181d); padding: 32px; } .ds-sign-lg { display: inline-flex; align-items: center; gap: 10px; font-family: var(--sans, \"Overpass\", \"Helvetica Neue\", Arial, sans-serif); background: var(--paper, #f8f9fa); color: var(--ink, #16181d); font-weight: 700; font-size: clamp(18px, 2.6vw, 30px); padding: 20px 26px 17px; border-radius: 8px; text-decoration: none; transition: background-color 0.15s ease; } .ds-sign-lg:hover { background: var(--backend, #d42a30); color: #fff; } .ds-sign-lg:hover .ds-arrow { transform: translateX(3px); } .ds-sign-lg:focus-visible { outline: 3px solid #8fb6ff; outline-offset: 3px; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Sticky 64px header: site mark, section links, Email sign.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-home\" href=\"#\"><svg class=\"ds-mark\" viewBox=\"0 0 40 28\" width=\"40\" height=\"28\" aria-hidden=\"true\"><path d=\"M2 20h12l8-8h16\" style=\"stroke:#d42a30\"/><path d=\"M2 20h36\" style=\"stroke:#1a5fc9\"/><path d=\"M14 20l6 6\" style=\"stroke:#0d8346\"/><circle cx=\"14\" cy=\"20\" r=\"4.5\"/></svg><span>Manal Liaquat</span></a><nav class=\"ds-nav\"><a href=\"#\">Stations</a><a href=\"#\">Lines</a><a href=\"#\">Credentials</a><a href=\"#\">Writing</a></nav></header>",
+      "css": ".ds-top { display: flex; align-items: center; gap: 32px; height: 64px; padding: 0 24px; font-family: var(--sans, \"Overpass\", \"Helvetica Neue\", Arial, sans-serif); background: var(--paper, #f8f9fa); color: var(--ink, #16181d); border-bottom: 2px solid var(--ink, #16181d); } .ds-home { display: flex; align-items: center; gap: 10px; font-weight: 800; color: inherit; text-decoration: none; } .ds-mark path { fill: none; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; } .ds-mark circle { fill: #fff; stroke: var(--ink, #16181d); stroke-width: 2.5; } .ds-nav { display: flex; gap: 26px; margin-left: auto; } .ds-nav a { font-weight: 600; font-size: 15px; color: inherit; text-decoration: none; text-underline-offset: 0.22em; text-decoration-thickness: 2px; } .ds-nav a:hover { text-decoration: underline; text-decoration-color: var(--backend, #d42a30); } .ds-nav a:focus-visible, .ds-home:focus-visible { outline: 3px solid var(--frontend, #1a5fc9); outline-offset: 3px; border-radius: 4px; }"
+    },
+    {
+      "name": "Line Tag",
+      "kind": "chip",
+      "refersTo": "line-tag",
+      "description": "Pill naming a discipline, led by its line bullet.",
+      "html": "<span class=\"ds-tag\"><span class=\"ds-bullet\" style=\"background:#d42a30\">B</span>Backend</span> <span class=\"ds-tag\"><span class=\"ds-bullet\" style=\"background:#f2a900;color:#16181d\">T</span>Tooling</span>",
+      "css": ".ds-tag { display: inline-flex; align-items: center; gap: 7px; padding: 3px 12px 2px 4px; font-family: var(--sans, \"Overpass\", \"Helvetica Neue\", Arial, sans-serif); border: 1.5px solid var(--rule, #d5d9df); border-radius: 999px; font-size: 14px; font-weight: 600; background: #fff; color: var(--ink, #16181d); } .ds-bullet { display: inline-grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; color: #fff; font-size: 12px; font-weight: 800; line-height: 1; padding-top: 0.12em; }"
+    },
+    {
+      "name": "Map Key",
+      "kind": "card",
+      "refersTo": "map-key",
+      "description": "Boxed legend explaining line colours, interchanges and end bars.",
+      "html": "<aside class=\"ds-key\"><h2>Key</h2><ul><li><span class=\"ds-kl\" style=\"background:#d42a30\"></span>Backend line</li><li><span class=\"ds-kl\" style=\"background:#1a5fc9\"></span>Frontend line</li><li><span class=\"ds-kl\" style=\"background:#0d8346\"></span>Mobile line</li><li><span class=\"ds-kr\"></span>Interchange: role on two lines</li><li><span class=\"ds-kt\"></span>End of line</li></ul></aside>",
+      "css": ".ds-key { display: inline-block; font-family: var(--sans, \"Overpass\", \"Helvetica Neue\", Arial, sans-serif); border: 2px solid var(--ink, #16181d); border-radius: 10px; padding: 14px 18px 12px; background: #fff; color: var(--ink, #16181d); font-size: 14px; } .ds-key h2 { font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; margin: 0 0 8px; } .ds-key ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; } .ds-key li { display: flex; align-items: center; gap: 10px; } .ds-kl { width: 30px; height: 6px; border-radius: 3px; } .ds-kr { width: 16px; height: 16px; margin: 0 7px; border-radius: 50%; border: 3.5px solid var(--ink, #16181d); background: #fff; box-sizing: border-box; } .ds-kt { width: 6px; height: 18px; margin: 0 12px; border-radius: 2px; background: var(--ink, #16181d); }"
+    },
+    {
+      "name": "Network Map",
+      "kind": "custom",
+      "description": "Signature SVG map: thick lines on 45° transfers, ringed interchanges, end bars, You are here pill.",
+      "html": "<svg class=\"ds-nm\" viewBox=\"0 0 520 200\" role=\"img\" aria-label=\"Sample network map\"><rect x=\"0\" y=\"0\" width=\"130\" height=\"180\" class=\"ds-za\"/><rect x=\"130\" y=\"0\" width=\"130\" height=\"180\" class=\"ds-zb\"/><rect x=\"260\" y=\"0\" width=\"130\" height=\"180\" class=\"ds-za\"/><rect x=\"390\" y=\"0\" width=\"130\" height=\"180\" class=\"ds-zb\"/><path class=\"ds-ln\" style=\"stroke:#1a5fc9\" d=\"M40 130 L330 130\"/><path class=\"ds-ln\" style=\"stroke:#0d8346\" d=\"M40 130 L90 180 L150 180\"/><path class=\"ds-ln\" style=\"stroke:#d42a30\" d=\"M200 130 L250 80 L560 80\"/><rect x=\"326\" y=\"114\" width=\"8\" height=\"32\" rx=\"2\" fill=\"#1a5fc9\"/><circle class=\"ds-ring\" cx=\"40\" cy=\"130\" r=\"12\"/><circle class=\"ds-ring\" cx=\"200\" cy=\"130\" r=\"12\"/><circle class=\"ds-ring ds-cur\" cx=\"380\" cy=\"80\" r=\"12\"/><circle cx=\"380\" cy=\"80\" r=\"5\" fill=\"#d42a30\"/><rect x=\"400\" y=\"100\" width=\"110\" height=\"26\" rx=\"13\" fill=\"#16181d\"/><text x=\"455\" y=\"118\" text-anchor=\"middle\" class=\"ds-here\">You are here</text><text x=\"6\" y=\"196\" class=\"ds-yr\">2019</text><text x=\"136\" y=\"196\" class=\"ds-yr\">2020</text></svg>",
+      "css": ".ds-nm { display: block; width: 100%; height: auto; overflow: hidden; background: #f8f9fa; } .ds-za { fill: #f8f9fa; } .ds-zb { fill: #eef0f3; } .ds-ln { fill: none; stroke-width: 12; stroke-linecap: round; stroke-linejoin: round; } .ds-ring { fill: #fff; stroke: #16181d; stroke-width: 5; transition: stroke-width 0.15s ease; } .ds-ring:hover { stroke-width: 8; } .ds-cur { stroke-width: 6; } .ds-here { font: 700 13px \"Overpass\", \"Helvetica Neue\", Arial, sans-serif; fill: #fff; } .ds-yr { font: 400 12px \"Overpass Mono\", ui-monospace, monospace; fill: #555b69; }"
+    },
+    {
+      "name": "Strip Map",
+      "kind": "custom",
+      "description": "One line per skill group: bullet, name, coloured track with ringed stops.",
+      "html": "<div class=\"ds-strip\"><h3><span class=\"ds-bl\">B</span>Backend</h3><ol><li>Node.js</li><li>Express</li><li>MongoDB</li><li>REST APIs</li></ol></div>",
+      "css": ".ds-strip { font-family: var(--sans, \"Overpass\", \"Helvetica Neue\", Arial, sans-serif); color: var(--ink, #16181d); background: var(--zone, #eef0f3); padding: 24px; } .ds-strip h3 { display: flex; align-items: center; gap: 12px; font-size: 26px; font-weight: 800; margin: 0 0 14px; } .ds-bl { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #d42a30; color: #fff; font-size: 22px; line-height: 1; padding-top: 0.12em; } .ds-strip ol { position: relative; display: flex; list-style: none; margin: 0; padding: 0; } .ds-strip ol::before { content: \"\"; position: absolute; left: 0; right: 0; top: 17px; height: 10px; border-radius: 5px; background: #d42a30; } .ds-strip li { position: relative; flex: 1 1 0; padding: 44px 12px 0 0; font-weight: 600; font-size: 16px; line-height: 1.25; } .ds-strip li::before { content: \"\"; position: absolute; left: 0; top: 10px; width: 24px; height: 24px; border-radius: 50%; background: #fff; border: 5px solid var(--ink, #16181d); box-sizing: border-box; }"
+    },
+    {
+      "name": "Timetable",
+      "kind": "custom",
+      "refersTo": "timetable-head",
+      "description": "Credentials as a departures board with ink header, zebra rows and Verify links.",
+      "html": "<div class=\"ds-tw\"><table class=\"ds-tt\"><thead><tr><th>Credential</th><th>Issued by</th><th></th></tr></thead><tbody><tr><th>React Nanodegree</th><td>Udacity</td><td class=\"ds-ck\"><a href=\"#\">Verify <svg class=\"ds-arrow\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\"/></svg></a></td></tr><tr><th>Financial Literacy Training Program</th><td>NIBAF Pakistan</td><td class=\"ds-ck\"></td></tr></tbody></table></div>",
+      "css": ".ds-arrow { fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1); } .ds-tw { border: 2px solid var(--ink, #16181d); border-radius: 10px; overflow: hidden; } .ds-tt { width: 100%; border-collapse: collapse; font-family: var(--sans, \"Overpass\", \"Helvetica Neue\", Arial, sans-serif); font-size: 17px; color: var(--ink, #16181d); background: #f8f9fa; } .ds-tt thead th { background: var(--ink, #16181d); color: var(--paper, #f8f9fa); font-size: 13px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; text-align: left; padding: 12px 20px 10px; } .ds-tt tbody th, .ds-tt td { text-align: left; padding: 16px 20px 14px; border-top: 1px solid var(--rule, #d5d9df); } .ds-tt tbody tr:nth-child(even) { background: var(--zone, #eef0f3); } .ds-tt tbody th { font-weight: 700; } .ds-tt td { color: var(--muted, #555b69); } .ds-ck { text-align: right; } .ds-ck a { display: inline-flex; align-items: center; gap: 4px; color: var(--frontend, #1a5fc9); font-weight: 700; text-underline-offset: 0.22em; text-decoration-thickness: 2px; } .ds-ck a:focus-visible { outline: 3px solid var(--frontend, #1a5fc9); outline-offset: 3px; border-radius: 4px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Network Map",
+    "overview": "**Creative North Star: \"The Network Map\"**\n\nThe whole site is printed transit cartography. A pale map paper carries ink-black signage and four thick, saturated line colours, each of which names a discipline (Backend, Frontend, Mobile, Tooling). Content is arranged the way a metro authority arranges information: a map with a key, a station guide, strip maps per line, a timetable, and a terminus. Strip every word away and the system is still recognisable: 10 to 12px coloured strokes on 45° diagonals, white discs with heavy ink rings where lines meet, rectangular end-of-line bars, and alternating fare-zone bands behind them.\n\nDensity is calm and wayfinding-first. Type is large, heavy and direct, set in Overpass, a face descended from highway signage; Overpass Mono appears only for dates, years and codes, the way a timetable sets departure times. Depth comes from layered planes (zone bands far, lines and stations mid, labels near) that drift apart with scroll and pointer, never from shadows or blur. Motion is cartographic: strokes draw themselves along their path, stations fade in once the line reaches them, and the station guide's track fills as the reader scrolls. All of it switches off under `prefers-reduced-motion`, and the content reads completely without it.\n\nThe build carries one known divergence from its original direction: on the hero map the lines draw on load (a timed CSS stroke animation), while the scroll-tied drawing lives in the station guide. Treat both as part of the system.",
+    "keyCharacteristics": [
+      "Map paper, ink, and four line colours as named roles; nothing else carries hue.",
+      "Thick round-capped strokes, 45° diagonals only, white ringed interchanges.",
+      "Overpass at weight 800 for every heading; Overpass Mono only for time and codes.",
+      "Flat surfaces; depth is parallax between map planes, not shadow.",
+      "Ink-filled \"signs\" with an arrow are the only buttons.",
+      "One dark surface, the terminus, where the backend line runs into contact."
+    ],
+    "rules": [
+      {
+        "name": "The Line Colour Rule",
+        "body": "Red, blue, green and amber each name a discipline. A line colour appears only where that discipline is meant (a stroke, a bullet, a tag, a strip track), with two sanctioned interaction uses: blue for focus and links, red for hover on signs and underlines. No line colour is ever decoration.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ink On Amber Rule",
+        "body": "Text set on a line colour is white on red, blue and green, and ink on amber.",
+        "section": "colors"
+      },
+      {
+        "name": "The Mono Is Time Rule",
+        "body": "Overpass Mono is reserved for dates, years and codes. Names, roles and prose are always Overpass.",
+        "section": "typography"
+      },
+      {
+        "name": "The Baseline Lift Rule",
+        "body": "Overpass sits high in its box, so filled elements carry 2 to 3px more padding on top than on bottom (signs 9/7 and 20/17, tags 3/2, bullets padding-top 0.12em). Keep the asymmetry when adding filled labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Paper Map Rule",
+        "body": "Nothing floats above the paper. Depth is planes sliding against each other, never a cast shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do give every discipline its line colour (backend-red, frontend-blue, mobile-green, tooling-amber) and use that colour every time the discipline appears.",
+      "Do draw connections as thick round-capped strokes (10 to 12px) that turn only at 45°, with white ringed discs at stations.",
+      "Do set headings in Overpass 800 with negative tracking, and dates and years in Overpass Mono.",
+      "Do keep primary actions as ink signs with an arrow that turn backend red on hover.",
+      "Do show keyboard focus as the 3px frontend-blue outline at 3px offset (night-focus on the terminus).",
+      "Do switch off stroke drawing, fades, guide fill and parallax under `prefers-reduced-motion`, leaving every element in its final state."
+    ],
+    "donts": [
+      "Don't add box shadows, gradients or blur; depth comes from parallax planes and rules.",
+      "Don't introduce a hue outside the four line colours, or use a line colour as decoration.",
+      "Don't put white text on tooling amber or set amber text on paper.",
+      "Don't draw curved or arbitrary-angle lines on the map; 45° diagonals only.",
+      "Don't set names, roles or prose in Overpass Mono."
+    ]
+  }
+}
