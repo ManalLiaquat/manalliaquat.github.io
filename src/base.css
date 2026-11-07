@@ -10,9 +10,9 @@ body {
 }
 body {
   -webkit-font-smoothing: antialiased;
-  font-family: "Space Grotesk", system-ui, sans-serif;
-  background: #0a0e0c;
-  color: #e7e9ee;
+  font-family: "Overpass", "Helvetica Neue", Arial, sans-serif;
+  background: #f8f9fa;
+  color: #16181d;
 }
 img {
   max-width: 100%;
@@ -20,10 +20,6 @@ img {
 }
 a {
   color: inherit;
-}
-:focus-visible {
-  outline: 2px solid #7dd3fc;
-  outline-offset: 3px;
 }
 .sr-only {
   position: absolute;
@@ -35,25 +31,15 @@ a {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-.theme-loading {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  font-family: "JetBrains Mono", monospace;
-  color: #8b93a7;
-}
 /* Prerendered content for crawlers / no-JS; replaced once React mounts. */
 .prerender {
   max-width: 760px;
   margin: 0 auto;
   padding: 48px 16px;
-  font-family: "JetBrains Mono", ui-monospace, monospace;
   line-height: 1.6;
-  color: #d6e2da;
-  background: #0a0e0c;
 }
 .prerender a {
-  color: #4ade80;
+  color: #1a5fc9;
 }
 .prerender h3 {
   margin: 0;

@@ -5,9 +5,8 @@
 I'm a Backend Engineer and Backend Team Lead at Plai, with 7+ years building
 web and mobile applications in JavaScript: Node.js, Express, MongoDB, React, Next.js and React Native.
 
-This repository is my interactive portfolio. It has three themes: **Terminal** (the default),
-**Motion** and **Desktop**. Link to a specific one with `?theme=terminal`, `?theme=motion` or
-`?theme=desktop`.
+This repository is my portfolio. It draws my career as a metro network map: Backend,
+Frontend and Mobile are the lines, and each role is a station.
 
 ## For AI agents and crawlers
 

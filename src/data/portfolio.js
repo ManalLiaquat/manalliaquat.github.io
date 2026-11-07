@@ -1,4 +1,4 @@
-// Single source of content for every theme.
+// Single source of content for the site and the build-time SEO files.
 
 export const profile = {
   name: "Manal Liaquat",
@@ -63,6 +63,7 @@ export const experience = [
     logo: "/img/plai.png",
     start: "Jan 2024",
     end: "Present",
+    lines: ["backend"],
     highlights: ["Backend Team Lead", "Backend application engineering"]
   },
   {
@@ -71,6 +72,7 @@ export const experience = [
     logo: "/img/insuranceMarket.png",
     start: "Sep 2021",
     end: "Dec 2023",
+    lines: ["frontend", "backend"],
     highlights: [
       "Web application development",
       "Backend application development"
@@ -82,6 +84,7 @@ export const experience = [
     logo: "/img/digitalMarknAdsPlan.webp",
     start: "Jun 2020",
     end: "Aug 2021",
+    lines: ["frontend"],
     highlights: ["Web application development"]
   },
   {
@@ -90,11 +93,21 @@ export const experience = [
     logo: "/img/systemsAvenue.webp",
     start: "Mar 2019",
     end: "Jun 2020",
+    lines: ["frontend", "mobile"],
     highlights: [
       "Senior mobile application developer",
       "Web application development"
     ]
   }
+];
+
+// The network map's lines. Each experience entry lists the lines it ran on,
+// taken from its highlights.
+export const lines = [
+  {id: "backend", name: "Backend", letter: "B"},
+  {id: "frontend", name: "Frontend", letter: "F"},
+  {id: "mobile", name: "Mobile", letter: "M"},
+  {id: "tooling", name: "Tooling", letter: "T"}
 ];
 
 export const skillGroups = [
