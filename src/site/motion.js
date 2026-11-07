@@ -170,17 +170,21 @@ export function choreograph(root, {reduced}) {
         }
       );
       if (!next) return;
-      gsap.to(card, {
-        scale: 0.9,
-        filter: "brightness(0.4)",
-        ease: "none",
-        scrollTrigger: {
-          trigger: next,
-          start: "top bottom",
-          end: "top 15%",
-          scrub: true
+      gsap.fromTo(
+        card,
+        {scale: 1, filter: "brightness(1)"},
+        {
+          scale: 0.93,
+          filter: "brightness(0.62)",
+          ease: "none",
+          scrollTrigger: {
+            trigger: next,
+            start: "top 70%",
+            end: "top 15%",
+            scrub: true
+          }
         }
-      });
+      );
     });
 
     // skills: rows run in opposite directions and surge with scroll speed

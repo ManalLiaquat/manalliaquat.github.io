@@ -151,11 +151,15 @@ function Skills() {
       <SectionHead title="Skills" />
       <div className="marquees">
         {skillGroups.map((g, i) => (
-          <div className="marquee" key={g.group} data-marquee={i % 2 ? -1 : 1}>
+          <div
+            className={`marquee ${g.items.length < 3 ? "marquee-static" : ""}`}
+            key={g.group}
+            {...(g.items.length < 3 ? {} : {"data-marquee": i % 2 ? -1 : 1})}
+          >
             <span className="marquee-label">{g.group}</span>
             <div className="marquee-viewport">
               <div className="marquee-track">
-                {[0, 1, 2, 3].map(k => (
+                {(g.items.length < 3 ? [0] : [0, 1, 2, 3]).map(k => (
                   <span className="marquee-set" key={k} aria-hidden={k > 0}>
                     {g.items.map(s => (
                       <span className="pill" key={s}>
@@ -258,11 +262,10 @@ function Writing() {
             data-cursor="Read"
             data-fade
           >
-            <span className="post-src">Medium</span>
             <h3>{b.title}</h3>
             <p>{b.description}</p>
             <span className="post-go">
-              Read the article <Arrow external />
+              Read on Medium <Arrow external />
             </span>
           </a>
         ))}

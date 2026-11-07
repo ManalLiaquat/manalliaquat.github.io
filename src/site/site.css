@@ -166,13 +166,13 @@ html.lenis body {
   padding: 8px 8px 8px 18px;
   translate: -50% 0;
   border-radius: 999px;
-  border: 1px solid transparent;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--panel) 82%, transparent);
+  backdrop-filter: blur(14px);
   transition: background-color 0.4s ease, border-color 0.4s ease;
 }
 .nav.is-scrolled {
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  border-color: var(--line);
-  backdrop-filter: blur(14px);
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
 }
 .nav-home {
   display: flex;
@@ -218,7 +218,7 @@ html.lenis body {
   min-height: 100svh;
   display: flex;
   align-items: flex-end;
-  padding: 120px var(--gutter) clamp(40px, 7vh, 80px);
+  padding: 104px var(--gutter) clamp(32px, 6vh, 72px);
 }
 .hero-inner {
   width: 100%;
@@ -258,11 +258,12 @@ html.lenis body {
   }
 }
 .hero-name {
-  font-size: clamp(64px, 21vw, 15.5rem);
+  font-size: clamp(64px, 23.6vw, 30rem);
   font-weight: 700;
-  line-height: 0.86;
+  line-height: 0.84;
   letter-spacing: -0.04em;
   font-variation-settings: "opsz" 96;
+  margin-left: -0.04em;
 }
 .letters {
   display: block;
@@ -287,8 +288,7 @@ html.lenis body {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
-  justify-content: space-between;
-  gap: 24px 40px;
+  gap: 20px 40px;
   margin-top: clamp(24px, 4vh, 48px);
 }
 .hero-tag {
@@ -305,7 +305,7 @@ html.lenis body {
 .scroll-cue {
   position: absolute;
   right: var(--gutter);
-  top: 50%;
+  bottom: clamp(32px, 6vh, 72px);
   writing-mode: vertical-rl;
   font-size: 13px;
   letter-spacing: 0.2em;
@@ -412,11 +412,11 @@ html.lenis body {
 .card {
   position: sticky;
   top: calc(96px + var(--i) * 22px);
-  min-height: min(72vh, 620px);
+  min-height: min(56vh, 480px);
   display: flex;
   flex-direction: column;
   padding: clamp(28px, 4vw, 56px);
-  border-radius: 28px;
+  border-radius: 16px;
   background: var(--panel);
   border: 1px solid var(--line);
   transform-origin: 50% 0;
@@ -442,8 +442,7 @@ html.lenis body {
   background: #fff;
 }
 .card-company {
-  margin-top: auto;
-  padding-top: 48px;
+  padding-top: clamp(20px, 3vw, 36px);
   font-size: clamp(44px, 8vw, 8rem);
   font-weight: 700;
   line-height: 0.95;
@@ -589,7 +588,7 @@ a.row:hover .arrow {
   width: 150px;
   height: 150px;
   padding: 20px;
-  border-radius: 24px;
+  border-radius: 16px;
   background: #fff;
   pointer-events: none;
   opacity: 0;
@@ -621,7 +620,7 @@ a.row:hover .arrow {
   flex-direction: column;
   min-height: 380px;
   padding: clamp(24px, 3vw, 40px);
-  border-radius: 28px;
+  border-radius: 16px;
   background: var(--panel);
   border: 1px solid var(--line);
   color: var(--fg);
@@ -649,10 +648,7 @@ a.row:hover .arrow {
 .post:hover::before {
   opacity: 1;
 }
-.post-src {
-  font-size: 14px;
-  color: var(--muted);
-}
+
 .post h3 {
   margin-top: auto;
   padding-top: 64px;
@@ -836,10 +832,16 @@ a.row:hover .arrow {
   .hero-line-2 {
     padding-left: 0;
   }
+  .hero {
+    min-height: 86svh;
+  }
+  .hero-name {
+    font-size: 26.5vw;
+  }
   .card {
     top: calc(84px + var(--i) * 14px);
-    min-height: 64vh;
-    border-radius: 22px;
+    min-height: 50vh;
+    border-radius: 16px;
   }
   .card-logo {
     width: 48px;
@@ -899,4 +901,9 @@ a.row:hover .arrow {
   .float {
     transition: none;
   }
+}
+
+/* a group too small to loop sits still instead of repeating itself */
+.marquee-static .marquee-viewport {
+  mask-image: none;
 }
