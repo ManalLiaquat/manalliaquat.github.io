@@ -1,134 +1,13 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-11-07T16:44:04+00:00",
+  "generatedAt": "2026-11-12T18:05:52+00:00",
   "title": "Design System: Manal Liaquat",
   "extensions": {
     "colorMeta": {
-      "stage": {
+      "void-black": {
         "role": "neutral",
-        "displayName": "Stage Black",
-        "canonical": "oklch(15.1% 0.004 286)",
-        "tonalRamp": [
-          "oklch(15% 0.002 286)",
-          "oklch(25% 0.003 286)",
-          "oklch(35% 0.004 286)",
-          "oklch(45% 0.004 286)",
-          "oklch(55% 0.004 286)",
-          "oklch(65% 0.004 286)",
-          "oklch(80% 0.003 286)",
-          "oklch(95% 0.002 286)"
-        ]
-      },
-      "stage-panel": {
-        "role": "neutral",
-        "displayName": "Stage Panel",
-        "canonical": "oklch(19.3% 0.006 286)",
-        "tonalRamp": [
-          "oklch(15% 0.002 286)",
-          "oklch(25% 0.004 286)",
-          "oklch(35% 0.005 286)",
-          "oklch(45% 0.006 286)",
-          "oklch(55% 0.006 286)",
-          "oklch(65% 0.006 286)",
-          "oklch(80% 0.005 286)",
-          "oklch(95% 0.002 286)"
-        ]
-      },
-      "stage-panel-raised": {
-        "role": "neutral",
-        "displayName": "Stage Panel Raised",
-        "canonical": "oklch(22.4% 0.010 286)",
-        "tonalRamp": [
-          "oklch(15% 0.004 286)",
-          "oklch(25% 0.006 286)",
-          "oklch(35% 0.008 286)",
-          "oklch(45% 0.009 286)",
-          "oklch(55% 0.010 286)",
-          "oklch(65% 0.009 286)",
-          "oklch(80% 0.007 286)",
-          "oklch(95% 0.004 286)"
-        ]
-      },
-      "stage-ink": {
-        "role": "neutral",
-        "displayName": "Warm Ink",
-        "canonical": "oklch(95.8% 0.007 89)",
-        "tonalRamp": [
-          "oklch(15% 0.003 89)",
-          "oklch(25% 0.005 89)",
-          "oklch(35% 0.006 89)",
-          "oklch(45% 0.007 89)",
-          "oklch(55% 0.007 89)",
-          "oklch(65% 0.007 89)",
-          "oklch(80% 0.005 89)",
-          "oklch(95% 0.003 89)"
-        ]
-      },
-      "stage-muted": {
-        "role": "neutral",
-        "displayName": "Ash",
-        "canonical": "oklch(71.9% 0.014 286)",
-        "tonalRamp": [
-          "oklch(15% 0.006 286)",
-          "oklch(25% 0.010 286)",
-          "oklch(35% 0.012 286)",
-          "oklch(45% 0.014 286)",
-          "oklch(55% 0.014 286)",
-          "oklch(65% 0.014 286)",
-          "oklch(80% 0.011 286)",
-          "oklch(95% 0.006 286)"
-        ]
-      },
-      "stage-line": {
-        "role": "neutral",
-        "displayName": "Hairline",
-        "canonical": "rgba(243, 241, 236, 0.12)",
-        "note": "Translucent hairline; the ramp steps its alpha over the same ink.",
-        "tonalRamp": [
-          "rgba(243, 241, 236, 0.04)",
-          "rgba(243, 241, 236, 0.08)",
-          "rgba(243, 241, 236, 0.12)",
-          "rgba(243, 241, 236, 0.16)",
-          "rgba(243, 241, 236, 0.24)",
-          "rgba(243, 241, 236, 0.32)",
-          "rgba(243, 241, 236, 0.48)",
-          "rgba(243, 241, 236, 0.64)"
-        ]
-      },
-      "periwinkle": {
-        "role": "primary",
-        "displayName": "Periwinkle",
-        "canonical": "oklch(72.6% 0.143 276)",
-        "tonalRamp": [
-          "oklch(15% 0.058 276)",
-          "oklch(25% 0.095 276)",
-          "oklch(35% 0.122 276)",
-          "oklch(45% 0.137 276)",
-          "oklch(55% 0.143 276)",
-          "oklch(65% 0.137 276)",
-          "oklch(80% 0.110 276)",
-          "oklch(95% 0.058 276)"
-        ]
-      },
-      "paper": {
-        "role": "neutral",
-        "displayName": "Paper",
-        "canonical": "oklch(94.6% 0.007 89)",
-        "tonalRamp": [
-          "oklch(15% 0.003 89)",
-          "oklch(25% 0.005 89)",
-          "oklch(35% 0.006 89)",
-          "oklch(45% 0.007 89)",
-          "oklch(55% 0.007 89)",
-          "oklch(65% 0.007 89)",
-          "oklch(80% 0.005 89)",
-          "oklch(95% 0.003 89)"
-        ]
-      },
-      "paper-panel": {
-        "role": "neutral",
-        "displayName": "Paper White",
-        "canonical": "oklch(100.0% 0.000 0)",
+        "displayName": "Void Black",
+        "canonical": "oklch(15.4% 0 0)",
         "tonalRamp": [
           "oklch(15% 0.000 0)",
           "oklch(25% 0.000 0)",
@@ -140,420 +19,365 @@
           "oklch(95% 0.000 0)"
         ]
       },
-      "paper-panel-raised": {
+      "mist-ink": {
         "role": "neutral",
-        "displayName": "Paper Raised",
-        "canonical": "oklch(97.3% 0.005 95)",
+        "displayName": "Mist Ink",
+        "canonical": "oklch(90.7% 0.016 239)",
         "tonalRamp": [
-          "oklch(15% 0.002 95)",
-          "oklch(25% 0.004 95)",
-          "oklch(35% 0.005 95)",
-          "oklch(45% 0.005 95)",
-          "oklch(55% 0.005 95)",
-          "oklch(65% 0.005 95)",
-          "oklch(80% 0.004 95)",
-          "oklch(95% 0.002 95)"
+          "oklch(15% 0.007 239)",
+          "oklch(25% 0.009 239)",
+          "oklch(35% 0.011 239)",
+          "oklch(45% 0.014 239)",
+          "oklch(55% 0.016 239)",
+          "oklch(65% 0.014 239)",
+          "oklch(80% 0.010 239)",
+          "oklch(95% 0.007 239)"
         ]
       },
-      "paper-ink": {
+      "slate-steel": {
         "role": "neutral",
-        "displayName": "Paper Ink",
-        "canonical": "oklch(17.9% 0.004 286)",
+        "displayName": "Slate Steel",
+        "canonical": "oklch(52% 0.017 264)",
         "tonalRamp": [
-          "oklch(15% 0.002 286)",
-          "oklch(25% 0.003 286)",
-          "oklch(35% 0.003 286)",
-          "oklch(45% 0.004 286)",
-          "oklch(55% 0.004 286)",
-          "oklch(65% 0.004 286)",
-          "oklch(80% 0.003 286)",
-          "oklch(95% 0.002 286)"
+          "oklch(15% 0.007 264)",
+          "oklch(25% 0.010 264)",
+          "oklch(35% 0.012 264)",
+          "oklch(45% 0.015 264)",
+          "oklch(55% 0.017 264)",
+          "oklch(65% 0.015 264)",
+          "oklch(80% 0.011 264)",
+          "oklch(95% 0.007 264)"
         ]
       },
-      "paper-muted": {
+      "steel-mist": {
         "role": "neutral",
-        "displayName": "Graphite",
-        "canonical": "oklch(48.2% 0.014 286)",
+        "displayName": "Steel Mist",
+        "canonical": "oklch(83.6% 0.024 236)",
         "tonalRamp": [
-          "oklch(15% 0.006 286)",
-          "oklch(25% 0.010 286)",
-          "oklch(35% 0.012 286)",
-          "oklch(45% 0.014 286)",
-          "oklch(55% 0.014 286)",
-          "oklch(65% 0.014 286)",
-          "oklch(80% 0.011 286)",
-          "oklch(95% 0.006 286)"
+          "oklch(15% 0.010 236)",
+          "oklch(25% 0.014 236)",
+          "oklch(35% 0.017 236)",
+          "oklch(45% 0.021 236)",
+          "oklch(55% 0.024 236)",
+          "oklch(65% 0.021 236)",
+          "oklch(80% 0.015 236)",
+          "oklch(95% 0.010 236)"
         ]
       },
-      "paper-line": {
+      "paper-white": {
         "role": "neutral",
-        "displayName": "Paper Hairline",
-        "canonical": "rgba(17, 17, 19, 0.12)",
-        "note": "Translucent hairline; the ramp steps its alpha over the same ink.",
+        "displayName": "Paper White",
+        "canonical": "oklch(100% 0 0)",
         "tonalRamp": [
-          "rgba(17, 17, 19, 0.04)",
-          "rgba(17, 17, 19, 0.08)",
-          "rgba(17, 17, 19, 0.12)",
-          "rgba(17, 17, 19, 0.16)",
-          "rgba(17, 17, 19, 0.24)",
-          "rgba(17, 17, 19, 0.32)",
-          "rgba(17, 17, 19, 0.48)",
-          "rgba(17, 17, 19, 0.64)"
+          "oklch(15% 0.000 0)",
+          "oklch(25% 0.000 0)",
+          "oklch(35% 0.000 0)",
+          "oklch(45% 0.000 0)",
+          "oklch(55% 0.000 0)",
+          "oklch(65% 0.000 0)",
+          "oklch(80% 0.000 0)",
+          "oklch(95% 0.000 0)"
         ]
       },
-      "cobalt": {
+      "aubergine-night": {
         "role": "primary",
-        "displayName": "Cobalt",
-        "canonical": "oklch(51.1% 0.205 271)",
+        "displayName": "Aubergine Night",
+        "canonical": "oklch(15.6% 0.071 318)",
         "tonalRamp": [
-          "oklch(15% 0.084 271)",
-          "oklch(25% 0.137 271)",
-          "oklch(35% 0.175 271)",
-          "oklch(45% 0.198 271)",
-          "oklch(55% 0.205 271)",
-          "oklch(65% 0.198 271)",
-          "oklch(80% 0.158 271)",
-          "oklch(95% 0.084 271)"
+          "oklch(15% 0.030 318)",
+          "oklch(25% 0.040 318)",
+          "oklch(35% 0.050 318)",
+          "oklch(45% 0.061 318)",
+          "oklch(55% 0.071 318)",
+          "oklch(65% 0.061 318)",
+          "oklch(80% 0.045 318)",
+          "oklch(95% 0.030 318)"
         ]
       },
-      "live-green": {
-        "role": "status",
-        "displayName": "Live Green",
-        "canonical": "oklch(80.0% 0.182 152)",
+      "magenta-bloom": {
+        "role": "primary",
+        "displayName": "Magenta Bloom",
+        "canonical": "oklch(53.6% 0.241 333)",
         "tonalRamp": [
-          "oklch(15% 0.074 152)",
-          "oklch(25% 0.121 152)",
-          "oklch(35% 0.155 152)",
-          "oklch(45% 0.175 152)",
-          "oklch(55% 0.182 152)",
-          "oklch(65% 0.175 152)",
-          "oklch(80% 0.140 152)",
-          "oklch(95% 0.074 152)"
+          "oklch(15% 0.101 333)",
+          "oklch(25% 0.136 333)",
+          "oklch(35% 0.171 333)",
+          "oklch(45% 0.206 333)",
+          "oklch(55% 0.241 333)",
+          "oklch(65% 0.206 333)",
+          "oklch(80% 0.153 333)",
+          "oklch(95% 0.101 333)"
+        ]
+      },
+      "ultraviolet": {
+        "role": "secondary",
+        "displayName": "Ultraviolet",
+        "canonical": "oklch(45.9% 0.208 306)",
+        "tonalRamp": [
+          "oklch(15% 0.087 306)",
+          "oklch(25% 0.117 306)",
+          "oklch(35% 0.147 306)",
+          "oklch(45% 0.178 306)",
+          "oklch(55% 0.208 306)",
+          "oklch(65% 0.178 306)",
+          "oklch(80% 0.132 306)",
+          "oklch(95% 0.087 306)"
+        ]
+      },
+      "ember": {
+        "role": "tertiary",
+        "displayName": "Ember",
+        "canonical": "oklch(56% 0.162 44)",
+        "tonalRamp": [
+          "oklch(15% 0.068 44)",
+          "oklch(25% 0.091 44)",
+          "oklch(35% 0.115 44)",
+          "oklch(45% 0.138 44)",
+          "oklch(55% 0.162 44)",
+          "oklch(65% 0.138 44)",
+          "oklch(80% 0.103 44)",
+          "oklch(95% 0.068 44)"
+        ]
+      },
+      "silk-plum": {
+        "role": "neutral",
+        "displayName": "Silk Plum",
+        "canonical": "oklch(28% 0.089 317)",
+        "tonalRamp": [
+          "oklch(15% 0.037 317)",
+          "oklch(25% 0.050 317)",
+          "oklch(35% 0.063 317)",
+          "oklch(45% 0.076 317)",
+          "oklch(55% 0.089 317)",
+          "oklch(65% 0.076 317)",
+          "oklch(80% 0.057 317)",
+          "oklch(95% 0.037 317)"
         ]
       }
     },
     "typographyMeta": {
+      "display-hero": {
+        "displayName": "Display Hero",
+        "purpose": "The full-width hero greeting; 12.4vw stepping to 13.2 / 14.2 / 15.4vw at 640 / 768 / 1024px, uppercase, steel gradient."
+      },
       "display": {
         "displayName": "Display",
-        "purpose": "The hero name only, full width in two lines."
+        "purpose": "Section titles, uppercase and centred; steel gradient on dark, solid void-black on the white panel."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "01, 02 index numbers in the skills list and on work cards."
+      },
+      "marquee": {
+        "displayName": "Marquee",
+        "purpose": "ScrollVelocity skill rows."
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section titles, one or two words, revealed line by line from a mask."
-      },
-      "statement": {
-        "displayName": "Statement",
-        "purpose": "The pinned summary paragraph that lights up word by word."
+        "purpose": "Company names on work cards, uppercase; post titles use the same weight at a smaller clamp."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "Credential row titles."
+        "purpose": "Skill-group names and credential titles, uppercase."
       },
-      "display-closing": {
-        "displayName": "Display Closing",
-        "purpose": "The two-line contact headline."
-      },
-      "display-company": {
-        "displayName": "Display Company",
-        "purpose": "Company names on experience cards."
-      },
-      "panel-heading": {
-        "displayName": "Panel Heading",
-        "purpose": "Writing-panel titles."
-      },
-      "pill": {
-        "displayName": "Pill",
-        "purpose": "Skill pills in the marquees."
-      },
-      "micro": {
-        "displayName": "Micro",
-        "purpose": "Cursor-ring label and nav monogram."
-      },
-      "lead": {
-        "displayName": "Lead",
-        "purpose": "Hero tagline (22ch) and role titles (500, accent)."
+      "body-lead": {
+        "displayName": "Body Lead",
+        "purpose": "The About summary, centred, max 560px."
       },
       "body": {
         "displayName": "Body",
-        "purpose": "Running text; post summaries capped at 44ch."
+        "purpose": "Skill lists, excerpts and meta lines, usually at 60 to 70% opacity."
+      },
+      "tagline": {
+        "displayName": "Tagline",
+        "purpose": "Hero tagline beside the Contact button, uppercase."
       },
       "label": {
         "displayName": "Label",
-        "purpose": "Nav links, badge, tabular dates, chip notes, marquee labels, small buttons."
-      },
-      "caption": {
-        "displayName": "Caption",
-        "purpose": "Footer."
+        "purpose": "Button text, uppercase at 0.1em; grows to 1rem at 768px."
       }
     },
     "shadows": [
       {
-        "name": "none",
-        "value": "none",
-        "purpose": "No box-shadow anywhere; depth is tonal layering, stacking and scroll-driven recession."
-      },
-      {
-        "name": "nav-frost",
-        "value": "backdrop-filter: blur(14px) over color-mix(in srgb, var(--panel) 82%, transparent)",
-        "purpose": "The floating nav only."
-      },
-      {
-        "name": "post-spotlight",
-        "value": "radial-gradient(420px circle at var(--mx) var(--my), color-mix(in srgb, var(--accent) 18%, transparent), transparent 70%)",
-        "purpose": "Hover-only cursor wash inside writing panels."
-      },
-      {
-        "name": "focus-ring",
-        "value": "outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 6px",
-        "purpose": "Global :focus-visible."
+        "name": "contact-glow",
+        "value": "0 4px 4px rgba(181, 1, 167, 0.25), inset 4px 4px 12px #7721b1",
+        "purpose": "Magenta drop and violet inner bevel on the Contact button only."
       }
     ],
     "motion": [
       {
-        "name": "ease",
-        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
-        "purpose": "The one CSS easing curve for every transition (fast start, long settle)."
+        "name": "ease-standard",
+        "value": "cubic-bezier(0.25, 0.1, 0.25, 1)",
+        "purpose": "Easing for FadeIn entrances and the Contact button lift."
       },
       {
-        "name": "duration-quick",
-        "value": "0.3s",
-        "purpose": "Color and background swaps on links, pills, socials, rows."
+        "name": "fade-in",
+        "value": "0.7s, from 30-40px below, once, 0.06-0.1s list stagger",
+        "purpose": "Default entrance for headings, rows, cards and buttons."
       },
       {
-        "name": "duration-nudge",
-        "value": "0.35s",
-        "purpose": "Arrow nudges and cursor-ring size changes."
+        "name": "button-lift",
+        "value": "0.3s translateY(-2px) + brightness(1.12)",
+        "purpose": "Contact button hover."
       },
       {
-        "name": "duration-state",
-        "value": "0.4s",
-        "purpose": "Button text/border color, nav tint, post border, spotlight fade."
+        "name": "ghost-fill",
+        "value": "0.2s ease background-color",
+        "purpose": "Ghost button hover fill."
       },
       {
-        "name": "duration-fill",
-        "value": "0.5s",
-        "purpose": "Button fill rising from below; credential row indent."
+        "name": "magnet",
+        "value": "0.3s ease-out active / 0.6s ease-in-out release, 150px reach, strength 3",
+        "purpose": "Hero avatar pull toward a fine pointer."
       },
       {
-        "name": "duration-lift",
-        "value": "0.6s",
-        "purpose": "Writing panel lift; nav monogram spin."
+        "name": "card-stack",
+        "value": "scale 1 to 1 - 0.03 per remaining card over the stack's scroll",
+        "purpose": "Sticky work cards recede as the next one stacks over."
       },
       {
-        "name": "duration-tone",
-        "value": "0.7s",
-        "purpose": "Cross-fade between the dark stage and the paper scene."
-      },
-      {
-        "name": "reveal-lines",
-        "value": "gsap yPercent 110 -> 0, 1.1s power4.out, stagger 0.1",
-        "purpose": "Section titles and contact headline rising out of masks."
-      },
-      {
-        "name": "reveal-hero-letters",
-        "value": "gsap yPercent 115 -> 0, 1.1s power4.out, stagger 0.04",
-        "purpose": "Hero name letters on arrival."
-      },
-      {
-        "name": "fade-up",
-        "value": "gsap opacity 0 / y 40 -> rest, 1s power3.out, start top 88%",
-        "purpose": "Supporting elements entering."
-      },
-      {
-        "name": "card-recede",
-        "value": "scrubbed scale 1 -> 0.93, brightness 1 -> 0.62",
-        "purpose": "Experience card receding as the next one slides over it."
-      },
-      {
-        "name": "hero-recede",
-        "value": "scrubbed yPercent -18, scale 0.94, opacity 0.15",
-        "purpose": "Hero drifting back as the visitor scrolls away."
-      },
-      {
-        "name": "statement-scrub",
-        "value": "word opacity 0.14 -> 1, scrub 0.6",
-        "purpose": "Pinned summary lighting up word by word."
-      },
-      {
-        "name": "row-wipe",
-        "value": "clip-path inset(0 100% 0 0) -> 0, 1s power4.inOut, stagger 0.07",
-        "purpose": "Credential rows wiping in."
-      },
-      {
-        "name": "marquee",
-        "value": "38s linear loop, timeScale up to 7x on scroll velocity, settle 1.2s power2.out",
-        "purpose": "Skill rows."
-      },
-      {
-        "name": "nav-hide",
-        "value": "yPercent -150, 0.45s power3.out",
-        "purpose": "Nav leaves on scroll down, returns on scroll up or near top."
+        "name": "char-reveal",
+        "value": "opacity 0.2 to 1 per character, scroll range start 0.8 to end 0.2",
+        "purpose": "About summary brightening on scroll."
       },
       {
         "name": "smooth-scroll",
-        "value": "Lenis lerp 0.11; anchor glide 1.4s",
-        "purpose": "Smooth scrolling synced to GSAP's ticker; off under reduced motion."
-      },
-      {
-        "name": "magnetic",
-        "value": "gsap quickTo 0.5s power3, strength 0.3 (0.2 large)",
-        "purpose": "Hero and contact buttons leaning toward a fine pointer."
-      },
-      {
-        "name": "cursor-follow",
-        "value": "gsap quickTo 0.35s power3",
-        "purpose": "Cursor ring trailing the native cursor."
-      },
-      {
-        "name": "intro-curtain",
-        "value": "letters 0.7s power4.out stagger 0.035; bar 0.6s power2.inOut; lift 0.8s power4.inOut",
-        "purpose": "Once-per-session intro."
-      },
-      {
-        "name": "reduced-motion",
-        "value": "prefers-reduced-motion: reduce",
-        "purpose": "Disables intro, Lenis, scrubbing, marquees, magnetic, cursor ring, keyframes and transitions; final states shown."
+        "value": "Lenis lerp 0.11; anchor scrollTo 1.3s",
+        "purpose": "Page scroll and in-page anchor glides; disabled under reduced motion."
       }
     ],
     "breakpoints": [
       {
-        "name": "compact",
-        "value": "860px",
-        "purpose": "max-width: nav collapses to monogram + Contact, single-column panels, two-column rows."
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
       }
     ]
   },
   "components": [
     {
-      "name": "Solid Button",
+      "name": "Contact Button",
       "kind": "button",
-      "refersTo": "button-primary",
-      "description": "Primary call to action (Email me); periwinkle rises from below on hover.",
-      "html": "<a class=\"ds-btn ds-btn-solid\" href=\"#\">Email me <svg class=\"ds-arrow\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M2 8h11M9 4l4 4-4 4\"/></svg></a>",
-      "css": ":host{--bg:#0b0b0d;--panel:#141417;--fg:#f3f1ec;--muted:#a3a3ad;--line:rgba(243,241,236,.12);--accent:#8f9dff;--accent-ink:#0b0b0d} .ds-btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;border:1px solid var(--line);color:var(--fg);background:transparent;font-family:'Onest Variable',system-ui,sans-serif;font-size:17px;font-weight:500;text-decoration:none;overflow:hidden;isolation:isolate;transition:color .4s cubic-bezier(0.16, 1, 0.3, 1),border-color .4s cubic-bezier(0.16, 1, 0.3, 1)}.ds-btn::before{content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--fg);transform:translateY(101%);transition:transform .5s cubic-bezier(0.16, 1, 0.3, 1)}.ds-btn:hover{color:var(--bg);border-color:var(--fg)}.ds-btn:hover::before{transform:none}.ds-btn:hover .ds-arrow{transform:translateX(3px)}.ds-btn:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.ds-arrow{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s cubic-bezier(0.16, 1, 0.3, 1)}.ds-btn-solid{background:var(--fg);color:var(--bg);border-color:var(--fg)}.ds-btn-solid::before{background:var(--accent)}.ds-btn-solid:hover{color:var(--accent-ink);border-color:var(--accent)}"
+      "refersTo": "button-contact",
+      "description": "The single hot action: the four-stop gradient pill used for Contact Me and the email link.",
+      "html": "<a class=\"ds-btn-contact\" href=\"#\">Contact Me</a>",
+      "css": ".ds-btn-contact { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; padding: 0.75rem 2rem; background: linear-gradient(123deg, #18011f 7%, #b600a8 37%, #7621b0 72%, #be4c00 100%); box-shadow: 0 4px 4px rgba(181, 1, 167, 0.25), inset 4px 4px 12px #7721b1; outline: 2px solid #fff; outline-offset: -3px; color: #fff; font-family: Kanit, sans-serif; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.75rem; text-decoration: none; transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), filter 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); } .ds-btn-contact:hover { transform: translateY(-2px); filter: brightness(1.12); } .ds-btn-contact:active { transform: translateY(0); } .ds-btn-contact:focus-visible { outline: 2px solid #d7e2ea; outline-offset: 4px; }"
     },
     {
       "name": "Ghost Button",
       "kind": "button",
       "refersTo": "button-ghost",
-      "description": "Secondary action (See the work, nav Contact); ink rises from below on hover.",
-      "html": "<a class=\"ds-btn\" href=\"#\">See the work</a>",
-      "css": ":host{--bg:#0b0b0d;--panel:#141417;--fg:#f3f1ec;--muted:#a3a3ad;--line:rgba(243,241,236,.12);--accent:#8f9dff;--accent-ink:#0b0b0d} .ds-btn{position:relative;display:inline-flex;align-items:center;gap:10px;padding:15px 26px;border-radius:999px;border:1px solid var(--line);color:var(--fg);background:transparent;font-family:'Onest Variable',system-ui,sans-serif;font-size:17px;font-weight:500;text-decoration:none;overflow:hidden;isolation:isolate;transition:color .4s cubic-bezier(0.16, 1, 0.3, 1),border-color .4s cubic-bezier(0.16, 1, 0.3, 1)}.ds-btn::before{content:'';position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--fg);transform:translateY(101%);transition:transform .5s cubic-bezier(0.16, 1, 0.3, 1)}.ds-btn:hover{color:var(--bg);border-color:var(--fg)}.ds-btn:hover::before{transform:none}.ds-btn:hover .ds-arrow{transform:translateX(3px)}.ds-btn:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.ds-arrow{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s cubic-bezier(0.16, 1, 0.3, 1)}"
+      "description": "Hollow mist-ink pill for Verify, Read on Medium and social links.",
+      "html": "<a class=\"ds-btn-ghost\" href=\"#\">Read on Medium</a>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; justify-content: center; border-radius: 999px; border: 2px solid #d7e2ea; padding: 0.6rem 1.6rem; color: #d7e2ea; background: #0c0c0c; font-family: Kanit, sans-serif; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; white-space: nowrap; text-decoration: none; transition: background-color 0.2s ease; } .ds-btn-ghost:hover { background: rgba(215, 226, 234, 0.1); } .ds-btn-ghost:focus-visible { outline: 2px solid #d7e2ea; outline-offset: 4px; }"
     },
     {
-      "name": "Floating Pill Nav",
+      "name": "Pill Navigation",
       "kind": "nav",
-      "refersTo": "nav",
-      "description": "Fixed, centered, frosted pill with monogram, section links and Contact.",
-      "html": "<header class=\"ds-nav\"><a class=\"ds-nav-home\" href=\"#\"><span class=\"ds-nav-mono\">ML</span>Manal Liaquat</a><nav class=\"ds-nav-links\"><a href=\"#\" class=\"is-active\">Work</a><a href=\"#\">Skills</a><a href=\"#\">Credentials</a><a href=\"#\">Writing</a></nav><a class=\"ds-nav-btn\" href=\"#\">Contact</a></header>",
-      "css": ":host{--bg:#0b0b0d;--panel:#141417;--fg:#f3f1ec;--muted:#a3a3ad;--line:rgba(243,241,236,.12);--accent:#8f9dff;--accent-ink:#0b0b0d} .ds-nav{display:flex;align-items:center;gap:28px;padding:8px 8px 8px 18px;border-radius:999px;border:1px solid var(--line);background:color-mix(in srgb,var(--panel) 82%,transparent);backdrop-filter:blur(14px);color:var(--fg);font-family:'Onest Variable',system-ui,sans-serif;font-size:17px}.ds-nav a{color:inherit;text-decoration:none}.ds-nav-home{display:flex;align-items:center;gap:10px;font-weight:600}.ds-nav-mono{display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--fg);color:var(--bg);font:700 13px 'Bricolage Grotesque Variable',sans-serif;transition:transform .6s cubic-bezier(0.16, 1, 0.3, 1)}.ds-nav-home:hover .ds-nav-mono{transform:rotate(-360deg)}.ds-nav-links{display:flex;gap:4px;margin-left:auto}.ds-nav-links a{padding:8px 14px;border-radius:999px;font-size:15px;color:var(--muted);transition:color .3s ease,background-color .3s ease}.ds-nav-links a:hover,.ds-nav-links a.is-active{color:var(--fg);background:var(--line)}.ds-nav-btn{padding:9px 18px;border-radius:999px;border:1px solid var(--line);font-size:15px;font-weight:500;transition:background-color .4s cubic-bezier(0.16, 1, 0.3, 1),color .4s cubic-bezier(0.16, 1, 0.3, 1)}.ds-nav-btn:hover{background:var(--fg);color:var(--bg)}.ds-nav a:focus-visible{outline:2px solid var(--accent);outline-offset:4px}"
+      "refersTo": null,
+      "description": "PillNav configured dark and glass: monogram plus four section anchors, centred above the hero. Simplified stand-in; the live component is React Bits PillNav.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Sections\"><span class=\"ds-nav-logo\">ML</span><a class=\"ds-nav-item is-active\" href=\"#\">About</a><a class=\"ds-nav-item\" href=\"#\">Skills</a><a class=\"ds-nav-item\" href=\"#\">Work</a><a class=\"ds-nav-item\" href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav { display: inline-flex; align-items: center; gap: 4px; padding: 6px; border-radius: 999px; background: rgba(38, 35, 46, 0.66); backdrop-filter: blur(20px) saturate(1.6); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 22px 44px -20px rgba(0, 0, 0, 0.8); font-family: Kanit, sans-serif; } .ds-nav-logo { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: #d7e2ea; color: #0c0c0c; font-weight: 900; font-size: 13px; } .ds-nav-item { padding: 8px 16px; border-radius: 999px; color: rgba(244, 244, 245, 0.64); text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease, background 0.2s ease; } .ds-nav-item:hover { color: #f4f4f5; background: rgba(255, 255, 255, 0.06); } .ds-nav-item.is-active { background: linear-gradient(180deg, #ffffff 0%, #ebebf0 100%); color: #121016; } .ds-nav-item:focus-visible { outline: 2px solid #d7e2ea; outline-offset: 2px; }"
     },
     {
-      "name": "Live Badge",
-      "kind": "chip",
-      "refersTo": "badge",
-      "description": "Hero status pill with the pulsing live dot.",
-      "html": "<p class=\"ds-badge\"><span class=\"ds-badge-dot\"></span>Currently Backend Team Lead @ Plai</p>",
-      "css": ":host{--bg:#0b0b0d;--panel:#141417;--fg:#f3f1ec;--muted:#a3a3ad;--line:rgba(243,241,236,.12);--accent:#8f9dff;--accent-ink:#0b0b0d} .ds-badge{display:inline-flex;align-items:center;gap:10px;margin:0;padding:8px 16px 8px 12px;border:1px solid var(--line);border-radius:999px;font-family:'Onest Variable',system-ui,sans-serif;font-size:15px;color:var(--muted)}.ds-badge-dot{position:relative;width:8px;height:8px;border-radius:50%;background:#4ade80}.ds-badge-dot::after{content:'';position:absolute;inset:0;border-radius:50%;background:inherit;animation:ds-ping 2.4s cubic-bezier(0.16, 1, 0.3, 1) infinite}@keyframes ds-ping{70%,100%{transform:scale(3);opacity:0}}@media (prefers-reduced-motion:reduce){.ds-badge-dot::after{animation:none}}"
-    },
-    {
-      "name": "Skill Pill",
-      "kind": "chip",
-      "refersTo": "pill-skill",
-      "description": "Display-face pill in the skill marquees; fills with the accent on hover.",
-      "html": "<span class=\"ds-pill\">Node.js</span> <span class=\"ds-pill\">PostgreSQL</span>",
-      "css": ":host{--bg:#0b0b0d;--panel:#141417;--fg:#f3f1ec;--muted:#a3a3ad;--line:rgba(243,241,236,.12);--accent:#8f9dff;--accent-ink:#0b0b0d} .ds-pill{display:inline-block;padding:14px 28px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--fg);font-family:'Bricolage Grotesque Variable','Onest Variable',system-ui,sans-serif;font-size:clamp(22px,3vw,44px);font-weight:600;letter-spacing:-.02em;white-space:nowrap;transition:background-color .3s ease,color .3s ease,border-color .3s}.ds-pill:hover{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}"
-    },
-    {
-      "name": "Experience Card",
-      "kind": "card",
-      "refersTo": "card-experience",
-      "description": "Sticky stacking role panel: date and logo tile, display company, accent role, chip notes.",
-      "html": "<article class=\"ds-card\"><div class=\"ds-card-top\"><span class=\"ds-card-date\">2023 – Present</span><span class=\"ds-card-logo\"></span></div><h3 class=\"ds-card-company\">Plai</h3><p class=\"ds-card-role\">Backend Team Lead</p><ul class=\"ds-notes\"><li>Node.js services</li><li>Team of five</li></ul></article>",
-      "css": ":host{--bg:#0b0b0d;--panel:#141417;--fg:#f3f1ec;--muted:#a3a3ad;--line:rgba(243,241,236,.12);--accent:#8f9dff;--accent-ink:#0b0b0d} .ds-card{display:flex;flex-direction:column;padding:clamp(28px,4vw,56px);border-radius:16px;background:var(--panel);border:1px solid var(--line);color:var(--fg);font-family:'Onest Variable',system-ui,sans-serif;}.ds-card-top{display:flex;align-items:center;justify-content:space-between;gap:16px}.ds-card-date{font-size:15px;color:var(--muted);font-variant-numeric:tabular-nums}.ds-card-logo{width:64px;height:64px;border-radius:16px;background:#fff}.ds-card-company{margin:0;padding-top:clamp(20px,3vw,36px);font-family:'Bricolage Grotesque Variable','Onest Variable',system-ui,sans-serif;font-size:clamp(44px,8vw,8rem);font-weight:700;line-height:.95;letter-spacing:-.04em}.ds-card-role{margin:16px 0 20px;font-size:clamp(19px,2vw,26px);font-weight:500;color:var(--accent)}.ds-notes{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0}.ds-notes li{padding:7px 14px;border-radius:999px;border:1px solid var(--line);font-size:15px;color:var(--muted)}"
-    },
-    {
-      "name": "Credential Row",
+      "name": "Gradient Heading",
       "kind": "custom",
-      "refersTo": "row-credential",
-      "description": "Hairline-ruled row on paper; indents and turns accent on hover.",
-      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\"><span class=\"ds-row-title\">Full Stack Web Developer</span><span class=\"ds-row-meta\">Udacity</span><span class=\"ds-row-go\">Verify <svg class=\"ds-arrow\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\"/></svg></span></a></li></ul>",
-      "css": ":host{--fg:#111113;--muted:#5d5d66;--line:rgba(17,17,19,.12);--accent:#4152d9} .ds-rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--line);background:#efede8;font-family:'Onest Variable',system-ui,sans-serif;font-size:17px}.ds-rows li{border-bottom:1px solid var(--line)}.ds-row{display:grid;grid-template-columns:1fr minmax(140px,.4fr) 100px;align-items:baseline;gap:16px;padding:26px 8px;color:var(--fg);text-decoration:none;transition:padding .5s cubic-bezier(0.16, 1, 0.3, 1),color .3s ease}.ds-row-title{font-family:'Bricolage Grotesque Variable','Onest Variable',system-ui,sans-serif;font-size:clamp(22px,2.8vw,38px);font-weight:600;letter-spacing:-.02em;line-height:1.1;transition:color .3s ease}.ds-row-meta{color:var(--muted)}.ds-row-go{display:inline-flex;align-items:center;justify-content:flex-end;gap:6px;font-weight:500;color:var(--accent)}.ds-row:hover{padding-left:28px}.ds-row:hover .ds-row-title{color:var(--accent)}.ds-row:hover .ds-arrow{transform:translate(2px,-2px)}.ds-row:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.ds-arrow{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s cubic-bezier(0.16, 1, 0.3, 1)}"
+      "refersTo": null,
+      "description": "Kanit 900 uppercase display title filled with the steel gradient; the brand's signature type treatment on the dark stage.",
+      "html": "<div class=\"ds-stage\"><h2 class=\"ds-heading\">About me</h2></div>",
+      "css": ".ds-stage { background: #0c0c0c; padding: 2rem 1.25rem; } .ds-heading { margin: 0; font-family: Kanit, sans-serif; font-weight: 900; text-transform: uppercase; line-height: 1; letter-spacing: -0.025em; text-align: center; font-size: clamp(3rem, 12vw, 160px); background: linear-gradient(180deg, #646973 0%, #bbccd7 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }"
     },
     {
-      "name": "Writing Panel",
+      "name": "Work Card",
       "kind": "card",
-      "refersTo": "post-panel",
-      "description": "Article link panel on paper; lifts with an accent border and a cursor-follow wash on hover.",
-      "html": "<a class=\"ds-post\" href=\"#\"><h3>CRA to PWA</h3><p>How to convert a Create React App project into a Progressive Web App.</p><span class=\"ds-post-go\">Read on Medium <svg class=\"ds-arrow\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\"/></svg></span></a>",
-      "css": ":host{--panel:#fff;--fg:#111113;--muted:#5d5d66;--line:rgba(17,17,19,.12);--accent:#4152d9} .ds-post{position:relative;display:flex;flex-direction:column;min-height:300px;padding:clamp(24px,3vw,40px);border-radius:16px;background:var(--panel);border:1px solid var(--line);color:var(--fg);text-decoration:none;font-family:'Onest Variable',system-ui,sans-serif;font-size:17px;line-height:1.6;overflow:hidden;isolation:isolate;transition:transform .6s cubic-bezier(0.16, 1, 0.3, 1),border-color .4s ease}.ds-post::before{content:'';position:absolute;inset:0;z-index:-1;background:radial-gradient(420px circle at var(--mx,50%) var(--my,50%),color-mix(in srgb,var(--accent) 18%,transparent),transparent 70%);opacity:0;transition:opacity .4s ease}.ds-post:hover{transform:translateY(-6px);border-color:var(--accent)}.ds-post:hover::before{opacity:1}.ds-post h3{margin:0;font-family:'Bricolage Grotesque Variable','Onest Variable',system-ui,sans-serif;font-size:clamp(34px,4.4vw,64px);font-weight:700;line-height:1;letter-spacing:-.035em}.ds-post p{color:var(--muted);max-width:44ch;margin:16px 0 24px}.ds-post-go{margin-top:auto;display:inline-flex;align-items:center;gap:8px;font-weight:500}.ds-post:hover .ds-arrow{transform:translate(2px,-2px)}.ds-post:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.ds-arrow{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s cubic-bezier(0.16, 1, 0.3, 1)}"
+      "refersTo": "card-work",
+      "description": "Outlined black card with numeral, dates, company, role, white logo tile and highlight chips; sticks and stacks on scroll.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-card-top\"><span class=\"ds-card-num\">01</span><div class=\"ds-card-title\"><p class=\"ds-card-cat\">2023 – Present</p><h3>Plai</h3><p class=\"ds-card-role\">Backend Team Lead</p></div><span class=\"ds-card-logo\"></span></div><ul class=\"ds-chips\"><li>Node.js APIs</li><li>Team lead</li></ul></article>",
+      "css": ".ds-card { border-radius: 40px; border: 2px solid #d7e2ea; background: #0c0c0c; color: #d7e2ea; padding: 1.5rem; font-family: Kanit, sans-serif; display: flex; flex-direction: column; gap: 2rem; transition: border-color 0.3s ease; } .ds-card:hover { border-color: #bbccd7; } .ds-card-top { display: flex; align-items: flex-start; gap: 1.5rem; } .ds-card-num { font-weight: 900; font-size: 4rem; line-height: 0.9; } .ds-card-title { flex: 1; min-width: 0; padding-top: 0.6rem; } .ds-card-title p, .ds-card-title h3 { margin: 0; } .ds-card-cat { color: #bbccd7; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.85rem; } .ds-card-title h3 { font-weight: 700; text-transform: uppercase; line-height: 1; font-size: 2.4rem; margin: 0.4rem 0; } .ds-card-role { font-weight: 300; font-size: 1.1rem; } .ds-card-logo { width: 72px; height: 72px; border-radius: 24px; background: #fff; flex-shrink: 0; } .ds-chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; } .ds-chips li { border-radius: 999px; border: 2px solid rgba(215, 226, 234, 0.35); padding: 0.55rem 1.2rem; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; }"
     },
     {
-      "name": "Social Link",
+      "name": "Chip",
       "kind": "chip",
-      "refersTo": "social-link",
-      "description": "Pill link in the contact block; ink fill on hover.",
-      "html": "<a class=\"ds-social\" href=\"#\">GitHub <svg class=\"ds-arrow\" viewBox=\"0 0 16 16\" width=\"16\" height=\"16\" aria-hidden=\"true\"><path d=\"M5 11 11 5M6 5h5v5\"/></svg></a>",
-      "css": ":host{--bg:#0b0b0d;--panel:#141417;--fg:#f3f1ec;--muted:#a3a3ad;--line:rgba(243,241,236,.12);--accent:#8f9dff;--accent-ink:#0b0b0d} .ds-social{display:inline-flex;align-items:center;gap:6px;padding:10px 18px;border-radius:999px;border:1px solid var(--line);color:var(--fg);text-decoration:none;font-family:'Onest Variable',system-ui,sans-serif;font-size:17px;transition:background-color .3s ease,color .3s ease}.ds-social:hover{background:var(--fg);color:var(--bg)}.ds-social:hover .ds-arrow{transform:translate(2px,-2px)}.ds-social:focus-visible{outline:2px solid var(--accent);outline-offset:4px}.ds-arrow{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s cubic-bezier(0.16, 1, 0.3, 1)}"
+      "refersTo": "chip",
+      "description": "Static highlight pill on work cards.",
+      "html": "<div class=\"ds-chip-wrap\"><span class=\"ds-chip\">Laravel</span><span class=\"ds-chip\">REST APIs</span></div>",
+      "css": ".ds-chip-wrap { display: flex; gap: 10px; flex-wrap: wrap; background: #0c0c0c; padding: 1rem; } .ds-chip { border-radius: 999px; border: 2px solid rgba(215, 226, 234, 0.35); padding: 0.55rem 1.2rem; color: #d7e2ea; font-family: Kanit, sans-serif; text-transform: uppercase; letter-spacing: 0.06em; font-size: 0.8rem; }"
+    },
+    {
+      "name": "Post Card",
+      "kind": "card",
+      "refersTo": "card-post",
+      "description": "Writing card with a softer 35% outline, 700 uppercase title, 300 excerpt and a ghost link.",
+      "html": "<article class=\"ds-post\"><h3>Article title</h3><p>A short excerpt of the Medium article.</p><a class=\"ds-post-link\" href=\"#\">Read on Medium</a></article>",
+      "css": ".ds-post { border-radius: 40px; border: 2px solid rgba(215, 226, 234, 0.35); background: #0c0c0c; color: #d7e2ea; padding: clamp(1.5rem, 3vw, 2.5rem); min-height: 300px; display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; font-family: Kanit, sans-serif; } .ds-post h3 { margin: 0; font-weight: 700; text-transform: uppercase; line-height: 1.05; font-size: clamp(1.6rem, 3.4vw, 2.8rem); } .ds-post p { margin: 0 0 auto; font-weight: 300; opacity: 0.7; line-height: 1.6; } .ds-post-link { border-radius: 999px; border: 2px solid #d7e2ea; padding: 0.6rem 1.6rem; color: #d7e2ea; text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; font-weight: 500; transition: background-color 0.2s ease; } .ds-post-link:hover { background: rgba(215, 226, 234, 0.1); } .ds-post-link:focus-visible { outline: 2px solid #d7e2ea; outline-offset: 4px; }"
+    },
+    {
+      "name": "Skills Panel Row",
+      "kind": "custom",
+      "refersTo": "panel-light",
+      "description": "The white sheet's numbered list row: black 900 numeral, 500 uppercase group name, 300 item list.",
+      "html": "<ol class=\"ds-panel\"><li class=\"ds-row\"><span class=\"ds-row-num\">01</span><div><h3>Backend</h3><p>PHP, Laravel, Node.js, MySQL</p></div></li></ol>",
+      "css": ".ds-panel { list-style: none; margin: 0; padding: 3rem 1.25rem; background: #fff; color: #0c0c0c; border-radius: 40px 40px 0 0; font-family: Kanit, sans-serif; } .ds-row { display: flex; align-items: flex-start; gap: 2rem; padding: 2rem 0; border-top: 1px solid rgba(12, 12, 12, 0.15); border-bottom: 1px solid rgba(12, 12, 12, 0.15); } .ds-row-num { font-weight: 900; font-size: 4rem; line-height: 0.9; } .ds-row h3 { margin: 0; font-weight: 500; text-transform: uppercase; font-size: 1.6rem; padding-top: 0.4em; } .ds-row p { margin: 0.4rem 0 0; font-weight: 300; line-height: 1.625; opacity: 0.6; }"
     }
   ],
   "narrative": {
-    "northStar": "The Launch Keynote",
-    "overview": "The site plays like a product launch on a dark stage. The name arrives at full width and full weight. The summary lights up word by word while the page holds still. Each role slides in as a panel over the last one, and the skills run past in rows. Then the house lights come up: the page fades to warm paper for credentials and writing, goes dark again, and closes on a full-bleed call to email. Scroll sets the pace. Every movement is tied to the reader's scroll position or pointer, and almost nothing moves on a timer.\n\nDensity is low and scale is extreme. One or two very large Bricolage Grotesque words own each section, and Onest body text sits quietly beneath them. The material is plain: flat near-black panels, 1px hairlines at 12% ink, pill controls and 16px-radius panels. Depth comes from motion (scale, brightness and stacking order), not from shadow, glass or glow. The one periwinkle accent marks the second line of the name, roles, links and the filled state of a control, and nothing else.\n\nEvery effect is optional. Under `prefers-reduced-motion` the intro, smooth scroll, scrubbing, marquees, magnetic pull and cursor ring all switch off, and the page shows its final state at once. The native cursor always stays.",
+    "northStar": "The Midnight Showreel",
+    "overview": "The Motion theme is a creator's showreel cut for the dark: one near-black stage (void-black), cool mist-coloured text, and enormous uppercase Kanit that fills the viewport edge to edge. It follows the MotionSites \"3D Creator portfolio\" brief the user supplied (recorded in PRODUCT.md under Brand Commitments) and is written in plain CSS in `src/themes/motion/motion.css`, scoped under `.mt-root`. The page reads as a sequence of reels: hero, skills marquee, about, a white numbered skills panel, sticky stacking work cards, credentials and writing, contact.\n\nColour is held back to two moments. The headings carry a cool steel gradient that fades from slate to mist, and the Contact action carries a hot four-stop gradient from aubergine through magenta and ultraviolet to ember. Everything else is ink on black, or black on white inside the skills panel. Density is low and type is the main visual material; there is no illustration system, only the photographic avatar, employer logos on white tiles, and the React Bits effects (Silk, Lanyard, ProfileCard) that add depth.\n\nMotion is constant but never required: content fades up as it enters, paragraphs brighten character by character on scroll, work cards scale back as the next one stacks over them, and Lenis smooths the scroll. Every effect has a `prefers-reduced-motion` path, and the native cursor stays visible under the TargetCursor brackets.\n\nThe site ships a second theme, **Terminal** (the default), with its own styles in `src/themes/terminal/terminal.css`. It is not covered by this document; the tokens below describe the Motion theme only.",
     "keyCharacteristics": [
-      "Near-black stage, warm off-white ink, one periwinkle accent; a single shift to paper for the credentials and writing sections.",
-      "Display type at extreme scale (up to 30rem) with tight but legible tracking (-0.04em).",
-      "Hairline rules, 16px-radius panels and fully rounded pill controls; no shadows.",
-      "Scroll-scrubbed choreography (GSAP ScrollTrigger with Lenis) on one shared ease curve.",
-      "All motion removed under reduced motion; content and layout never depend on it."
+      "One typeface, Kanit, from 300 to 900, with 900 uppercase at viewport scale for display.",
+      "Gradient display text (#646973 to #bbccd7, 180deg) as a deliberate brand commitment.",
+      "A single hot gradient reserved for the Contact action.",
+      "Very large radii (40px rising to 60px) and full pills; nothing square.",
+      "Scroll-linked motion with a reduced-motion fallback for every effect."
     ],
     "rules": [
       {
-        "name": "The One Accent Rule",
-        "body": "Each scene has exactly one accent: periwinkle on the stage, cobalt on paper. A second hue (Live Green excepted) never enters.",
+        "name": "The Steel Gradient Rule",
+        "body": "Display headings on the dark stage are filled with `linear-gradient(180deg, #646973 0%, #bbccd7 100%)` clipped to the text. This is a brand commitment from the supplied brief, not decoration to be removed. Headings on the white skills panel are solid void-black instead.",
         "section": "colors"
       },
       {
-        "name": "The Scene Swap Rule",
-        "body": "Colors are always assigned through the role variables (background, panel, ink, muted, line, accent, accent-ink), never as raw hex values in a component. The light scene is a full swap of those roles on the page root, cross-faded over 0.7s, so every component works in both scenes without its own light variant.",
+        "name": "The One Hot Gradient Rule",
+        "body": "The aubergine, magenta, ultraviolet, ember gradient (123deg, stops at 7 / 37 / 72 / 100%) belongs to the Contact action. Its only other appearances are echoes of it: the Lanyard badge header, the selection colour and the spotlight tint.",
         "section": "colors"
       },
       {
-        "name": "The Two Voices Rule",
-        "body": "Bricolage is for things you look at, Onest is for things you read. Never set a paragraph in Bricolage below statement size, and never set a heading in Onest.",
+        "name": "The Weight Is the Hierarchy Rule",
+        "body": "Kanit is the only family. Steps are made with weight (300 / 500 / 700 / 900), case and size, never with a second typeface.",
         "section": "typography"
       },
       {
-        "name": "The Tight-But-Legal Rule",
-        "body": "Display tracking runs between -0.02em and -0.045em, getting tighter as the size grows; it never goes tight enough for letters to collide.",
+        "name": "The Uppercase Display Rule",
+        "body": "Everything at 700 and above is uppercase. Running text (About, skill lists, excerpts) stays in sentence case.",
         "section": "typography"
       },
       {
-        "name": "The Recede, Don't Lift Rule",
-        "body": "To show something is behind, push it back with scale and brightness tied to scroll. Never add a drop shadow to bring something forward.",
-        "section": "elevation"
-      },
-      {
-        "name": "The Hover Lift Exception",
-        "body": "Writing panels are the only panels that rise on hover (up 6px over 0.6s). They also show a soft accent wash that follows the cursor (18% accent, 420px radius), which only appears while hovering.",
+        "name": "The Outline Not Shadow Rule",
+        "body": "Cards and posts separate from the black ground with a 2px border (solid mist-ink on work cards, 35% mist-ink on posts and chips), never a drop shadow.",
         "section": "elevation"
       }
     ],
     "dos": [
-      "**Do** assign every color through the role variables so a section marked as light swaps the whole palette at once.",
-      "**Do** keep one accent per scene: periwinkle on the stage, cobalt on paper.",
-      "**Do** use Bricolage at 600 to 700 with -0.02em to -0.045em tracking for anything meant to be looked at, and Onest at 17px with 1.6 line height for anything meant to be read.",
-      "**Do** make every control a 999px pill with a 1px hairline, and every content container a 16px-radius panel.",
-      "**Do** use `cubic-bezier(0.16, 1, 0.3, 1)` for CSS transitions and power3/power4 eases for GSAP, and tie large movements to scroll position.",
-      "**Do** show depth by receding with scale and brightness, not by lifting with shadows.",
-      "**Do** give every motion a reduced-motion path that shows the final state, and keep the native cursor and the 2px accent focus outline."
+      "**Do** set every dark-stage display heading in Kanit 900 uppercase with the Steel Gradient (#646973 to #bbccd7, 180deg).",
+      "**Do** use the Contact gradient button for the contact action and nothing else.",
+      "**Do** round containers at 40px, stepping to 50px at 640px and 60px at 768px; use full pills for actions and chips.",
+      "**Do** give every motion effect a `prefers-reduced-motion` path that leaves the content fully visible and static.",
+      "**Do** keep the native cursor visible when TargetCursor is active.",
+      "**Do** keep logos on white tiles (24px or 14px radius) so they read on the black stage."
     ],
     "donts": [
-      "**Don't** use gradient text, glass cards or glow halos. The nav's backdrop blur is the only frosted surface, and the writing panels' accent wash appears only on hover.",
-      "**Don't** add `box-shadow` to panels, cards or buttons.",
-      "**Don't** introduce a second accent hue or put cobalt on the dark stage.",
-      "**Don't** fall back to equal-card grids with generic fade-ups; each section has its own scroll behavior.",
-      "**Don't** hide the native cursor or make any content depend on hover, the pointer or motion."
+      "**Don't** add a second typeface; Kanit carries every role.",
+      "**Don't** introduce hues beyond the gradient stops; new emphasis comes from weight, scale or the steel gradient.",
+      "**Don't** put the steel gradient on the white skills panel; headings there are solid void-black.",
+      "**Don't** separate cards from the ground with drop shadows; use the 2px outline.",
+      "**Don't** use square or small-radius containers."
     ]
   }
 }
