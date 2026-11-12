@@ -10,7 +10,7 @@ body {
 }
 body {
   -webkit-font-smoothing: antialiased;
-  font-family: "Onest Variable", system-ui, sans-serif;
+  font-family: system-ui, sans-serif;
   background: #0b0b0d;
   color: #f3f1ec;
 }

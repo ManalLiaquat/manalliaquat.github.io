@@ -120,7 +120,8 @@ export const skillGroups = [
     items: ["React", "Next.js", "JavaScript", "HTML5", "CSS3", "PWA"]
   },
   {group: "Mobile", items: ["React Native"]},
-  {group: "Tooling", items: ["npm", "Git", "Google Ads Scripts"]}
+  {group: "Tooling", items: ["npm", "Git", "Google Ads Scripts"]},
+  {group: "AI / ML", items: ["Unsloth"]}
 ];
 
 export const allSkills = skillGroups.flatMap(g => g.items);

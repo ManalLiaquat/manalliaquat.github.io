@@ -36,6 +36,8 @@ A backend engineer and team lead who has also shipped frontend (React, Next.js) 
 - Visual standard (confirmed by the user, 2026-11-07): a premium, familiar developer portfolio executed at top-studio quality, not a themed concept. The user rejected the transit-map concept.
 - Quality bar set by the user: Apple product pages (cinematic scroll storytelling) and Awwwards-level studio sites (kinetic type, cursor interaction, bold transitions).
 - Rich interaction, animation and transitions are expected; a static page reads as "not pro" to this user.
+- Motion theme layout (user-supplied, 2026-11-12): the MotionSites "3D Creator portfolio" brief (Kanit, #0C0C0C, gradient headings, gradient Contact Me button, magnetic portrait, skill marquee, white numbered list, sticky stacking cards), filled with Manal's real content and Manal's GitHub avatar. The brief's sample people, projects, services, images and the "living portrait" of another person's face are not used.
+- React Bits components chosen by the user for the Motion theme: PillNav, Silk, Lanyard, ScrollVelocity, DecryptedText, SpotlightCard, ProfileCard, ClickSpark, TargetCursor.
 
 ## Evidence on Hand
 

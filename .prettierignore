@@ -2,3 +2,6 @@ src/serviceWorker.js
 package-lock.json
 src/assets/lottie
 
+
+# vendored React Bits components keep their upstream formatting
+src/themes/motion/rb

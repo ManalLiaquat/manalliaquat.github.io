@@ -1,186 +1,188 @@
-import React, {useEffect, useRef, useState} from "react";
-import gsap from "gsap";
+import React, {useEffect, useMemo, useRef, useState} from "react";
+import {motion, useReducedMotion, useScroll, useTransform} from "motion/react";
 
-export function Arrow({external = false, className = ""}) {
-  return (
-    <svg
-      className={`arrow ${className}`}
-      viewBox="0 0 16 16"
-      width="16"
-      height="16"
-      aria-hidden="true"
-      focusable="false"
-    >
-      {external ? (
-        <path d="M5 11 11 5M6 5h5v5" />
-      ) : (
-        <path d="M2 8h11M9 4l4 4-4 4" />
-      )}
-    </svg>
-  );
-}
+const EASE = [0.25, 0.1, 0.25, 1];
 
-// Splits text into masked letters for kinetic reveals; screen readers get the
-// whole string once.
-export function Letters({text, className = ""}) {
-  return (
-    <span className={`letters ${className}`}>
-      <span className="sr-only">{text}</span>
-      {[...text].map((ch, i) => (
-        <span className="ch-mask" aria-hidden="true" key={i}>
-          <span className="ch">{ch === " " ? " " : ch}</span>
-        </span>
-      ))}
-    </span>
-  );
-}
-
-// Wraps a link so it leans toward a fine pointer while hovered.
-export function Magnetic({
-  as: Tag = "a",
-  strength = 0.3,
+// Fades and slides its children in once they enter the viewport.
+export function FadeIn({
+  as = "div",
+  delay = 0,
+  duration = 0.7,
+  x = 0,
+  y = 30,
   className = "",
   children,
   ...rest
 }) {
-  const ref = useRef(null);
-  useEffect(() => {
-    const el = ref.current;
-    if (!window.matchMedia("(pointer: fine)").matches) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const xTo = gsap.quickTo(el, "x", {duration: 0.5, ease: "power3"});
-    const yTo = gsap.quickTo(el, "y", {duration: 0.5, ease: "power3"});
-    const move = e => {
-      const r = el.getBoundingClientRect();
-      xTo((e.clientX - (r.left + r.width / 2)) * strength);
-      yTo((e.clientY - (r.top + r.height / 2)) * strength);
-    };
-    const leave = () => {
-      xTo(0);
-      yTo(0);
-    };
-    el.addEventListener("pointermove", move);
-    el.addEventListener("pointerleave", leave);
-    return () => {
-      el.removeEventListener("pointermove", move);
-      el.removeEventListener("pointerleave", leave);
-    };
-  }, [strength]);
+  const reduced = useReducedMotion();
+  const Tag = useMemo(() => motion.create(as), [as]);
+  if (reduced) {
+    const Plain = as;
+    return (
+      <Plain className={className} {...rest}>
+        {children}
+      </Plain>
+    );
+  }
   return (
-    <Tag ref={ref} className={`magnetic ${className}`} {...rest}>
+    <Tag
+      className={className}
+      initial={{opacity: 0, x, y}}
+      whileInView={{opacity: 1, x: 0, y: 0}}
+      viewport={{once: true, margin: "50px", amount: 0}}
+      transition={{duration, delay, ease: EASE}}
+      {...rest}
+    >
       {children}
     </Tag>
   );
 }
 
-// A ring that trails the native cursor and grows over interactive targets.
-// `data-cursor="Label"` on a target shows that label inside the ring.
-export function Cursor() {
+// Pulls its child toward a fine pointer once the pointer comes within `padding`
+// px of the element's edge.
+export function Magnet({
+  padding = 150,
+  strength = 3,
+  activeTransition = "transform 0.3s ease-out",
+  inactiveTransition = "transform 0.6s ease-in-out",
+  className = "",
+  children
+}) {
   const ref = useRef(null);
-  const [label, setLabel] = useState("");
+  const [pos, setPos] = useState({x: 0, y: 0, on: false});
   useEffect(() => {
-    if (!window.matchMedia("(pointer: fine)").matches) return;
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches)
+      return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-    const el = ref.current;
-    el.classList.add("is-live", "is-out"); // hidden until the pointer first moves
-    let seen = false;
-    const xTo = gsap.quickTo(el, "x", {duration: 0.35, ease: "power3"});
-    const yTo = gsap.quickTo(el, "y", {duration: 0.35, ease: "power3"});
     const move = e => {
-      if (!seen) {
-        seen = true;
-        gsap.set(el, {x: e.clientX, y: e.clientY});
-        el.classList.remove("is-out");
-      }
-      xTo(e.clientX);
-      yTo(e.clientY);
-      const t = e.target.closest?.("a, button, [data-cursor]");
-      el.classList.toggle("is-hover", !!t);
-      setLabel(t?.dataset.cursor || "");
+      const el = ref.current;
+      if (!el) return;
+      const r = el.getBoundingClientRect();
+      const cx = r.left + r.width / 2;
+      const cy = r.top + r.height / 2;
+      const near =
+        Math.abs(e.clientX - cx) < r.width / 2 + padding &&
+        Math.abs(e.clientY - cy) < r.height / 2 + padding;
+      setPos(
+        near
+          ? {
+              x: (e.clientX - cx) / strength,
+              y: (e.clientY - cy) / strength,
+              on: true
+            }
+          : {x: 0, y: 0, on: false}
+      );
     };
-    const down = () => el.classList.add("is-down");
-    const up = () => el.classList.remove("is-down");
-    const out = () => el.classList.add("is-out");
-    const over = () => el.classList.remove("is-out");
-    window.addEventListener("pointermove", move);
-    window.addEventListener("pointerdown", down);
-    window.addEventListener("pointerup", up);
-    document.addEventListener("pointerleave", out);
-    document.addEventListener("pointerenter", over);
-    return () => {
-      window.removeEventListener("pointermove", move);
-      window.removeEventListener("pointerdown", down);
-      window.removeEventListener("pointerup", up);
-      document.removeEventListener("pointerleave", out);
-      document.removeEventListener("pointerenter", over);
-    };
-  }, []);
+    window.addEventListener("pointermove", move, {passive: true});
+    return () => window.removeEventListener("pointermove", move);
+  }, [padding, strength]);
   return (
-    <div
-      ref={ref}
-      className={`cursor ${label ? "has-label" : ""}`}
-      aria-hidden="true"
-    >
-      <span>{label}</span>
+    <div ref={ref} className={className}>
+      <div
+        style={{
+          transform: `translate3d(${pos.x}px, ${pos.y}px, 0)`,
+          transition: pos.on ? activeTransition : inactiveTransition,
+          willChange: "transform"
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 }
 
-// One-time intro: the name assembles, then the curtain lifts. Skipped on repeat
-// visits in the same session and under reduced motion.
-export function Intro({name, onDone}) {
-  const ref = useRef(null);
-  const [show] = useState(() => {
-    try {
-      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches)
-        return false;
-      return !sessionStorage.getItem("ml-intro");
-    } catch {
-      return true;
-    }
-  });
-  useEffect(() => {
-    if (!show) {
-      onDone();
-      return;
-    }
-    try {
-      sessionStorage.setItem("ml-intro", "1");
-    } catch {
-      /* private mode: the intro just plays again next time */
-    }
-    const el = ref.current;
-    const tl = gsap.timeline({onComplete: () => (el.style.display = "none")});
-    tl.from(el.querySelectorAll(".ch"), {
-      yPercent: 110,
-      duration: 0.7,
-      ease: "power4.out",
-      stagger: 0.035
-    })
-      .to(
-        el.querySelector(".intro-bar span"),
-        {scaleX: 1, duration: 0.6, ease: "power2.inOut"},
-        "-=0.4"
-      )
-      .to(
-        el.querySelectorAll(".ch"),
-        {yPercent: -110, duration: 0.45, ease: "power3.in", stagger: 0.015},
-        "+=0.05"
-      )
-      .add(onDone, "-=0.1")
-      .to(el, {yPercent: -100, duration: 0.8, ease: "power4.inOut"}, "-=0.15");
-    return () => tl.kill();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  if (!show) return null;
+function Char({ch, progress, range}) {
+  const opacity = useTransform(progress, range, [0.2, 1]);
   return (
-    <div className="intro" ref={ref} aria-hidden="true">
-      <p className="intro-name">
-        <Letters text={name} />
-      </p>
-      <div className="intro-bar">
-        <span />
-      </div>
-    </div>
+    <span className="char">
+      <span className="char-ghost">{ch}</span>
+      <motion.span className="char-live" style={{opacity}}>
+        {ch}
+      </motion.span>
+    </span>
   );
+}
+
+// Each character brightens from 0.2 to 1 as the paragraph scrolls through view.
+export function AnimatedText({text, className = ""}) {
+  const ref = useRef(null);
+  const reduced = useReducedMotion();
+  const {scrollYProgress} = useScroll({
+    target: ref,
+    offset: ["start 0.8", "end 0.2"]
+  });
+  const chars = [...text];
+  if (reduced)
+    return (
+      <p ref={ref} className={className}>
+        {text}
+      </p>
+    );
+  return (
+    <p ref={ref} className={className}>
+      <span className="sr-only">{text}</span>
+      <span aria-hidden="true">
+        {chars.map((ch, i) => (
+          <Char
+            key={i}
+            ch={ch}
+            progress={scrollYProgress}
+            range={[i / chars.length, (i + 1) / chars.length]}
+          />
+        ))}
+      </span>
+    </p>
+  );
+}
+
+export function ContactButton({href, children = "Contact Me", className = ""}) {
+  return (
+    <a className={`contact-btn ${className}`} href={href}>
+      {children}
+    </a>
+  );
+}
+
+export function GhostButton({href, children, external = false}) {
+  return (
+    <a
+      className="ghost-btn"
+      href={href}
+      {...(external ? {target: "_blank", rel: "noreferrer"} : {})}
+    >
+      {children}
+    </a>
+  );
+}
+
+// The 3D lanyard badge's face, drawn as an SVG so it needs no image file.
+export function badgeImage({name, title, handle}) {
+  const esc = s =>
+    s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0.07" stop-color="#18011F"/><stop offset="0.37" stop-color="#B600A8"/>
+    <stop offset="0.72" stop-color="#7621B0"/><stop offset="1" stop-color="#BE4C00"/></linearGradient></defs>
+  <rect width="600" height="900" fill="#0C0C0C"/>
+  <rect x="0" y="0" width="600" height="300" fill="url(#g)"/>
+  <text x="48" y="230" font-family="Kanit, Arial, sans-serif" font-weight="900" font-size="150" fill="#ffffff">${esc(
+    name
+      .split(" ")
+      .map(w => w[0])
+      .join("")
+  )}</text>
+  <text x="48" y="430" font-family="Kanit, Arial, sans-serif" font-weight="800" font-size="64" fill="#D7E2EA">${esc(
+    name.split(" ")[0].toUpperCase()
+  )}</text>
+  <text x="48" y="500" font-family="Kanit, Arial, sans-serif" font-weight="800" font-size="64" fill="#D7E2EA">${esc(
+    name.split(" ").slice(1).join(" ").toUpperCase()
+  )}</text>
+  <text x="48" y="600" font-family="Kanit, Arial, sans-serif" font-weight="400" font-size="34" fill="#BBCCD7">${esc(
+    title
+  )}</text>
+  <text x="48" y="830" font-family="Kanit, Arial, sans-serif" font-weight="500" font-size="30" fill="#646973">@${esc(
+    handle
+  )}</text>
+</svg>`;
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
 }
