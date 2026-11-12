@@ -39,6 +39,7 @@ Mar 2019 – Jun 2020
 - **Frontend:** React, Next.js, JavaScript, HTML5, CSS3, PWA
 - **Mobile:** React Native
 - **Tooling:** npm, Git, Google Ads Scripts
+- **AI / ML:** Unsloth
 
 ## Certifications
 
