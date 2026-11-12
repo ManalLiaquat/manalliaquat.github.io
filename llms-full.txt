@@ -35,11 +35,16 @@ Mar 2019 – Jun 2020
 
 ## Skills
 
-- **Backend:** Node.js, Express, MongoDB, REST APIs, Firebase, Python
-- **Frontend:** React, Next.js, JavaScript, HTML5, CSS3, PWA
-- **Mobile:** React Native
-- **Tooling:** npm, Git, Google Ads Scripts
-- **AI / ML:** Unsloth
+- **Languages:** TypeScript, JavaScript (ES6+), Python, HTML5, CSS3, Sass, SQL (BigQuery)
+- **Frontend:** React, Next.js, React Query (TanStack), Tailwind CSS, Vite, Material UI, Headless UI, Bootstrap, Chart.js, PWA, In-browser PDF generation (canvas, non-Latin text and currencies), Internationalization (react-intl / FormatJS)
+- **Mobile:** React Native, React Navigation, React Native Firebase (Auth, Firestore, push notifications, Remote Config), Google and Apple sign-in
+- **Backend & APIs:** Node.js, Express.js, REST API design, MongoDB, Background jobs, retries and crash recovery (Google Cloud Tasks), Input validation (Joi, Zod), MCP servers (Model Context Protocol)
+- **Cloud & Firebase:** Google Cloud Platform, Firebase (Auth, Firestore, Cloud Functions, Hosting, Storage), BigQuery, Cloudflare Workers, Terraform
+- **Ad-tech & integrations:** Meta Marketing API, Google Ads API, Google Ads Scripts, LinkedIn Marketing API, Google Analytics Data API, Stripe and Stripe Connect, Shopify, HubSpot, Algolia
+- **AI / LLM:** OpenAI API and Agents SDK, Google Gemini API, AI agents and prompt engineering, Unsloth
+- **Security & auth:** Firebase Authentication and route guards, JWT, OAuth 2.0, Login-link and signup flow hardening, Dependency vulnerability scanning and CVE triage
+- **Testing & quality:** Jest, React Testing Library, Playwright, Detox, ESLint, Prettier, Husky
+- **Tools & practices:** Git and GitHub, Sentry, CI/CD, Monorepos, npm, Agile (Jira), AI-assisted development (Claude Code, Cursor)
 
 ## Certifications
 

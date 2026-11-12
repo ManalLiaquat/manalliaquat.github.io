@@ -80,14 +80,15 @@
   ],
   "skills": [
     {
-      "name": "Backend",
+      "name": "Languages",
       "keywords": [
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "REST APIs",
-        "Firebase",
-        "Python"
+        "TypeScript",
+        "JavaScript (ES6+)",
+        "Python",
+        "HTML5",
+        "CSS3",
+        "Sass",
+        "SQL (BigQuery)"
       ]
     },
     {
@@ -95,30 +96,104 @@
       "keywords": [
         "React",
         "Next.js",
-        "JavaScript",
-        "HTML5",
-        "CSS3",
-        "PWA"
+        "React Query (TanStack)",
+        "Tailwind CSS",
+        "Vite",
+        "Material UI",
+        "Headless UI",
+        "Bootstrap",
+        "Chart.js",
+        "PWA",
+        "In-browser PDF generation (canvas, non-Latin text and currencies)",
+        "Internationalization (react-intl / FormatJS)"
       ]
     },
     {
       "name": "Mobile",
       "keywords": [
-        "React Native"
+        "React Native",
+        "React Navigation",
+        "React Native Firebase (Auth, Firestore, push notifications, Remote Config)",
+        "Google and Apple sign-in"
       ]
     },
     {
-      "name": "Tooling",
+      "name": "Backend & APIs",
       "keywords": [
-        "npm",
-        "Git",
-        "Google Ads Scripts"
+        "Node.js",
+        "Express.js",
+        "REST API design",
+        "MongoDB",
+        "Background jobs, retries and crash recovery (Google Cloud Tasks)",
+        "Input validation (Joi, Zod)",
+        "MCP servers (Model Context Protocol)"
       ]
     },
     {
-      "name": "AI / ML",
+      "name": "Cloud & Firebase",
       "keywords": [
+        "Google Cloud Platform",
+        "Firebase (Auth, Firestore, Cloud Functions, Hosting, Storage)",
+        "BigQuery",
+        "Cloudflare Workers",
+        "Terraform"
+      ]
+    },
+    {
+      "name": "Ad-tech & integrations",
+      "keywords": [
+        "Meta Marketing API",
+        "Google Ads API",
+        "Google Ads Scripts",
+        "LinkedIn Marketing API",
+        "Google Analytics Data API",
+        "Stripe and Stripe Connect",
+        "Shopify",
+        "HubSpot",
+        "Algolia"
+      ]
+    },
+    {
+      "name": "AI / LLM",
+      "keywords": [
+        "OpenAI API and Agents SDK",
+        "Google Gemini API",
+        "AI agents and prompt engineering",
         "Unsloth"
+      ]
+    },
+    {
+      "name": "Security & auth",
+      "keywords": [
+        "Firebase Authentication and route guards",
+        "JWT",
+        "OAuth 2.0",
+        "Login-link and signup flow hardening",
+        "Dependency vulnerability scanning and CVE triage"
+      ]
+    },
+    {
+      "name": "Testing & quality",
+      "keywords": [
+        "Jest",
+        "React Testing Library",
+        "Playwright",
+        "Detox",
+        "ESLint",
+        "Prettier",
+        "Husky"
+      ]
+    },
+    {
+      "name": "Tools & practices",
+      "keywords": [
+        "Git and GitHub",
+        "Sentry",
+        "CI/CD",
+        "Monorepos",
+        "npm",
+        "Agile (Jira)",
+        "AI-assisted development (Claude Code, Cursor)"
       ]
     }
   ],
