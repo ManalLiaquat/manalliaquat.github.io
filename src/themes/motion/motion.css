@@ -716,13 +716,25 @@ html[data-theme="motion"] body {
   .mt-hero-portrait {
     width: 520px;
   }
+  /* two columns so the badge has room to swing without covering the text */
+  .mt-about {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(440px, 46%);
+    align-items: center;
+    gap: 2rem;
+    padding-right: 0;
+  }
+  .mt-about-inner {
+    grid-column: 1;
+    grid-row: 1;
+  }
   .mt-lanyard {
     display: block;
-    position: absolute;
-    top: 0;
-    right: 2%;
-    width: min(34vw, 460px);
-    height: 92%;
+    grid-column: 2;
+    grid-row: 1;
+    align-self: stretch;
+    position: relative;
+    min-height: 88vh;
   }
   .mt-lanyard > * {
     width: 100%;

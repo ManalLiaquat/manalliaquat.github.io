@@ -152,7 +152,9 @@ function About() {
               })}
               strapColor="#7621B0"
               finish="glossy"
-              size={0.62}
+              size={0.42}
+              breeze={0.2}
+              damping={0.7}
             />
           </Suspense>
         </div>
