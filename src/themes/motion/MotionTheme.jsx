@@ -20,6 +20,7 @@ import {
   ContactButton,
   FadeIn,
   GhostButton,
+  LinkPreview,
   Magnet,
   badgeImage
 } from "./parts.jsx";
@@ -286,6 +287,25 @@ function Work() {
 }
 
 function Proof() {
+  // hovering a credential with a link (or focusing its Verify button) previews
+  // the verification page
+  const [peek, setPeek] = useState(null);
+  const hoverable = window.matchMedia?.("(hover: hover)").matches ?? false;
+  const fromPointer = (c, e) => {
+    if (!c.preview || !hoverable || e.pointerType === "touch") return;
+    setPeek({item: c, at: {x: e.clientX, y: e.clientY}});
+  };
+  const fromFocus = (c, e) => {
+    if (!c.preview) return;
+    const r = e.currentTarget.getBoundingClientRect();
+    setPeek({item: c, at: {x: r.left, y: r.top + r.height / 2}});
+  };
+  useEffect(() => {
+    if (!peek) return undefined;
+    const hide = () => setPeek(null);
+    window.addEventListener("scroll", hide, {passive: true});
+    return () => window.removeEventListener("scroll", hide);
+  }, [peek]);
   return (
     <section className="mt-proof">
       <FadeIn as="h2" y={40} className="hero-heading mt-big">
@@ -293,20 +313,33 @@ function Proof() {
       </FadeIn>
       <ul className="mt-rows">
         {certifications.map((c, i) => (
-          <FadeIn as="li" key={c.title} delay={i * 0.06} className="mt-row">
+          <FadeIn
+            as="li"
+            key={c.title}
+            delay={i * 0.06}
+            className={`mt-row ${c.preview ? "has-preview" : ""}`}
+            onPointerMove={e => fromPointer(c, e)}
+            onPointerLeave={() => setPeek(null)}
+          >
             <img src={c.image} alt="" loading="lazy" />
             <div>
               <p className="mt-row-title">{c.title}</p>
               <p className="mt-row-meta">{c.issuer}</p>
             </div>
             {c.url && (
-              <GhostButton href={c.url} external>
+              <GhostButton
+                href={c.url}
+                external
+                onFocus={e => fromFocus(c, e)}
+                onBlur={() => setPeek(null)}
+              >
                 Verify<span className="sr-only"> {c.title}</span>
               </GhostButton>
             )}
           </FadeIn>
         ))}
       </ul>
+      <LinkPreview item={peek?.item} at={peek?.at} />
       <FadeIn as="h2" y={40} className="hero-heading mt-big mt-big-gap">
         Writing
       </FadeIn>

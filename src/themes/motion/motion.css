@@ -492,6 +492,33 @@ html[data-theme="motion"] body {
   font-weight: 300;
   opacity: 0.6;
 }
+/* hover preview of a credential's verification page */
+.link-preview {
+  position: fixed;
+  z-index: 120;
+  pointer-events: none;
+  border-radius: 20px;
+  padding: 8px 8px 0;
+  background: #17171a;
+  border: 2px solid var(--ink);
+  box-shadow: 0 24px 50px -16px rgba(0, 0, 0, 0.7);
+  transform-origin: left center;
+}
+.link-preview img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 11;
+  object-fit: contain;
+  border-radius: 13px;
+  background: #fff;
+}
+.link-preview-host {
+  display: block;
+  padding: 8px 6px 10px;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: #bbccd7;
+}
 .mt-posts {
   display: grid;
   gap: 1.25rem;

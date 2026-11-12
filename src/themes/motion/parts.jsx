@@ -1,5 +1,11 @@
 import React, {useEffect, useMemo, useRef, useState} from "react";
-import {motion, useReducedMotion, useScroll, useTransform} from "motion/react";
+import {
+  AnimatePresence,
+  motion,
+  useReducedMotion,
+  useScroll,
+  useTransform
+} from "motion/react";
 
 const EASE = [0.25, 0.1, 0.25, 1];
 
@@ -143,12 +149,13 @@ export function ContactButton({href, children = "Contact Me", className = ""}) {
   );
 }
 
-export function GhostButton({href, children, external = false}) {
+export function GhostButton({href, children, external = false, ...rest}) {
   return (
     <a
       className="ghost-btn"
       href={href}
       {...(external ? {target: "_blank", rel: "noreferrer"} : {})}
+      {...rest}
     >
       {children}
     </a>
@@ -185,4 +192,50 @@ export function badgeImage({name, title, handle}) {
   )}</text>
 </svg>`;
   return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+}
+
+const PREVIEW_W = 340;
+
+// A floating screenshot of a link's destination. `at` is a viewport point
+// (the cursor, or a focused button's corner); the card keeps itself on screen.
+export function LinkPreview({item, at}) {
+  const reduced = useReducedMotion();
+  let left = 0;
+  let top = 0;
+  if (item && at) {
+    const h = PREVIEW_W * (11 / 16) + 44;
+    left = at.x + 24;
+    // near the right edge (where the Verify buttons sit) open to the left,
+    // far enough not to cover the button under the cursor
+    if (left + PREVIEW_W > window.innerWidth - 12) left = at.x - PREVIEW_W - 72;
+    left = Math.max(12, left);
+    top = Math.min(Math.max(12, at.y - h / 2), window.innerHeight - h - 12);
+  }
+  let host = "";
+  try {
+    host = item ? new URL(item.url).host.replace(/^www\./, "") : "";
+  } catch {
+    host = "";
+  }
+  return (
+    <AnimatePresence>
+      {item && at && (
+        <motion.div
+          key={item.url}
+          className="link-preview"
+          aria-hidden="true"
+          style={{left, top, width: PREVIEW_W}}
+          initial={
+            reduced ? {opacity: 0} : {opacity: 0, scale: 0.9, rotate: -2}
+          }
+          animate={{opacity: 1, scale: 1, rotate: 0}}
+          exit={{opacity: 0, scale: reduced ? 1 : 0.95}}
+          transition={{duration: 0.22, ease: EASE}}
+        >
+          <img src={item.preview} alt="" />
+          <span className="link-preview-host">{host}</span>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
 }

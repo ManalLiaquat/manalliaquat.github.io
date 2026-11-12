@@ -248,7 +248,9 @@ export const certifications = [
     title: "React Nanodegree",
     issuer: "Udacity",
     image: "/img/udacity.png",
-    url: "https://confirm.udacity.com/KHYFX7KF"
+    url: "https://confirm.udacity.com/KHYFX7KF",
+    // screenshot of the verification page, shown on hover
+    preview: "/img/certs/udacity-react.webp"
   },
   {
     title: "PWA Web App Developer",
@@ -264,13 +266,17 @@ export const certifications = [
     title: "Legacy Front End",
     issuer: "freeCodeCamp",
     image: "/img/freecodecamp.webp",
-    url: "https://www.freecodecamp.org/certification/manalliaquat/legacy-front-end"
+    url: "https://www.freecodecamp.org/certification/manalliaquat/legacy-front-end",
+    // screenshot of the verification page, shown on hover
+    preview: "/img/certs/fcc-legacy-front-end.webp"
   },
   {
     title: "JavaScript Algorithms & Data Structures",
     issuer: "freeCodeCamp",
     image: "/img/freecodecamp.webp",
-    url: "https://www.freecodecamp.org/certification/manalliaquat/javascript-algorithms-and-data-structures"
+    url: "https://www.freecodecamp.org/certification/manalliaquat/javascript-algorithms-and-data-structures",
+    // screenshot of the verification page, shown on hover
+    preview: "/img/certs/fcc-javascript-algorithms.webp"
   },
   {
     title: "Financial Literacy Training Program",
