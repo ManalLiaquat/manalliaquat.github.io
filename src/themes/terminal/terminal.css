@@ -337,6 +337,16 @@ a.t-card:hover {
   border-color: var(--accent);
   color: var(--accent);
 }
+/* the core row spans the grid and leads */
+.t-card-core {
+  grid-column: 1 / -1;
+  border-color: var(--accent);
+}
+.t-chip-core {
+  border-color: var(--accent);
+  color: var(--accent);
+  font-weight: 600;
+}
 
 .t-certs {
   display: grid;

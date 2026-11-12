@@ -292,6 +292,41 @@ html[data-theme="motion"] body {
 .mt-services .mt-big {
   margin-bottom: 4rem;
 }
+/* core row: the skills Manal leads with, above the numbered groups */
+.mt-core {
+  max-width: 64rem;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.mt-core-label {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  margin-bottom: 1rem !important;
+}
+.mt-core-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+.mt-core-list li {
+  border-radius: 999px;
+  border: 2px solid #0c0c0c;
+  padding: 0.55rem 1.3rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: clamp(0.75rem, 1.3vw, 1rem);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.mt-core-list li:hover {
+  background: #0c0c0c;
+  color: #fff;
+}
 .mt-service-list {
   list-style: none;
   max-width: 64rem;

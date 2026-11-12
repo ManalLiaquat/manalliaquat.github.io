@@ -11,6 +11,7 @@ import {
   socials,
   experience,
   skillGroups,
+  coreSkills,
   certifications,
   blogs
 } from "../../data/portfolio";
@@ -117,10 +118,11 @@ function Hero() {
 }
 
 function Marquee() {
-  const rows = [
-    [...skillGroups[0].items, ...skillGroups[1].items],
-    skillGroups.slice(2).flatMap(g => g.items)
-  ].map(r => r.join("  ·  "));
+  // top row: the core skills; second row: the shorter tool names from every group
+  const tools = skillGroups
+    .flatMap(g => g.items)
+    .filter(s => s.length <= 16 && !s.includes("(") && !coreSkills.includes(s));
+  const rows = [coreSkills, tools].map(r => r.join("  ·  "));
   return (
     <section className="mt-marquee" aria-label="Skills at a glance">
       <ScrollVelocity
@@ -174,9 +176,22 @@ function Skills() {
       <FadeIn as="h2" y={40} className="mt-big mt-dark">
         Skills
       </FadeIn>
+      <FadeIn className="mt-core" y={20}>
+        <h3 className="mt-core-label">Core</h3>
+        <ul className="mt-core-list">
+          {coreSkills.map(s => (
+            <li key={s}>{s}</li>
+          ))}
+        </ul>
+      </FadeIn>
       <ol className="mt-service-list">
         {skillGroups.map((g, i) => (
-          <FadeIn as="li" key={g.group} delay={i * 0.1} className="mt-service">
+          <FadeIn
+            as="li"
+            key={g.group}
+            delay={Math.min(i, 4) * 0.1}
+            className="mt-service"
+          >
             <span className="mt-num" aria-hidden="true">
               {String(i + 1).padStart(2, "0")}
             </span>
@@ -190,7 +205,7 @@ function Skills() {
                   speed={40}
                 />
               </h3>
-              <p className="mt-service-desc">{g.items.join(", ")}</p>
+              <p className="mt-service-desc">{g.items.join(" · ")}</p>
             </div>
           </FadeIn>
         ))}

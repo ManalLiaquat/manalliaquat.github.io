@@ -4,6 +4,7 @@ import {
   socials,
   experience,
   skillGroups,
+  coreSkills,
   certifications,
   blogs
 } from "../../data/portfolio";
@@ -249,6 +250,16 @@ export default function TerminalTheme({onThemeChange}) {
             <span className="t-accent">$</span> ls ~/skills
           </h2>
           <div className="t-skills">
+            <div className="t-card t-card-core" data-reveal>
+              <div className="t-yellow">core/</div>
+              <div className="t-chips">
+                {coreSkills.map(s => (
+                  <span key={s} className="t-chip t-chip-core">
+                    {s}
+                  </span>
+                ))}
+              </div>
+            </div>
             {skillGroups.map(g => (
               <div key={g.group} className="t-card" data-reveal>
                 <div className="t-yellow">{g.group.toLowerCase()}/</div>

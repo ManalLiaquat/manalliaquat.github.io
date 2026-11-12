@@ -4,6 +4,7 @@ import {
   socials,
   experience,
   skillGroups,
+  coreSkills,
   certifications,
   blogs
 } from "../../data/portfolio";
@@ -89,10 +90,12 @@ export function runCommand(raw, ctx) {
       return {
         output: (
           <div className="t-grid">
+            <span className="t-yellow">core/</span>
+            <span className="t-bold">{coreSkills.join(" · ")}</span>
             {skillGroups.map(g => (
               <React.Fragment key={g.group}>
                 <span className="t-yellow">{g.group.toLowerCase()}/</span>
-                <span>{g.items.join("  ")}</span>
+                <span>{g.items.join(" · ")}</span>
               </React.Fragment>
             ))}
           </div>

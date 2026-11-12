@@ -110,18 +110,135 @@ export const lines = [
   {id: "tooling", name: "Tooling", letter: "T"}
 ];
 
+// The headline row: what Manal leads with.
+export const coreSkills = [
+  "TypeScript",
+  "React",
+  "React Native",
+  "Node.js",
+  "Firebase / GCP",
+  "Ads APIs (Meta, Google, LinkedIn)",
+  "AI / LLM integration"
+];
+
 export const skillGroups = [
   {
-    group: "Backend",
-    items: ["Node.js", "Express", "MongoDB", "REST APIs", "Firebase", "Python"]
+    group: "Languages",
+    items: [
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "Python",
+      "HTML5",
+      "CSS3",
+      "Sass",
+      "SQL (BigQuery)"
+    ]
   },
   {
     group: "Frontend",
-    items: ["React", "Next.js", "JavaScript", "HTML5", "CSS3", "PWA"]
+    items: [
+      "React",
+      "Next.js",
+      "React Query (TanStack)",
+      "Tailwind CSS",
+      "Vite",
+      "Material UI",
+      "Headless UI",
+      "Bootstrap",
+      "Chart.js",
+      "PWA",
+      "In-browser PDF generation (canvas, non-Latin text and currencies)",
+      "Internationalization (react-intl / FormatJS)"
+    ]
   },
-  {group: "Mobile", items: ["React Native"]},
-  {group: "Tooling", items: ["npm", "Git", "Google Ads Scripts"]},
-  {group: "AI / ML", items: ["Unsloth"]}
+  {
+    group: "Mobile",
+    items: [
+      "React Native",
+      "React Navigation",
+      "React Native Firebase (Auth, Firestore, push notifications, Remote Config)",
+      "Google and Apple sign-in"
+    ]
+  },
+  {
+    group: "Backend & APIs",
+    items: [
+      "Node.js",
+      "Express.js",
+      "REST API design",
+      "MongoDB",
+      "Background jobs, retries and crash recovery (Google Cloud Tasks)",
+      "Input validation (Joi, Zod)",
+      "MCP servers (Model Context Protocol)"
+    ]
+  },
+  {
+    group: "Cloud & Firebase",
+    items: [
+      "Google Cloud Platform",
+      "Firebase (Auth, Firestore, Cloud Functions, Hosting, Storage)",
+      "BigQuery",
+      "Cloudflare Workers",
+      "Terraform"
+    ]
+  },
+  {
+    group: "Ad-tech & integrations",
+    items: [
+      "Meta Marketing API",
+      "Google Ads API",
+      "Google Ads Scripts",
+      "LinkedIn Marketing API",
+      "Google Analytics Data API",
+      "Stripe and Stripe Connect",
+      "Shopify",
+      "HubSpot",
+      "Algolia"
+    ]
+  },
+  {
+    group: "AI / LLM",
+    items: [
+      "OpenAI API and Agents SDK",
+      "Google Gemini API",
+      "AI agents and prompt engineering",
+      "Unsloth"
+    ]
+  },
+  {
+    group: "Security & auth",
+    items: [
+      "Firebase Authentication and route guards",
+      "JWT",
+      "OAuth 2.0",
+      "Login-link and signup flow hardening",
+      "Dependency vulnerability scanning and CVE triage"
+    ]
+  },
+  {
+    group: "Testing & quality",
+    items: [
+      "Jest",
+      "React Testing Library",
+      "Playwright",
+      "Detox",
+      "ESLint",
+      "Prettier",
+      "Husky"
+    ]
+  },
+  {
+    group: "Tools & practices",
+    items: [
+      "Git and GitHub",
+      "Sentry",
+      "CI/CD",
+      "Monorepos",
+      "npm",
+      "Agile (Jira)",
+      "AI-assisted development (Claude Code, Cursor)"
+    ]
+  }
 ];
 
 export const allSkills = skillGroups.flatMap(g => g.items);
